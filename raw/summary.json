@@ -1,0 +1,386 @@
+{
+ "Cloudflare": {
+  "cached": {
+   "n": 40,
+   "fail": 0,
+   "p50": 14.1,
+   "p90": 15.6,
+   "max": 18.4
+  },
+  "uncached": {
+   "n": 40,
+   "fail": 0,
+   "p50": 18.1,
+   "p90": 32.2,
+   "max": 36.8
+  },
+  "doh": {
+   "n": 48,
+   "fail": 0,
+   "first_p50": 117.4,
+   "warm_p50": 24.5,
+   "warm_p90": 30.7
+  },
+  "features": {
+   "validates_dnssec": true,
+   "ad_flag": true,
+   "honest_nxdomain": true,
+   "sends_ecs": false,
+   "ecs_prefix": null,
+   "egress": "172.69.21.220",
+   "tcp": true,
+   "dot": "TLSv1.3"
+  }
+ },
+ "Google": {
+  "cached": {
+   "n": 40,
+   "fail": 0,
+   "p50": 25.0,
+   "p90": 38.9,
+   "max": 53.0
+  },
+  "uncached": {
+   "n": 40,
+   "fail": 0,
+   "p50": 35.6,
+   "p90": 40.9,
+   "max": 45.3
+  },
+  "doh": {
+   "n": 48,
+   "fail": 0,
+   "first_p50": 122.0,
+   "warm_p50": 28.4,
+   "warm_p90": 46.6
+  },
+  "features": {
+   "validates_dnssec": true,
+   "ad_flag": true,
+   "honest_nxdomain": true,
+   "sends_ecs": true,
+   "ecs_prefix": "24",
+   "egress": "2607:f8b0:4004:1002::124",
+   "tcp": true,
+   "dot": "TLSv1.3"
+  }
+ },
+ "Quad9": {
+  "cached": {
+   "n": 40,
+   "fail": 0,
+   "p50": 11.7,
+   "p90": 13.8,
+   "max": 33.6
+  },
+  "uncached": {
+   "n": 40,
+   "fail": 0,
+   "p50": 13.8,
+   "p90": 27.5,
+   "max": 36.9
+  },
+  "doh": {
+   "n": 48,
+   "fail": 0,
+   "first_p50": 90.9,
+   "warm_p50": 17.9,
+   "warm_p90": 34.8
+  },
+  "features": {
+   "validates_dnssec": true,
+   "ad_flag": true,
+   "honest_nxdomain": true,
+   "sends_ecs": false,
+   "ecs_prefix": null,
+   "egress": "2620:171:f0:f0:9999::250",
+   "tcp": true,
+   "dot": "TLSv1.3"
+  }
+ },
+ "OpenDNS": {
+  "cached": {
+   "n": 40,
+   "fail": 0,
+   "p50": 14.7,
+   "p90": 46.0,
+   "max": 56.8
+  },
+  "uncached": {
+   "n": 40,
+   "fail": 0,
+   "p50": 15.9,
+   "p90": 29.6,
+   "max": 54.9
+  },
+  "doh": {
+   "n": 48,
+   "fail": 0,
+   "first_p50": 104.4,
+   "warm_p50": 23.0,
+   "warm_p90": 87.2
+  },
+  "features": {
+   "validates_dnssec": true,
+   "ad_flag": true,
+   "honest_nxdomain": true,
+   "sends_ecs": true,
+   "ecs_prefix": "24",
+   "egress": "2620:0:cc3::131",
+   "tcp": true,
+   "dot": "TLSv1.3"
+  }
+ },
+ "AdGuard": {
+  "cached": {
+   "n": 40,
+   "fail": 0,
+   "p50": 25.1,
+   "p90": 26.0,
+   "max": 27.9
+  },
+  "uncached": {
+   "n": 40,
+   "fail": 0,
+   "p50": 32.8,
+   "p90": 38.2,
+   "max": 69.4
+  },
+  "doh": {
+   "n": 48,
+   "fail": 0,
+   "first_p50": 138.1,
+   "warm_p50": 28.9,
+   "warm_p90": 75.8
+  },
+  "features": {
+   "validates_dnssec": true,
+   "ad_flag": true,
+   "honest_nxdomain": true,
+   "sends_ecs": true,
+   "ecs_prefix": "24",
+   "egress": "84.17.44.209",
+   "tcp": true,
+   "dot": "TLSv1.3"
+  }
+ },
+ "Control D": {
+  "cached": {
+   "n": 40,
+   "fail": 0,
+   "p50": 14.9,
+   "p90": 16.3,
+   "max": 30.9
+  },
+  "uncached": {
+   "n": 40,
+   "fail": 0,
+   "p50": 16.1,
+   "p90": 29.6,
+   "max": 30.9
+  },
+  "doh": {
+   "n": 48,
+   "fail": 0,
+   "first_p50": 117.9,
+   "warm_p50": 18.6,
+   "warm_p90": 28.9
+  },
+  "features": {
+   "validates_dnssec": true,
+   "ad_flag": true,
+   "honest_nxdomain": true,
+   "sends_ecs": false,
+   "ecs_prefix": null,
+   "egress": "149.50.212.65",
+   "tcp": true,
+   "dot": null
+  }
+ },
+ "CleanBrowsing": {
+  "cached": {
+   "n": 40,
+   "fail": 0,
+   "p50": 13.7,
+   "p90": 14.7,
+   "max": 20.7
+  },
+  "uncached": {
+   "n": 40,
+   "fail": 0,
+   "p50": 18.0,
+   "p90": 28.6,
+   "max": 47.4
+  },
+  "doh": {
+   "n": 48,
+   "fail": 0,
+   "first_p50": 142.6,
+   "warm_p50": 22.4,
+   "warm_p90": 28.0
+  },
+  "features": {
+   "validates_dnssec": true,
+   "ad_flag": true,
+   "honest_nxdomain": true,
+   "sends_ecs": false,
+   "ecs_prefix": null,
+   "egress": "45.32.138.180",
+   "tcp": true,
+   "dot": "TLSv1.3"
+  }
+ },
+ "NextDNS": {
+  "cached": {
+   "n": 40,
+   "fail": 0,
+   "p50": 14.0,
+   "p90": 15.1,
+   "max": 19.1
+  },
+  "uncached": {
+   "n": 40,
+   "fail": 0,
+   "p50": 20.0,
+   "p90": 56.5,
+   "max": 61.1
+  },
+  "doh": {
+   "n": 48,
+   "fail": 0,
+   "first_p50": 94.3,
+   "warm_p50": 17.0,
+   "warm_p90": 25.7
+  },
+  "features": {
+   "validates_dnssec": true,
+   "ad_flag": true,
+   "honest_nxdomain": true,
+   "sends_ecs": false,
+   "ecs_prefix": null,
+   "egress": "104.238.181.28",
+   "tcp": true,
+   "dot": "TLSv1.3"
+  }
+ },
+ "Comodo": {
+  "cached": {
+   "n": 40,
+   "fail": 0,
+   "p50": 14.4,
+   "p90": 15.5,
+   "max": 20.6
+  },
+  "uncached": {
+   "n": 40,
+   "fail": 0,
+   "p50": 23.4,
+   "p90": 29.4,
+   "max": 59.5
+  },
+  "features": {
+   "validates_dnssec": false,
+   "ad_flag": false,
+   "honest_nxdomain": true,
+   "sends_ecs": false,
+   "ecs_prefix": null,
+   "egress": "2001:19f0:ac01:1a8f:ec4:7aff:fe8f:6758",
+   "tcp": true,
+   "dot": null
+  }
+ },
+ "Level3": {
+  "cached": {
+   "n": 40,
+   "fail": 0,
+   "p50": 12.9,
+   "p90": 14.9,
+   "max": 24.5
+  },
+  "uncached": {
+   "n": 40,
+   "fail": 0,
+   "p50": 14.8,
+   "p90": 34.6,
+   "max": 59.7
+  },
+  "features": {
+   "validates_dnssec": false,
+   "ad_flag": false,
+   "honest_nxdomain": true,
+   "sends_ecs": false,
+   "ecs_prefix": null,
+   "egress": "8.0.34.7",
+   "tcp": true,
+   "dot": null
+  }
+ },
+ "Yandex": {
+  "cached": {
+   "n": 40,
+   "fail": 0,
+   "p50": 226.5,
+   "p90": 237.9,
+   "max": 263.1
+  },
+  "uncached": {
+   "n": 40,
+   "fail": 0,
+   "p50": 252.7,
+   "p90": 269.9,
+   "max": 394.1
+  },
+  "doh": {
+   "n": 48,
+   "fail": 1,
+   "first_p50": 1199.1,
+   "warm_p50": 240.9,
+   "warm_p90": 358.7
+  },
+  "features": {
+   "validates_dnssec": false,
+   "ad_flag": true,
+   "honest_nxdomain": true,
+   "sends_ecs": false,
+   "ecs_prefix": null,
+   "egress": "37.140.169.70",
+   "tcp": true,
+   "dot": "TLSv1.3"
+  }
+ },
+ "Network default": {
+  "cached": {
+   "n": 40,
+   "fail": 0,
+   "p50": 4.7,
+   "p90": 7.9,
+   "max": 33.2
+  },
+  "uncached": {
+   "n": 40,
+   "fail": 0,
+   "p50": 37.3,
+   "p90": 43.3,
+   "max": 120.5
+  },
+  "features": {
+   "validates_dnssec": false,
+   "ad_flag": false,
+   "honest_nxdomain": true,
+   "sends_ecs": true,
+   "ecs_prefix": "24",
+   "egress": "2607:f8b0:4004:1002::124",
+   "tcp": true,
+   "dot": null
+  }
+ },
+ "Mullvad": {
+  "doh": {
+   "n": 48,
+   "fail": 0,
+   "first_p50": 380.8,
+   "warm_p50": 82.2,
+   "warm_p90": 92.8
+  }
+ }
+}

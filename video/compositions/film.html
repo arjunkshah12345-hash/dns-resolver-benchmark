@@ -1,0 +1,390 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: var(--ground);
+    }
+    #cam {
+      position: absolute;
+      inset: 0;
+      transform-origin: 900px 520px;
+    }
+    #cam > * {
+      position: absolute;
+    }
+    .w {
+      display: inline-block;
+    }
+    .a {
+      color: var(--accent);
+    }
+    .m {
+      color: var(--muted);
+    }
+    .mono {
+      font-family: "JetBrains Mono", monospace;
+    }
+
+    /* 1. The question and the answer */
+    #q {
+      left: 0;
+      top: 500px;
+      width: 1920px;
+      text-align: center;
+      font-size: 64px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+    #pk {
+      left: 0;
+      top: 528px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    #num {
+      left: 0;
+      top: 330px;
+      width: 1920px;
+      text-align: center;
+      font-size: 340px;
+      font-weight: 600;
+      letter-spacing: -0.05em;
+      line-height: 1;
+      white-space: nowrap;
+      transform-origin: 960px 170px;
+    }
+    #num small {
+      font-size: 120px;
+      letter-spacing: -0.02em;
+      color: var(--muted);
+      margin-left: 24px;
+    }
+    #numl {
+      left: 0;
+      top: 720px;
+      width: 1920px;
+      text-align: center;
+      font-size: 46px;
+      font-weight: 500;
+      letter-spacing: -0.015em;
+    }
+
+    /* 2-3. The board */
+    .ttl {
+      left: 220px;
+      top: 104px;
+      font-size: 64px;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      white-space: nowrap;
+    }
+    .row {
+      left: 220px;
+      width: 1500px;
+      height: 62px;
+    }
+    .nm {
+      position: absolute;
+      left: 0;
+      top: 12px;
+      font-size: 34px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+    }
+    .bar {
+      position: absolute;
+      left: 340px;
+      top: 16px;
+      height: 30px;
+      border-radius: 3px;
+      background: #3a3a3a;
+      transform-origin: 0 50%;
+    }
+    .row.win .bar {
+      background: var(--accent);
+    }
+    .val {
+      position: absolute;
+      top: 14px;
+      font-size: 30px;
+      font-weight: 500;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .row.win .val {
+      color: var(--ink);
+    }
+    .brk {
+      position: absolute;
+      left: 1424px;
+      top: 10px;
+      width: 10px;
+      height: 42px;
+      background: var(--ground);
+      transform: skewX(-18deg);
+    }
+    #brace {
+      left: 1320px;
+      top: 254px;
+      width: 14px;
+      height: 488px;
+      border: 3px solid var(--ink);
+      border-left: none;
+      transform-origin: 50% 0;
+    }
+    #bracel {
+      left: 1362px;
+      top: 470px;
+      font-size: 34px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .hd {
+      top: 196px;
+      font-size: 28px;
+      font-weight: 500;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+    }
+    #hd1 {
+      left: 700px;
+    }
+    #hd2 {
+      left: 1130px;
+    }
+    .mk {
+      position: absolute;
+      top: 6px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 50px;
+      text-align: center;
+    }
+    .mk.ok {
+      background: rgba(124, 242, 154, 0.14);
+      color: var(--accent);
+    }
+    .mk.no {
+      background: rgba(255, 93, 93, 0.16);
+      color: var(--bad);
+    }
+    .c1 {
+      left: 590px;
+    }
+    .c2 {
+      left: 1020px;
+    }
+    .why {
+      position: absolute;
+      left: 1100px;
+      top: 14px;
+      font-size: 28px;
+      color: var(--bad);
+      white-space: nowrap;
+    }
+    .why.d {
+      left: 670px;
+    }
+
+    /* 4. The pick */
+    #hero {
+      left: 0;
+      top: 300px;
+      width: 1920px;
+      text-align: center;
+      font-size: 250px;
+      font-weight: 600;
+      letter-spacing: -0.05em;
+      line-height: 1;
+      color: var(--accent);
+    }
+    #heroip {
+      left: 0;
+      top: 250px;
+      width: 1920px;
+      text-align: center;
+      font-size: 40px;
+      color: var(--muted);
+    }
+    #sub {
+      left: 0;
+      top: 600px;
+      width: 1920px;
+      text-align: center;
+      font-size: 46px;
+      font-weight: 500;
+      letter-spacing: -0.015em;
+    }
+    #url {
+      left: 0;
+      top: 860px;
+      width: 1920px;
+      text-align: center;
+      font-size: 34px;
+      color: var(--ink);
+    }
+    #src {
+      left: 0;
+      top: 916px;
+      width: 1920px;
+      text-align: center;
+      font-size: 28px;
+      color: var(--muted);
+    }
+  </style>
+
+  <div id="root" data-composition-id="film" data-width="1920" data-height="1080">
+  <div id="cam">
+    <div id="q"><span class="w">Where</span> <span class="w">is</span> <span class="w mono a">example.com</span><span class="w">?</span></div>
+    <div id="pk"></div>
+    <div id="num"><span id="numv">0.0</span><small>ms</small></div>
+    <div id="numl"><span class="w a">Quad9.</span> <span class="w m">Fastest</span> <span class="w m">of</span> <span class="w m">11.</span></div>
+
+    <div id="t1" class="ttl"><span class="w">Cached</span> <span class="w">lookup,</span> <span class="w">median</span></div>
+    <div id="t2" class="ttl"><span class="w">Speed</span> <span class="w">isn’t</span> <span class="w">the</span> <span class="w">whole</span> <span class="w">test</span></div>
+    <div id="t3" class="ttl"><span class="w">Six</span> <span class="w">fail</span> <span class="w">a</span> <span class="w">security</span> <span class="w">or</span> <span class="w">privacy</span> <span class="w">check</span></div>
+
+    <div class="row win" data-name="Quad9" data-v="11.7" data-dnssec="1" data-ecs="0"></div>
+    <div class="row" data-name="Level3" data-v="12.9" data-dnssec="0" data-ecs="0"></div>
+    <div class="row" data-name="CleanBrowsing" data-v="13.7" data-dnssec="1" data-ecs="0"></div>
+    <div class="row" data-name="NextDNS" data-v="14.0" data-dnssec="1" data-ecs="0"></div>
+    <div class="row" data-name="Cloudflare" data-v="14.1" data-dnssec="1" data-ecs="0"></div>
+    <div class="row" data-name="Comodo" data-v="14.4" data-dnssec="0" data-ecs="0"></div>
+    <div class="row" data-name="OpenDNS" data-v="14.7" data-dnssec="1" data-ecs="1"></div>
+    <div class="row" data-name="Control D" data-v="14.9" data-dnssec="1" data-ecs="0"></div>
+    <div class="row" data-name="Google" data-v="25.0" data-dnssec="1" data-ecs="1"></div>
+    <div class="row" data-name="AdGuard" data-v="25.1" data-dnssec="1" data-ecs="1"></div>
+    <div class="row" data-name="Yandex" data-v="226.5" data-dnssec="0" data-ecs="0"></div>
+
+    <div id="brace"></div>
+    <div id="bracel">8 within <span class="a">3.2 ms</span></div>
+    <div id="hd1" class="hd">Validates DNSSEC</div>
+    <div id="hd2" class="hd">Keeps your IP private</div>
+
+    <div id="heroip" class="mono">9.9.9.9</div>
+    <div id="hero">Quad9</div>
+    <div id="sub"><span class="w">Fastest.</span> <span class="w">Validates</span> <span class="w">DNSSEC.</span> <span class="w">Keeps</span> <span class="w">your</span> <span class="w">IP</span> <span class="w">private.</span></div>
+    <div id="url" class="mono">arjunkshah12345-hash.github.io/dns-resolver-benchmark</div>
+    <div id="src">960 lookups · one network · 28 Oct 2026</div>
+  </div>
+  </div>
+
+  <script>
+    (() => {
+      const TOP = 250, RH = 62, PX = 40, BAR0 = 340, CLIP = 1080;
+      
+      // Build rows from their data attributes: name, bar, value, two check marks.
+      const rows = Array.from(document.querySelectorAll(".row"));
+      rows.forEach((r, i) => {
+        const v = +r.dataset.v, w = Math.min(CLIP, v * PX);
+        r.style.top = TOP + i * RH + "px";
+        r.innerHTML =
+          `<div class="nm">${r.dataset.name}</div>` +
+          `<div class="bar" style="width:${w}px"></div>` +
+          (v * PX > CLIP ? `<div class="brk"></div>` : "") +
+          `<div class="val" style="left:${BAR0 + w + 22}px">${v.toFixed(1)} ms</div>` +
+          `<div class="mk c1 ${r.dataset.dnssec === "1" ? "ok" : "no"}">${r.dataset.dnssec === "1" ? "✓" : "✕"}</div>` +
+          `<div class="mk c2 ${r.dataset.ecs === "0" ? "ok" : "no"}">${r.dataset.ecs === "0" ? "✓" : "✕"}</div>` +
+          (r.dataset.ecs === "1" ? `<div class="why">sends your /24</div>` : "") +
+          (r.dataset.dnssec === "0" ? `<div class="why d">accepts forged answers</div>` : "");
+      });
+
+      const build = () => {
+        const tl = gsap.timeline({ paused: true });
+        const wordsIn = (sel, at, gap = 0.07) =>
+          tl.fromTo(sel, { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.16, ease: "power2.out", stagger: gap }, at);
+        const out = (sel, at, gap = 0.02) =>
+          tl.to(sel, { opacity: 0, filter: "blur(8px)", duration: 0.18, ease: "power3.in", stagger: gap }, at);
+
+        gsap.set("#numl .w, .ttl .w, #bracel, .hd, #heroip, #hero, #sub .w, #url, #src, .row .nm, .row .val, .row .mk, .row .why, .row .brk", { opacity: 0 });
+        gsap.set("#num", { opacity: 0 });
+        gsap.set(".row .bar", { scaleX: 0 });
+        gsap.set("#brace", { scaleY: 0 });
+        gsap.set("#pk", { x: -60, opacity: 0 });
+
+        // ---- 1. A question goes out (the first frame is the question), an answer comes back
+        out("#q .w", 1.3, 0.03);
+        tl.fromTo("#pk", { x: -60, opacity: 1, scaleX: 1 }, { x: 1960, scaleX: 3, duration: 0.42, ease: "power3.in" }, 1.2);
+        tl.fromTo("#pk", { x: 1960, scaleX: 3 }, { x: 948, scaleX: 1, duration: 0.36, ease: "expo.out", immediateRender: false }, 1.64);
+        tl.to("#pk", { scale: 14, opacity: 0, duration: 0.3, ease: "power2.out" }, 1.94);
+        tl.fromTo("#num", { opacity: 0, scale: 1.08, filter: "blur(12px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.9, ease: "expo.out" }, 1.96);
+        const n = { v: 0 };
+        tl.fromTo(n, { v: 0 }, { v: 11.7, duration: 1.2, ease: "expo.out", onUpdate: () => (document.getElementById("numv").textContent = n.v.toFixed(1)) }, 1.96);
+        wordsIn("#numl .w", 2.3, 0.08);
+        out("#numl .w", 3.65, 0.02);
+
+        // the number flies into Quad9's slot on the board
+        tl.to("#num", { x: 1080 - 960 + 180, y: TOP + 31 - 500, scale: 0.09, filter: "blur(8px)", duration: 0.5, ease: "power3.inOut" }, 3.75);
+        tl.to("#num", { opacity: 0, duration: 0.1 }, 4.15);
+
+        // ---- 2. The race
+        rows.forEach((r, i) => {
+          const at = 3.97 + i * 0.05, v = +r.dataset.v, val = r.querySelector(".val");
+          tl.fromTo(r.querySelector(".nm"), { opacity: 0, x: -20, filter: "blur(6px)" }, { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.4, ease: "expo.out" }, at);
+          tl.fromTo(r.querySelector(".bar"), { scaleX: 0 }, { scaleX: 1, duration: v > 100 ? 0.9 : 0.7, ease: "expo.out" }, at + 0.06);
+          tl.fromTo(val, { opacity: 0 }, { opacity: 1, duration: 0.15 }, at + 0.12);
+          const o = { v: 0 };
+          tl.fromTo(o, { v: 0 }, { v, duration: 0.8, ease: "expo.out", onUpdate: () => (val.textContent = o.v.toFixed(1) + " ms") }, at + 0.06);
+          if (v > 100) tl.fromTo(r.querySelector(".brk"), { opacity: 0 }, { opacity: 1, duration: 0.1 }, at + 0.4);
+        });
+        wordsIn("#t1 .w", 4.25, 0.08);
+        // punch in on the pack
+        tl.to("#cam", { scale: 1.1, x: -40, y: 10, duration: 0.55, ease: "power2.inOut" }, 5.15);
+        tl.fromTo("#brace", { scaleY: 0 }, { scaleY: 1, duration: 0.5, ease: "expo.out" }, 5.4);
+        tl.fromTo("#bracel", { opacity: 0, x: -16, filter: "blur(6px)" }, { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.4, ease: "expo.out" }, 5.5);
+        tl.to("#cam", { scale: 1, x: 0, y: 0, duration: 0.5, ease: "power2.inOut" }, 6.95);
+        out("#t1 .w", 7.0);
+        tl.to("#brace", { scaleY: 0, duration: 0.2, ease: "power3.in" }, 7.0);
+        out("#bracel", 7.0);
+        tl.to(".row .bar", { scaleX: 0, duration: 0.3, ease: "power3.in", stagger: 0.02 }, 7.05);
+        out(".row .val, .row .brk", 7.05, 0.01);
+
+        // ---- 3. The checks
+        wordsIn("#t2 .w", 7.4, 0.07);
+        tl.fromTo(".hd", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, stagger: 0.12 }, 7.45);
+        rows.forEach((r, i) => {
+          tl.fromTo(r.querySelector(".c1"), { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.6)" }, 7.65 + i * 0.05);
+          tl.fromTo(r.querySelector(".c2"), { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.6)" }, 8.05 + i * 0.05);
+        });
+        const fails = rows.filter((r) => r.dataset.dnssec === "0" || r.dataset.ecs === "1");
+        const pass = rows.filter((r) => !fails.includes(r));
+        out("#t2 .w", 8.95);
+        fails.forEach((r, i) => {
+          tl.to(r.querySelectorAll(".nm, .c1.ok, .c2.ok"), { opacity: 0.22, duration: 0.35, ease: "power2.out" }, 9.0 + i * 0.04);
+          tl.fromTo(r.querySelectorAll(".why"), { opacity: 0, x: -10 }, { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.35, ease: "expo.out" }, 9.0 + i * 0.04);
+        });
+        wordsIn("#t3 .w", 9.12, 0.07);
+
+        // ---- 4. Five pass; one is fastest
+        out("#t3 .w", 11.15);
+        out(".hd", 11.15);
+        fails.forEach((r) => out(r.querySelectorAll(".nm, .mk, .why"), 11.2, 0));
+        pass.forEach((r, i) => {
+          tl.to(r, { y: TOP + i * RH - parseFloat(r.style.top) + 2 * RH, duration: 0.5, ease: "power3.inOut" }, 11.25 + i * 0.03);
+          if (i > 0) out(r.querySelectorAll(".nm, .mk"), 11.6, 0);
+        });
+        out(pass[0].querySelectorAll(".mk"), 11.6, 0);
+        const qn = pass[0].querySelector(".nm");
+        tl.to(qn, { x: 960 - 220 - 50, y: 300 + 125 - (TOP + 2 * RH) - 30, scale: 5.5, filter: "blur(10px)", color: "#7cf29a", duration: 0.35, ease: "power3.in" }, 11.6);
+        tl.to(qn, { opacity: 0, duration: 0.08 }, 11.88);
+        tl.fromTo("#hero", { opacity: 0, scale: 1.12, filter: "blur(14px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.7, ease: "expo.out" }, 11.86);
+        tl.fromTo("#heroip", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 12.0);
+        wordsIn("#sub .w", 12.0, 0.05);
+        tl.fromTo("#url", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.22, ease: "power2.out" }, 12.15);
+        tl.fromTo("#src", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 12.2);
+        window.__timelines["film"] = tl;
+      };
+      Promise.all([document.fonts.load("600 340px Geist"), document.fonts.load("400 40px 'JetBrains Mono'"), document.fonts.ready]).then(build);
+    })();
+  </script>
+</template>

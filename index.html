@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DNS resolver benchmark: 13 resolvers, measured</title>
+    <meta name="description" content="Quad9, Cloudflare, Google, NextDNS and 9 others measured on speed, encrypted DNS, DNSSEC validation and subnet leaks. Raw data and scripts included." />
+    <meta property="og:title" content="DNS resolver benchmark" />
+    <meta property="og:description" content="13 resolvers measured on speed, DNSSEC and privacy. Quad9 came out on top from this network." />
+    <meta property="og:image" content="https://arjunkshah12345-hash.github.io/dns-resolver-benchmark/assets/card.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <style>
+      @font-face {
+        font-family: "Geist";
+        src: url("assets/Geist-Variable.woff2") format("woff2");
+        font-weight: 100 900;
+        font-display: swap;
+      }
+      :root {
+        --ground: #0a0b0c;
+        --raise: #121416;
+        --ink: #f2f2f2;
+        --muted: #9a9a9a;
+        --faint: #5c5c5c;
+        --rule: rgba(255, 255, 255, 0.09);
+        --accent: #7cf29a;
+        --bad: #ff6b6b;
+        --bar: #3a3a3a;
+        --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        background: var(--ground);
+        color: var(--ink);
+        font: 400 17px/1.55 "Geist", system-ui, sans-serif;
+        font-feature-settings: "tnum" 1;
+        -webkit-font-smoothing: antialiased;
+      }
+      main {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 72px 28px 120px;
+      }
+      a {
+        color: var(--ink);
+        text-underline-offset: 3px;
+        text-decoration-color: var(--faint);
+      }
+      a:hover {
+        text-decoration-color: var(--accent);
+      }
+      code,
+      .mono {
+        font-family: var(--mono);
+        font-size: 0.88em;
+      }
+      .kicker {
+        color: var(--muted);
+        font-size: 14px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      h1 {
+        font-size: clamp(40px, 6.4vw, 76px);
+        line-height: 1.02;
+        letter-spacing: -0.04em;
+        font-weight: 600;
+        margin: 14px 0 22px;
+        max-width: 15ch;
+      }
+      h1 em {
+        font-style: normal;
+        color: var(--accent);
+      }
+      .lede {
+        font-size: 20px;
+        color: var(--muted);
+        max-width: 60ch;
+      }
+      .lede b {
+        color: var(--ink);
+        font-weight: 500;
+      }
+      video {
+        display: block;
+        width: 100%;
+        margin: 48px 0 0;
+        border-radius: 10px;
+        border: 1px solid var(--rule);
+        background: #000;
+      }
+      section {
+        margin-top: 96px;
+      }
+      h2 {
+        font-size: 30px;
+        letter-spacing: -0.025em;
+        font-weight: 600;
+        margin-bottom: 6px;
+      }
+      .sub {
+        color: var(--muted);
+        margin-bottom: 28px;
+        max-width: 66ch;
+      }
+
+      /* chart */
+      .tabs {
+        display: inline-flex;
+        gap: 4px;
+        padding: 4px;
+        background: var(--raise);
+        border: 1px solid var(--rule);
+        border-radius: 8px;
+        margin-bottom: 26px;
+      }
+      .tabs button {
+        font: inherit;
+        font-size: 15px;
+        color: var(--muted);
+        background: none;
+        border: 0;
+        border-radius: 5px;
+        padding: 7px 14px;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+      .tabs button[aria-pressed="true"] {
+        background: #24272a;
+        color: var(--ink);
+      }
+      .tabs button:focus-visible {
+        outline: 2px solid var(--accent);
+      }
+      .chart {
+        display: grid;
+        gap: 9px;
+      }
+      .bar-row {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        align-items: center;
+        gap: 18px;
+        transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+      .bar-row .n {
+        font-weight: 500;
+        white-space: nowrap;
+      }
+      .bar-row.muted .n {
+        color: var(--faint);
+      }
+      .track {
+        position: relative;
+        height: 26px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .fill {
+        height: 22px;
+        border-radius: 3px;
+        background: var(--bar);
+        min-width: 2px;
+        transition: width 0.55s cubic-bezier(0.2, 0.8, 0.2, 1);
+        position: relative;
+      }
+      .fill .p90 {
+        position: absolute;
+        top: -3px;
+        bottom: -3px;
+        width: 2px;
+        background: var(--muted);
+        opacity: 0.6;
+        transition: left 0.55s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+      .win .fill {
+        background: var(--accent);
+      }
+      .track .v {
+        color: var(--muted);
+        font-size: 15px;
+        white-space: nowrap;
+      }
+      .win .track .v {
+        color: var(--ink);
+      }
+      .clipped .fill {
+        mask-image: linear-gradient(90deg, #000 92%, transparent);
+      }
+      .legend {
+        margin-top: 18px;
+        color: var(--faint);
+        font-size: 14px;
+      }
+
+      /* table */
+      .scroll {
+        overflow-x: auto;
+        border: 1px solid var(--rule);
+        border-radius: 10px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 15px;
+        min-width: 820px;
+      }
+      th,
+      td {
+        text-align: left;
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--rule);
+        white-space: nowrap;
+      }
+      th {
+        color: var(--muted);
+        font-weight: 500;
+        font-size: 13px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        background: var(--raise);
+      }
+      tr:last-child td {
+        border-bottom: 0;
+      }
+      td.num {
+        text-align: right;
+      }
+      th.num {
+        text-align: right;
+      }
+      .ok {
+        color: var(--accent);
+      }
+      .no {
+        color: var(--bad);
+      }
+      .na {
+        color: var(--faint);
+      }
+      td .ip {
+        color: var(--faint);
+        font-family: var(--mono);
+        font-size: 13px;
+        margin-left: 8px;
+      }
+
+      /* findings */
+      .finds {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1px;
+        background: var(--rule);
+        border: 1px solid var(--rule);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .finds div {
+        background: var(--ground);
+        padding: 24px 24px 26px;
+      }
+      .finds b {
+        display: block;
+        font-size: 34px;
+        letter-spacing: -0.03em;
+        font-weight: 600;
+        margin-bottom: 6px;
+      }
+      .finds p {
+        color: var(--muted);
+      }
+      ul.method {
+        list-style: none;
+        display: grid;
+        gap: 14px;
+        max-width: 74ch;
+      }
+      ul.method li {
+        color: var(--muted);
+        padding-left: 18px;
+        position: relative;
+      }
+      ul.method li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.7em;
+        width: 6px;
+        height: 1px;
+        background: var(--muted);
+      }
+      ul.method b {
+        color: var(--ink);
+        font-weight: 500;
+      }
+      pre {
+        background: var(--raise);
+        border: 1px solid var(--rule);
+        border-radius: 8px;
+        padding: 18px 20px;
+        overflow-x: auto;
+        font-family: var(--mono);
+        font-size: 14px;
+        margin-top: 18px;
+      }
+      footer {
+        margin-top: 96px;
+        padding-top: 24px;
+        border-top: 1px solid var(--rule);
+        color: var(--faint);
+        font-size: 14px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 24px;
+      }
+      @media (max-width: 640px) {
+        .bar-row {
+          grid-template-columns: 104px 1fr;
+          gap: 10px;
+        }
+        .bar-row .n {
+          font-size: 14px;
+        }
+        main {
+          padding-top: 48px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .fill,
+        .fill .p90,
+        .bar-row {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="kicker">Benchmark · 28 October 2026</p>
+      <h1>13 DNS resolvers, measured. <em>Quad9</em> wins from here.</h1>
+      <p class="lede">
+        Every web request starts with a DNS lookup. I timed <b>960 plain lookups</b> and <b>576 encrypted ones</b> against Cloudflare, Google, Quad9 and ten others, then checked which ones
+        validate DNSSEC and which ones leak your location. <b>Quad9 was fastest and passed every check.</b>
+      </p>
+
+      <video src="assets/dns-resolver-benchmark-15s.mp4" poster="assets/poster.jpg" controls playsinline muted preload="metadata"></video>
+
+      <section id="speed">
+        <h2>Speed</h2>
+        <p class="sub" id="chart-sub"></p>
+        <div class="tabs" role="group" aria-label="Measurement">
+          <button data-m="cached" aria-pressed="true">Cached</button>
+          <button data-m="uncached" aria-pressed="false">Cache miss</button>
+          <button data-m="doh" aria-pressed="false">Encrypted (DoH)</button>
+        </div>
+        <div class="chart" id="chart"></div>
+        <p class="legend">Bar: median. Tick: 90th percentile. Milliseconds, lower is better. Bars past 40 ms are cut off.</p>
+      </section>
+
+      <section id="findings">
+        <h2>What stands out</h2>
+        <p class="sub">Eight resolvers land within 3.2 ms of each other on cached lookups, too close to feel. The differences that matter are below.</p>
+        <div class="finds">
+          <div><b>3</b><p>resolvers skip DNSSEC validation. Level3, Comodo and Yandex all returned an address for <code>dnssec-failed.org</code>, a domain whose signature is deliberately broken.</p></div>
+          <div><b>3</b><p>send the first 24 bits of your IP to every domain's servers: Google, OpenDNS and AdGuard. That helps CDNs pick a nearby server, and it tells every domain owner roughly where you are.</p></div>
+          <div><b>46 ms</b><p>is OpenDNS's 90th percentile, against a 14.7 ms median. It has the slowest outliers of the fast group.</p></div>
+          <div><b>90–140 ms</b><p>to open a new encrypted connection, versus 17–29 ms on one that's already open. Browsers keep it open, so the warm number is what you'll usually feel.</p></div>
+          <div><b>4.7 ms</b><p>for this network's own resolver on cache hits. It's on the local network, but it's slow on misses (37 ms), skips DNSSEC and forwards to Google with your subnet attached.</p></div>
+          <div><b>0</b><p>timeouts across all 960 timed plain lookups, and no resolver redirected a made-up name to an ad page.</p></div>
+        </div>
+      </section>
+
+      <section id="table">
+        <h2>Every resolver</h2>
+        <p class="sub">Sorted by cached median. Mullvad doesn't answer plain DNS, so it only has an encrypted time.</p>
+        <div class="scroll"><table id="tbl"></table></div>
+      </section>
+
+      <section id="method">
+        <h2>Method</h2>
+        <p class="sub">Everything below comes from <a href="https://github.com/arjunkshah12345-hash/dns-resolver-benchmark/blob/main/scripts/bench.py"><code>scripts/bench.py</code></a>; the raw samples are in <a href="https://github.com/arjunkshah12345-hash/dns-resolver-benchmark/tree/main/raw"><code>raw/</code></a>.</p>
+        <ul class="method">
+          <li><b>Plain DNS.</b> Raw UDP from Python with a 2 s timeout, 40 rounds. Each round shuffles the resolver order so network drift hits every resolver equally.</li>
+          <li><b>Cached.</b> One of 15 popular domains, warmed into every resolver's cache first.</li>
+          <li><b>Cache miss.</b> A fresh random 14-character name under one of 6 unsigned zones, unique per resolver per round. No resolver can reuse another's cache or synthesize the answer from DNSSEC records.</li>
+          <li><b>Encrypted (DoH).</b> RFC 8484 GETs with curl, 16 on one connection, 3 times per endpoint. The first request includes TCP and TLS setup; "warm" is the median of the other 45.</li>
+          <li><b>Checks.</b> <code>dig</code> against <code>dnssec-failed.org</code> (DNSSEC), a random <code>.com</code> name (NXDOMAIN), Google's and Akamai's whoami records (subnet leak), and a TLS connection on port 853 (DNS over TLS).</li>
+          <li><b>Re-run.</b> The first encrypted pass was lost to a network drop partway through, so DoH was re-run on its own. The plain-DNS rounds were unaffected.</li>
+          <li><b>Limits.</b> One machine, one network, one evening. Anycast routing means the order will differ from other places, so treat gaps under about 3 ms as noise. Ad and malware filtering weren't tested.</li>
+        </ul>
+        <pre>ROUNDS=40 python3 -I scripts/bench.py &lt;your-default-resolver-ip&gt;
+python3 -I scripts/analyze.py</pre>
+        <p class="sub" style="margin-top: 18px">Run it on your own network. Your ranking may differ, and that's the point.</p>
+      </section>
+
+      <footer>
+        <span>Measured 28 Oct 2026 from one network.</span>
+        <a href="https://github.com/arjunkshah12345-hash/dns-resolver-benchmark">Code and raw data</a>
+        <a href="https://github.com/arjunkshah12345-hash/dns-resolver-benchmark/issues">Found a mistake? Open an issue</a>
+      </footer>
+    </main>
+
+    <script>
+      const IPS = {
+        Cloudflare: "1.1.1.1", Google: "8.8.8.8", Quad9: "9.9.9.9", OpenDNS: "208.67.222.222", AdGuard: "94.140.14.14",
+        "Control D": "76.76.2.0", CleanBrowsing: "185.228.168.9", NextDNS: "45.90.28.0", Comodo: "8.26.56.26",
+        Level3: "4.2.2.1", Yandex: "77.88.8.8", Mullvad: "DoH only", "Network default": "LAN",
+      };
+      const SUB = {
+        cached: "A popular name already in the resolver's cache. This is most lookups.",
+        uncached: "A name nobody has asked for, so the resolver has to go to the source. This is where resolvers really differ.",
+        doh: "DNS over HTTPS on a connection that's already open, the way browsers use it.",
+      };
+      const MAX = 40;
+      const pass = (f) => f && f.validates_dnssec && !f.sends_ecs;
+
+      fetch("raw/summary.json")
+        .then((r) => r.json())
+        .then((S) => {
+          const names = Object.keys(S);
+          const chart = document.getElementById("chart");
+          const rows = {};
+          names.forEach((n) => {
+            const el = document.createElement("div");
+            el.className = "bar-row" + (n === "Quad9" ? " win" : "") + (n === "Network default" ? " muted" : "");
+            el.innerHTML = `<span class="n">${n === "Network default" ? "This network" : n}</span><div class="track"><div class="fill"><span class="p90"></span></div><span class="v"></span></div>`;
+            chart.appendChild(el);
+            rows[n] = el;
+          });
+
+          const val = (n, m) => (m === "doh" ? S[n].doh && { p50: S[n].doh.warm_p50, p90: S[n].doh.warm_p90 } : S[n][m]);
+          const draw = (m) => {
+            document.getElementById("chart-sub").textContent = SUB[m];
+            document.querySelectorAll(".tabs button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.m === m));
+            const have = names.filter((n) => val(n, m)).sort((a, b) => val(a, m).p50 - val(b, m).p50);
+            const gone = names.filter((n) => !val(n, m));
+            // reorder with a FLIP so bars slide to their new rank
+            const before = {};
+            names.forEach((n) => (before[n] = rows[n].getBoundingClientRect().top));
+            [...have, ...gone].forEach((n) => chart.appendChild(rows[n]));
+            names.forEach((n) => {
+              const el = rows[n], v = val(n, m);
+              el.style.display = v ? "" : "none";
+              if (!v) return;
+              const pct = (x) => Math.min(100, (x / MAX) * 100);
+              el.querySelector(".fill").style.width = pct(v.p50) + "%";
+              el.querySelector(".p90").style.left = `calc(${Math.min(100, (v.p90 / v.p50) * 100)}% - 1px)`;
+              el.querySelector(".p90").style.display = v.p90 > MAX ? "none" : "";
+              el.classList.toggle("clipped", v.p50 > MAX);
+              el.querySelector(".v").textContent = `${v.p50.toFixed(1)} ms`;
+              const dy = before[n] - el.getBoundingClientRect().top;
+              if (dy && before[n]) {
+                el.style.transition = "none";
+                el.style.transform = `translateY(${dy}px)`;
+                requestAnimationFrame(() => requestAnimationFrame(() => {
+                  el.style.transition = "";
+                  el.style.transform = "";
+                }));
+              }
+            });
+          };
+          document.querySelectorAll(".tabs button").forEach((b) => b.addEventListener("click", () => draw(b.dataset.m)));
+          draw("cached");
+
+          // table
+          const yes = (b, good = true) => (b == null ? '<span class="na">n/a</span>' : (b === good ? '<span class="ok">yes</span>' : '<span class="no">no</span>'));
+          const ms = (x) => (x == null ? '<span class="na">none</span>' : x.toFixed(1));
+          const order = [...names].sort((a, b) => (S[a].cached?.p50 ?? 1e9) - (S[b].cached?.p50 ?? 1e9));
+          let h = `<thead><tr><th>Resolver</th><th class="num">Cached p50</th><th class="num">Miss p50</th><th class="num">Miss p90</th><th class="num">DoH warm</th><th class="num">DoH new conn</th><th>DNSSEC</th><th>Keeps IP private</th><th>DoT</th></tr></thead><tbody>`;
+          order.forEach((n) => {
+            const s = S[n], f = s.features;
+            const label = n === "Network default" ? "This network" : n;
+            h += `<tr><td>${n === "Quad9" ? `<span class="ok">${label}</span>` : label}<span class="ip">${IPS[n] || ""}</span></td>
+              <td class="num">${ms(s.cached?.p50)}</td><td class="num">${ms(s.uncached?.p50)}</td><td class="num">${ms(s.uncached?.p90)}</td>
+              <td class="num">${ms(s.doh?.warm_p50)}</td><td class="num">${ms(s.doh?.first_p50)}</td>
+              <td>${yes(f?.validates_dnssec)}</td><td>${f ? yes(!f.sends_ecs) : yes(null)}</td>
+              <td>${f ? (f.dot ? '<span class="ok">yes</span>' : '<span class="na">no</span>') : yes(null)}</td></tr>`;
+          });
+          document.getElementById("tbl").innerHTML = h + "</tbody>";
+        });
+    </script>
+  </body>
+</html>

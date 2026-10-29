@@ -1,0 +1,7433 @@
+{
+ "meta": {
+  "started": "2026-10-28T16:40:12-0700",
+  "rounds": 40,
+  "host": "redacted",
+  "resolvers": [
+   [
+    "Cloudflare",
+    "1.1.1.1",
+    "https://cloudflare-dns.com/dns-query"
+   ],
+   [
+    "Google",
+    "8.8.8.8",
+    "https://dns.google/dns-query"
+   ],
+   [
+    "Quad9",
+    "9.9.9.9",
+    "https://dns.quad9.net/dns-query"
+   ],
+   [
+    "OpenDNS",
+    "208.67.222.222",
+    "https://doh.opendns.com/dns-query"
+   ],
+   [
+    "AdGuard",
+    "94.140.14.14",
+    "https://dns.adguard-dns.com/dns-query"
+   ],
+   [
+    "Control D",
+    "76.76.2.0",
+    "https://freedns.controld.com/p0"
+   ],
+   [
+    "CleanBrowsing",
+    "185.228.168.9",
+    "https://doh.cleanbrowsing.org/doh/security-filter/"
+   ],
+   [
+    "NextDNS",
+    "45.90.28.0",
+    "https://dns.nextdns.io/dns-query"
+   ],
+   [
+    "Comodo",
+    "8.26.56.26",
+    null
+   ],
+   [
+    "Level3",
+    "4.2.2.1",
+    null
+   ],
+   [
+    "Yandex",
+    "77.88.8.8",
+    "https://common.dot.dns.yandex.net/dns-query"
+   ],
+   [
+    "Mullvad",
+    null,
+    "https://dns.mullvad.net/dns-query"
+   ],
+   [
+    "Network default",
+    "10.10.10.15",
+    null
+   ]
+  ],
+  "finished": "2026-10-28T17:48:30-0700",
+  "doh_rerun": "2026-10-28T18:11:44-0700",
+  "note": "First DoH pass lost to a network drop mid-run; DoH re-run separately."
+ },
+ "plain": {
+  "Cloudflare": {
+   "cached": [
+    {
+     "ms": 12.63,
+     "rcode": 0
+    },
+    {
+     "ms": 14.89,
+     "rcode": 0
+    },
+    {
+     "ms": 14.09,
+     "rcode": 0
+    },
+    {
+     "ms": 14.52,
+     "rcode": 0
+    },
+    {
+     "ms": 14.01,
+     "rcode": 0
+    },
+    {
+     "ms": 15.62,
+     "rcode": 0
+    },
+    {
+     "ms": 13.17,
+     "rcode": 0
+    },
+    {
+     "ms": 15.62,
+     "rcode": 0
+    },
+    {
+     "ms": 14.79,
+     "rcode": 0
+    },
+    {
+     "ms": 14.21,
+     "rcode": 0
+    },
+    {
+     "ms": 14.96,
+     "rcode": 0
+    },
+    {
+     "ms": 14.1,
+     "rcode": 0
+    },
+    {
+     "ms": 14.5,
+     "rcode": 0
+    },
+    {
+     "ms": 14.09,
+     "rcode": 0
+    },
+    {
+     "ms": 14.69,
+     "rcode": 0
+    },
+    {
+     "ms": 14.61,
+     "rcode": 0
+    },
+    {
+     "ms": 13.17,
+     "rcode": 0
+    },
+    {
+     "ms": 13.72,
+     "rcode": 0
+    },
+    {
+     "ms": 13.89,
+     "rcode": 0
+    },
+    {
+     "ms": 13.41,
+     "rcode": 0
+    },
+    {
+     "ms": 14.76,
+     "rcode": 0
+    },
+    {
+     "ms": 13.2,
+     "rcode": 0
+    },
+    {
+     "ms": 14.14,
+     "rcode": 0
+    },
+    {
+     "ms": 12.94,
+     "rcode": 0
+    },
+    {
+     "ms": 13.89,
+     "rcode": 0
+    },
+    {
+     "ms": 14.79,
+     "rcode": 0
+    },
+    {
+     "ms": 12.8,
+     "rcode": 0
+    },
+    {
+     "ms": 13.14,
+     "rcode": 0
+    },
+    {
+     "ms": 18.37,
+     "rcode": 0
+    },
+    {
+     "ms": 15.91,
+     "rcode": 0
+    },
+    {
+     "ms": 14.23,
+     "rcode": 0
+    },
+    {
+     "ms": 13.63,
+     "rcode": 0
+    },
+    {
+     "ms": 13.9,
+     "rcode": 0
+    },
+    {
+     "ms": 14.0,
+     "rcode": 0
+    },
+    {
+     "ms": 15.85,
+     "rcode": 0
+    },
+    {
+     "ms": 13.57,
+     "rcode": 0
+    },
+    {
+     "ms": 13.33,
+     "rcode": 0
+    },
+    {
+     "ms": 12.37,
+     "rcode": 0
+    },
+    {
+     "ms": 13.49,
+     "rcode": 0
+    },
+    {
+     "ms": 14.49,
+     "rcode": 0
+    }
+   ],
+   "uncached": [
+    {
+     "ms": 30.18,
+     "rcode": 3,
+     "name": "r2aqxv9upctnwl.google.com"
+    },
+    {
+     "ms": 15.86,
+     "rcode": 3,
+     "name": "3f9caioctiq71h.amazon.com"
+    },
+    {
+     "ms": 16.85,
+     "rcode": 3,
+     "name": "djzdnbj0ddlz2u.microsoft.com"
+    },
+    {
+     "ms": 18.27,
+     "rcode": 0,
+     "name": "7kegy5mtic4udy.apple.com"
+    },
+    {
+     "ms": 17.71,
+     "rcode": 0,
+     "name": "97gq8zxqyxjxvf.netflix.com"
+    },
+    {
+     "ms": 16.0,
+     "rcode": 3,
+     "name": "uay5gcq8nkm7wg.yahoo.com"
+    },
+    {
+     "ms": 32.54,
+     "rcode": 3,
+     "name": "645jcn0ivgxv47.google.com"
+    },
+    {
+     "ms": 16.83,
+     "rcode": 3,
+     "name": "quof6zl2kxpolc.amazon.com"
+    },
+    {
+     "ms": 18.54,
+     "rcode": 3,
+     "name": "26b78ibpfolkgt.microsoft.com"
+    },
+    {
+     "ms": 16.04,
+     "rcode": 0,
+     "name": "68yzawkpu9u5rs.apple.com"
+    },
+    {
+     "ms": 18.16,
+     "rcode": 0,
+     "name": "v8yvzeh1w9pym3.netflix.com"
+    },
+    {
+     "ms": 18.01,
+     "rcode": 3,
+     "name": "wtijpvh91kj3zn.yahoo.com"
+    },
+    {
+     "ms": 32.46,
+     "rcode": 3,
+     "name": "ixdzpdxcan3thi.google.com"
+    },
+    {
+     "ms": 16.18,
+     "rcode": 3,
+     "name": "cjjryre6qw7ic9.amazon.com"
+    },
+    {
+     "ms": 21.64,
+     "rcode": 3,
+     "name": "ndnxc2l1itbhja.microsoft.com"
+    },
+    {
+     "ms": 28.6,
+     "rcode": 0,
+     "name": "cuyx1h0jqygxw7.apple.com"
+    },
+    {
+     "ms": 16.06,
+     "rcode": 0,
+     "name": "k8c6qxmsz9nip8.netflix.com"
+    },
+    {
+     "ms": 18.81,
+     "rcode": 3,
+     "name": "p3qwg96yiq0e6v.yahoo.com"
+    },
+    {
+     "ms": 32.14,
+     "rcode": 3,
+     "name": "8490erzxz7shq2.google.com"
+    },
+    {
+     "ms": 18.9,
+     "rcode": 3,
+     "name": "s2qiqtwbuygk2k.amazon.com"
+    },
+    {
+     "ms": 17.7,
+     "rcode": 3,
+     "name": "h395fzh54lo12d.microsoft.com"
+    },
+    {
+     "ms": 18.01,
+     "rcode": 0,
+     "name": "3uo1fn80zioxxy.apple.com"
+    },
+    {
+     "ms": 19.37,
+     "rcode": 0,
+     "name": "jzgdcsi7geuk80.netflix.com"
+    },
+    {
+     "ms": 18.43,
+     "rcode": 3,
+     "name": "aowaqccuourxtx.yahoo.com"
+    },
+    {
+     "ms": 31.97,
+     "rcode": 3,
+     "name": "n2fjmuh6sl0425.google.com"
+    },
+    {
+     "ms": 26.19,
+     "rcode": 3,
+     "name": "hcjsd8iwypq6c2.amazon.com"
+    },
+    {
+     "ms": 15.06,
+     "rcode": 3,
+     "name": "v4cod26pclmeqf.microsoft.com"
+    },
+    {
+     "ms": 17.8,
+     "rcode": 0,
+     "name": "6b01lc8srh2x74.apple.com"
+    },
+    {
+     "ms": 17.92,
+     "rcode": 0,
+     "name": "lmuvbivxeebhdk.netflix.com"
+    },
+    {
+     "ms": 19.8,
+     "rcode": 3,
+     "name": "bm2cg81ntolwxg.yahoo.com"
+    },
+    {
+     "ms": 33.17,
+     "rcode": 3,
+     "name": "qlxqmz3lgtgl47.google.com"
+    },
+    {
+     "ms": 19.8,
+     "rcode": 3,
+     "name": "4t8csajudpbkqp.amazon.com"
+    },
+    {
+     "ms": 17.91,
+     "rcode": 3,
+     "name": "iz9emtxr8pg9vy.microsoft.com"
+    },
+    {
+     "ms": 19.01,
+     "rcode": 0,
+     "name": "v4f4vznwb55mm8.apple.com"
+    },
+    {
+     "ms": 17.34,
+     "rcode": 0,
+     "name": "ghv779jdra50di.netflix.com"
+    },
+    {
+     "ms": 17.48,
+     "rcode": 3,
+     "name": "dlitsg6k0j8sul.yahoo.com"
+    },
+    {
+     "ms": 36.8,
+     "rcode": 3,
+     "name": "popovbzrsda70t.google.com"
+    },
+    {
+     "ms": 16.95,
+     "rcode": 3,
+     "name": "h4fhrayf87pzoh.amazon.com"
+    },
+    {
+     "ms": 17.21,
+     "rcode": 3,
+     "name": "k8ttg54eek22w4.microsoft.com"
+    },
+    {
+     "ms": 17.52,
+     "rcode": 0,
+     "name": "pvcj8etx05sy6x.apple.com"
+    }
+   ]
+  },
+  "Google": {
+   "cached": [
+    {
+     "ms": 28.71,
+     "rcode": 0
+    },
+    {
+     "ms": 42.13,
+     "rcode": 0
+    },
+    {
+     "ms": 29.54,
+     "rcode": 0
+    },
+    {
+     "ms": 22.53,
+     "rcode": 0
+    },
+    {
+     "ms": 27.47,
+     "rcode": 0
+    },
+    {
+     "ms": 38.54,
+     "rcode": 0
+    },
+    {
+     "ms": 20.7,
+     "rcode": 0
+    },
+    {
+     "ms": 22.74,
+     "rcode": 0
+    },
+    {
+     "ms": 19.43,
+     "rcode": 0
+    },
+    {
+     "ms": 20.88,
+     "rcode": 0
+    },
+    {
+     "ms": 21.35,
+     "rcode": 0
+    },
+    {
+     "ms": 29.23,
+     "rcode": 0
+    },
+    {
+     "ms": 28.09,
+     "rcode": 0
+    },
+    {
+     "ms": 28.95,
+     "rcode": 0
+    },
+    {
+     "ms": 19.93,
+     "rcode": 0
+    },
+    {
+     "ms": 20.02,
+     "rcode": 0
+    },
+    {
+     "ms": 27.37,
+     "rcode": 0
+    },
+    {
+     "ms": 28.25,
+     "rcode": 0
+    },
+    {
+     "ms": 20.37,
+     "rcode": 0
+    },
+    {
+     "ms": 42.52,
+     "rcode": 0
+    },
+    {
+     "ms": 37.31,
+     "rcode": 0
+    },
+    {
+     "ms": 20.59,
+     "rcode": 0
+    },
+    {
+     "ms": 19.84,
+     "rcode": 0
+    },
+    {
+     "ms": 19.76,
+     "rcode": 0
+    },
+    {
+     "ms": 19.69,
+     "rcode": 0
+    },
+    {
+     "ms": 20.28,
+     "rcode": 0
+    },
+    {
+     "ms": 53.01,
+     "rcode": 0
+    },
+    {
+     "ms": 30.35,
+     "rcode": 0
+    },
+    {
+     "ms": 28.78,
+     "rcode": 0
+    },
+    {
+     "ms": 19.79,
+     "rcode": 0
+    },
+    {
+     "ms": 51.89,
+     "rcode": 0
+    },
+    {
+     "ms": 27.36,
+     "rcode": 0
+    },
+    {
+     "ms": 31.02,
+     "rcode": 0
+    },
+    {
+     "ms": 20.32,
+     "rcode": 0
+    },
+    {
+     "ms": 27.82,
+     "rcode": 0
+    },
+    {
+     "ms": 29.29,
+     "rcode": 0
+    },
+    {
+     "ms": 20.15,
+     "rcode": 0
+    },
+    {
+     "ms": 19.62,
+     "rcode": 0
+    },
+    {
+     "ms": 19.89,
+     "rcode": 0
+    },
+    {
+     "ms": 20.83,
+     "rcode": 0
+    }
+   ],
+   "uncached": [
+    {
+     "ms": 42.5,
+     "rcode": 3,
+     "name": "yf4r6mp6afqfjz.google.com"
+    },
+    {
+     "ms": 30.47,
+     "rcode": 3,
+     "name": "drgdsjpr16umx1.amazon.com"
+    },
+    {
+     "ms": 38.08,
+     "rcode": 3,
+     "name": "8hssrrxqqm2plp.microsoft.com"
+    },
+    {
+     "ms": 31.61,
+     "rcode": 0,
+     "name": "gz9j8fkzr0st0d.apple.com"
+    },
+    {
+     "ms": 39.72,
+     "rcode": 0,
+     "name": "inx4kiapj2gejr.netflix.com"
+    },
+    {
+     "ms": 36.15,
+     "rcode": 3,
+     "name": "46bx7v03nlz6hw.yahoo.com"
+    },
+    {
+     "ms": 42.53,
+     "rcode": 3,
+     "name": "w03s9i4woryq1l.google.com"
+    },
+    {
+     "ms": 31.8,
+     "rcode": 3,
+     "name": "953qdcadafyttk.amazon.com"
+    },
+    {
+     "ms": 38.51,
+     "rcode": 3,
+     "name": "amt2g4uxqyhx4y.microsoft.com"
+    },
+    {
+     "ms": 27.69,
+     "rcode": 0,
+     "name": "un1abdq5t8t817.apple.com"
+    },
+    {
+     "ms": 29.79,
+     "rcode": 0,
+     "name": "ml59r86jm0hjk7.netflix.com"
+    },
+    {
+     "ms": 39.69,
+     "rcode": 3,
+     "name": "o57q1wahscdphc.yahoo.com"
+    },
+    {
+     "ms": 36.1,
+     "rcode": 3,
+     "name": "15ktfjoki2zfc2.google.com"
+    },
+    {
+     "ms": 30.56,
+     "rcode": 3,
+     "name": "fbjnj7fwx1w89j.amazon.com"
+    },
+    {
+     "ms": 38.71,
+     "rcode": 3,
+     "name": "j6wgk3zf0vzvcp.microsoft.com"
+    },
+    {
+     "ms": 28.72,
+     "rcode": 0,
+     "name": "2z5i6aomz8cs9v.apple.com"
+    },
+    {
+     "ms": 30.99,
+     "rcode": 0,
+     "name": "la9k5osn8kjn7g.netflix.com"
+    },
+    {
+     "ms": 39.02,
+     "rcode": 3,
+     "name": "ps8b090fy5xruk.yahoo.com"
+    },
+    {
+     "ms": 35.16,
+     "rcode": 3,
+     "name": "b7ehuna3i2r6d2.google.com"
+    },
+    {
+     "ms": 29.13,
+     "rcode": 3,
+     "name": "fpgfxrttsj5vma.amazon.com"
+    },
+    {
+     "ms": 39.56,
+     "rcode": 3,
+     "name": "erx24pv9de6o4n.microsoft.com"
+    },
+    {
+     "ms": 31.85,
+     "rcode": 0,
+     "name": "xkpajq3499yiqp.apple.com"
+    },
+    {
+     "ms": 28.99,
+     "rcode": 0,
+     "name": "s3zmim5g6vpbq6.netflix.com"
+    },
+    {
+     "ms": 42.31,
+     "rcode": 3,
+     "name": "fl7s6wgodox1ky.yahoo.com"
+    },
+    {
+     "ms": 45.28,
+     "rcode": 3,
+     "name": "1vwzj39ac4w6z1.google.com"
+    },
+    {
+     "ms": 30.26,
+     "rcode": 3,
+     "name": "afigyrh12qf2xg.amazon.com"
+    },
+    {
+     "ms": 39.19,
+     "rcode": 3,
+     "name": "yfoajcwftu928m.microsoft.com"
+    },
+    {
+     "ms": 29.01,
+     "rcode": 0,
+     "name": "vv4gl5gxmr5civ.apple.com"
+    },
+    {
+     "ms": 30.08,
+     "rcode": 0,
+     "name": "zqol3kxdbyouzc.netflix.com"
+    },
+    {
+     "ms": 40.79,
+     "rcode": 3,
+     "name": "c2qmj2yrxj7k1j.yahoo.com"
+    },
+    {
+     "ms": 34.25,
+     "rcode": 3,
+     "name": "93cfpe9lxr34vt.google.com"
+    },
+    {
+     "ms": 37.5,
+     "rcode": 3,
+     "name": "pw3ygsdvt8pzb1.amazon.com"
+    },
+    {
+     "ms": 37.9,
+     "rcode": 3,
+     "name": "kdwtfnp5t2808e.microsoft.com"
+    },
+    {
+     "ms": 29.27,
+     "rcode": 0,
+     "name": "ogvjgm9uxf0g8c.apple.com"
+    },
+    {
+     "ms": 29.96,
+     "rcode": 0,
+     "name": "buhz52lhxcpajd.netflix.com"
+    },
+    {
+     "ms": 39.71,
+     "rcode": 3,
+     "name": "hzw9tgmusrrfoc.yahoo.com"
+    },
+    {
+     "ms": 36.01,
+     "rcode": 3,
+     "name": "xddp973gve8qwg.google.com"
+    },
+    {
+     "ms": 29.76,
+     "rcode": 3,
+     "name": "4kz4kuy2l8gg29.amazon.com"
+    },
+    {
+     "ms": 39.09,
+     "rcode": 3,
+     "name": "a8iehoibk5ka8q.microsoft.com"
+    },
+    {
+     "ms": 29.69,
+     "rcode": 0,
+     "name": "5jo4r3agzqp6sg.apple.com"
+    }
+   ]
+  },
+  "Quad9": {
+   "cached": [
+    {
+     "ms": 11.59,
+     "rcode": 0
+    },
+    {
+     "ms": 11.05,
+     "rcode": 0
+    },
+    {
+     "ms": 11.79,
+     "rcode": 0
+    },
+    {
+     "ms": 11.47,
+     "rcode": 0
+    },
+    {
+     "ms": 11.35,
+     "rcode": 0
+    },
+    {
+     "ms": 33.65,
+     "rcode": 0
+    },
+    {
+     "ms": 13.12,
+     "rcode": 0
+    },
+    {
+     "ms": 11.51,
+     "rcode": 0
+    },
+    {
+     "ms": 12.1,
+     "rcode": 0
+    },
+    {
+     "ms": 10.83,
+     "rcode": 0
+    },
+    {
+     "ms": 12.26,
+     "rcode": 0
+    },
+    {
+     "ms": 11.37,
+     "rcode": 0
+    },
+    {
+     "ms": 11.44,
+     "rcode": 0
+    },
+    {
+     "ms": 11.35,
+     "rcode": 0
+    },
+    {
+     "ms": 11.9,
+     "rcode": 0
+    },
+    {
+     "ms": 13.98,
+     "rcode": 0
+    },
+    {
+     "ms": 12.75,
+     "rcode": 0
+    },
+    {
+     "ms": 11.64,
+     "rcode": 0
+    },
+    {
+     "ms": 13.2,
+     "rcode": 0
+    },
+    {
+     "ms": 11.92,
+     "rcode": 0
+    },
+    {
+     "ms": 11.03,
+     "rcode": 0
+    },
+    {
+     "ms": 11.47,
+     "rcode": 0
+    },
+    {
+     "ms": 11.32,
+     "rcode": 0
+    },
+    {
+     "ms": 13.06,
+     "rcode": 0
+    },
+    {
+     "ms": 11.38,
+     "rcode": 0
+    },
+    {
+     "ms": 12.79,
+     "rcode": 0
+    },
+    {
+     "ms": 11.7,
+     "rcode": 0
+    },
+    {
+     "ms": 11.9,
+     "rcode": 0
+    },
+    {
+     "ms": 11.16,
+     "rcode": 0
+    },
+    {
+     "ms": 11.66,
+     "rcode": 0
+    },
+    {
+     "ms": 11.73,
+     "rcode": 0
+    },
+    {
+     "ms": 11.55,
+     "rcode": 0
+    },
+    {
+     "ms": 11.58,
+     "rcode": 0
+    },
+    {
+     "ms": 10.95,
+     "rcode": 0
+    },
+    {
+     "ms": 14.65,
+     "rcode": 0
+    },
+    {
+     "ms": 11.19,
+     "rcode": 0
+    },
+    {
+     "ms": 11.71,
+     "rcode": 0
+    },
+    {
+     "ms": 13.83,
+     "rcode": 0
+    },
+    {
+     "ms": 10.71,
+     "rcode": 0
+    },
+    {
+     "ms": 16.81,
+     "rcode": 0
+    }
+   ],
+   "uncached": [
+    {
+     "ms": 27.75,
+     "rcode": 3,
+     "name": "erbfqfoeqh3av9.google.com"
+    },
+    {
+     "ms": 13.89,
+     "rcode": 3,
+     "name": "nnefj7qxi6rhxo.amazon.com"
+    },
+    {
+     "ms": 18.4,
+     "rcode": 3,
+     "name": "82mux4b0pzcyc3.microsoft.com"
+    },
+    {
+     "ms": 12.63,
+     "rcode": 0,
+     "name": "ibehmi5skoewqk.apple.com"
+    },
+    {
+     "ms": 14.33,
+     "rcode": 0,
+     "name": "hvqdr917qsnf6a.netflix.com"
+    },
+    {
+     "ms": 13.42,
+     "rcode": 3,
+     "name": "daw5g5l5w6qksn.yahoo.com"
+    },
+    {
+     "ms": 27.46,
+     "rcode": 3,
+     "name": "rwptu451fxjtyd.google.com"
+    },
+    {
+     "ms": 13.01,
+     "rcode": 3,
+     "name": "hfnhi4brp2ldxj.amazon.com"
+    },
+    {
+     "ms": 13.2,
+     "rcode": 3,
+     "name": "a7slx1c0nrlil7.microsoft.com"
+    },
+    {
+     "ms": 12.51,
+     "rcode": 0,
+     "name": "1uz9du7jwp1axg.apple.com"
+    },
+    {
+     "ms": 12.83,
+     "rcode": 0,
+     "name": "6z9jm05z2v7fkx.netflix.com"
+    },
+    {
+     "ms": 12.16,
+     "rcode": 3,
+     "name": "3xsk9eca35fvqg.yahoo.com"
+    },
+    {
+     "ms": 29.6,
+     "rcode": 3,
+     "name": "nxac61jsed60ve.google.com"
+    },
+    {
+     "ms": 13.19,
+     "rcode": 3,
+     "name": "ztkejttq9vemfl.amazon.com"
+    },
+    {
+     "ms": 13.69,
+     "rcode": 3,
+     "name": "38s9v0rz1u80yj.microsoft.com"
+    },
+    {
+     "ms": 12.93,
+     "rcode": 0,
+     "name": "i0djuvm7al8r7q.apple.com"
+    },
+    {
+     "ms": 22.6,
+     "rcode": 0,
+     "name": "tjqggphj5r88hu.netflix.com"
+    },
+    {
+     "ms": 11.34,
+     "rcode": 3,
+     "name": "sxty7d55xbdh9y.yahoo.com"
+    },
+    {
+     "ms": 26.52,
+     "rcode": 3,
+     "name": "sme7b2mmqm9sbb.google.com"
+    },
+    {
+     "ms": 14.87,
+     "rcode": 3,
+     "name": "oazocpgmac3dzp.amazon.com"
+    },
+    {
+     "ms": 13.15,
+     "rcode": 3,
+     "name": "d17dp7k6ungf4q.microsoft.com"
+    },
+    {
+     "ms": 11.92,
+     "rcode": 0,
+     "name": "jyucxlob3f2ncs.apple.com"
+    },
+    {
+     "ms": 13.11,
+     "rcode": 0,
+     "name": "g3fric9ie3ctev.netflix.com"
+    },
+    {
+     "ms": 13.32,
+     "rcode": 3,
+     "name": "kp8qo7lolmh3nr.yahoo.com"
+    },
+    {
+     "ms": 28.51,
+     "rcode": 3,
+     "name": "99fj1mc5y1flit.google.com"
+    },
+    {
+     "ms": 15.23,
+     "rcode": 3,
+     "name": "tneqrxn6671r3u.amazon.com"
+    },
+    {
+     "ms": 14.81,
+     "rcode": 3,
+     "name": "r6j1xbbd18ykxx.microsoft.com"
+    },
+    {
+     "ms": 12.88,
+     "rcode": 0,
+     "name": "o4uhcu7f63hpn2.apple.com"
+    },
+    {
+     "ms": 14.33,
+     "rcode": 0,
+     "name": "tfn2r9adsotf94.netflix.com"
+    },
+    {
+     "ms": 12.11,
+     "rcode": 3,
+     "name": "h9b0fc2t2eggzt.yahoo.com"
+    },
+    {
+     "ms": 26.84,
+     "rcode": 3,
+     "name": "72233uhlhpinin.google.com"
+    },
+    {
+     "ms": 13.62,
+     "rcode": 3,
+     "name": "e2bb406f0oid0p.amazon.com"
+    },
+    {
+     "ms": 13.95,
+     "rcode": 3,
+     "name": "r85xn1b30mffot.microsoft.com"
+    },
+    {
+     "ms": 14.16,
+     "rcode": 0,
+     "name": "um1qvbtsa6rinx.apple.com"
+    },
+    {
+     "ms": 15.35,
+     "rcode": 0,
+     "name": "6vc2hu9nkt8j6r.netflix.com"
+    },
+    {
+     "ms": 11.85,
+     "rcode": 3,
+     "name": "3g89hqgjvu0b8g.yahoo.com"
+    },
+    {
+     "ms": 36.87,
+     "rcode": 3,
+     "name": "j2vl00s1maf8ii.google.com"
+    },
+    {
+     "ms": 14.95,
+     "rcode": 3,
+     "name": "70k7aflooluvzd.amazon.com"
+    },
+    {
+     "ms": 13.21,
+     "rcode": 3,
+     "name": "oe510rt1q5c25w.microsoft.com"
+    },
+    {
+     "ms": 18.29,
+     "rcode": 0,
+     "name": "goldfgsqy8zw4c.apple.com"
+    }
+   ]
+  },
+  "OpenDNS": {
+   "cached": [
+    {
+     "ms": 32.25,
+     "rcode": 0
+    },
+    {
+     "ms": 12.94,
+     "rcode": 0
+    },
+    {
+     "ms": 45.54,
+     "rcode": 0
+    },
+    {
+     "ms": 13.65,
+     "rcode": 0
+    },
+    {
+     "ms": 50.75,
+     "rcode": 0
+    },
+    {
+     "ms": 18.75,
+     "rcode": 0
+    },
+    {
+     "ms": 13.29,
+     "rcode": 0
+    },
+    {
+     "ms": 13.68,
+     "rcode": 0
+    },
+    {
+     "ms": 13.13,
+     "rcode": 0
+    },
+    {
+     "ms": 13.14,
+     "rcode": 0
+    },
+    {
+     "ms": 13.75,
+     "rcode": 0
+    },
+    {
+     "ms": 31.62,
+     "rcode": 0
+    },
+    {
+     "ms": 12.95,
+     "rcode": 0
+    },
+    {
+     "ms": 14.95,
+     "rcode": 0
+    },
+    {
+     "ms": 16.19,
+     "rcode": 0
+    },
+    {
+     "ms": 37.55,
+     "rcode": 0
+    },
+    {
+     "ms": 31.48,
+     "rcode": 0
+    },
+    {
+     "ms": 31.36,
+     "rcode": 0
+    },
+    {
+     "ms": 14.47,
+     "rcode": 0
+    },
+    {
+     "ms": 50.28,
+     "rcode": 0
+    },
+    {
+     "ms": 39.94,
+     "rcode": 0
+    },
+    {
+     "ms": 13.68,
+     "rcode": 0
+    },
+    {
+     "ms": 13.54,
+     "rcode": 0
+    },
+    {
+     "ms": 12.6,
+     "rcode": 0
+    },
+    {
+     "ms": 13.48,
+     "rcode": 0
+    },
+    {
+     "ms": 14.96,
+     "rcode": 0
+    },
+    {
+     "ms": 12.46,
+     "rcode": 0
+    },
+    {
+     "ms": 15.73,
+     "rcode": 0
+    },
+    {
+     "ms": 14.02,
+     "rcode": 0
+    },
+    {
+     "ms": 13.36,
+     "rcode": 0
+    },
+    {
+     "ms": 28.23,
+     "rcode": 0
+    },
+    {
+     "ms": 40.82,
+     "rcode": 0
+    },
+    {
+     "ms": 55.16,
+     "rcode": 0
+    },
+    {
+     "ms": 12.73,
+     "rcode": 0
+    },
+    {
+     "ms": 56.84,
+     "rcode": 0
+    },
+    {
+     "ms": 22.73,
+     "rcode": 0
+    },
+    {
+     "ms": 13.11,
+     "rcode": 0
+    },
+    {
+     "ms": 14.33,
+     "rcode": 0
+    },
+    {
+     "ms": 13.09,
+     "rcode": 0
+    },
+    {
+     "ms": 16.53,
+     "rcode": 0
+    }
+   ],
+   "uncached": [
+    {
+     "ms": 38.95,
+     "rcode": 3,
+     "name": "lri1qzj865ufrd.google.com"
+    },
+    {
+     "ms": 15.94,
+     "rcode": 3,
+     "name": "uvzhmasqxezyex.amazon.com"
+    },
+    {
+     "ms": 15.11,
+     "rcode": 3,
+     "name": "g43yq15i5latjp.microsoft.com"
+    },
+    {
+     "ms": 13.35,
+     "rcode": 0,
+     "name": "c9cuhy39t0tp1y.apple.com"
+    },
+    {
+     "ms": 24.66,
+     "rcode": 0,
+     "name": "ad9w275pkacd8b.netflix.com"
+    },
+    {
+     "ms": 15.77,
+     "rcode": 3,
+     "name": "jpu7wkpumqgkgm.yahoo.com"
+    },
+    {
+     "ms": 30.02,
+     "rcode": 3,
+     "name": "nz8kf9tm5n7f2h.google.com"
+    },
+    {
+     "ms": 14.4,
+     "rcode": 3,
+     "name": "eayj409gf4nja1.amazon.com"
+    },
+    {
+     "ms": 16.15,
+     "rcode": 3,
+     "name": "4hj6dn94shqmx1.microsoft.com"
+    },
+    {
+     "ms": 13.86,
+     "rcode": 0,
+     "name": "gqh7a1pcshtwkh.apple.com"
+    },
+    {
+     "ms": 15.13,
+     "rcode": 0,
+     "name": "ocklua3t0q5epy.netflix.com"
+    },
+    {
+     "ms": 13.86,
+     "rcode": 3,
+     "name": "kww0fmtii54ppa.yahoo.com"
+    },
+    {
+     "ms": 26.9,
+     "rcode": 3,
+     "name": "mhwkxvaqhpx67w.google.com"
+    },
+    {
+     "ms": 23.43,
+     "rcode": 3,
+     "name": "kx3v3ywuav4vob.amazon.com"
+    },
+    {
+     "ms": 15.66,
+     "rcode": 3,
+     "name": "0yobqbq1pownu1.microsoft.com"
+    },
+    {
+     "ms": 13.7,
+     "rcode": 0,
+     "name": "midn8x35jxvm39.apple.com"
+    },
+    {
+     "ms": 15.07,
+     "rcode": 0,
+     "name": "hfnop6dpevgcnl.netflix.com"
+    },
+    {
+     "ms": 15.46,
+     "rcode": 3,
+     "name": "rl208phncylyrv.yahoo.com"
+    },
+    {
+     "ms": 38.05,
+     "rcode": 3,
+     "name": "zvzz5vwlj870si.google.com"
+    },
+    {
+     "ms": 23.05,
+     "rcode": 3,
+     "name": "32ed4kzp44jh5y.amazon.com"
+    },
+    {
+     "ms": 16.39,
+     "rcode": 3,
+     "name": "xqxxk7hpksybom.microsoft.com"
+    },
+    {
+     "ms": 13.91,
+     "rcode": 0,
+     "name": "nnm4mt3rouc0lv.apple.com"
+    },
+    {
+     "ms": 15.12,
+     "rcode": 0,
+     "name": "ly1vxhp39hfqy4.netflix.com"
+    },
+    {
+     "ms": 16.3,
+     "rcode": 3,
+     "name": "yshoa0pdkjtq6u.yahoo.com"
+    },
+    {
+     "ms": 28.32,
+     "rcode": 3,
+     "name": "27c29a22bvz6jd.google.com"
+    },
+    {
+     "ms": 14.59,
+     "rcode": 3,
+     "name": "3xx4m8lxmmtspe.amazon.com"
+    },
+    {
+     "ms": 14.42,
+     "rcode": 3,
+     "name": "c5hkds6cvdg7m6.microsoft.com"
+    },
+    {
+     "ms": 14.72,
+     "rcode": 0,
+     "name": "ft3naefflxa106.apple.com"
+    },
+    {
+     "ms": 22.73,
+     "rcode": 0,
+     "name": "ivhvk0bxozakm8.netflix.com"
+    },
+    {
+     "ms": 19.26,
+     "rcode": 3,
+     "name": "t8khfetbxlz60h.yahoo.com"
+    },
+    {
+     "ms": 29.53,
+     "rcode": 3,
+     "name": "t9r6fg75voxhu6.google.com"
+    },
+    {
+     "ms": 17.7,
+     "rcode": 3,
+     "name": "gl27uiluzj2rq8.amazon.com"
+    },
+    {
+     "ms": 15.39,
+     "rcode": 3,
+     "name": "0x31xygoet7h20.microsoft.com"
+    },
+    {
+     "ms": 14.87,
+     "rcode": 0,
+     "name": "vh6l1qf25tx77c.apple.com"
+    },
+    {
+     "ms": 15.27,
+     "rcode": 0,
+     "name": "jd1ne24iga00p6.netflix.com"
+    },
+    {
+     "ms": 54.9,
+     "rcode": 3,
+     "name": "x664i903kcxfbu.yahoo.com"
+    },
+    {
+     "ms": 29.31,
+     "rcode": 3,
+     "name": "32pl8r7v4q09mf.google.com"
+    },
+    {
+     "ms": 27.72,
+     "rcode": 3,
+     "name": "epxif044yi15l3.amazon.com"
+    },
+    {
+     "ms": 15.32,
+     "rcode": 3,
+     "name": "yi3b9fxsjwuu05.microsoft.com"
+    },
+    {
+     "ms": 18.73,
+     "rcode": 0,
+     "name": "9dvwh4p5hnniai.apple.com"
+    }
+   ]
+  },
+  "AdGuard": {
+   "cached": [
+    {
+     "ms": 24.58,
+     "rcode": 0
+    },
+    {
+     "ms": 24.91,
+     "rcode": 0
+    },
+    {
+     "ms": 25.31,
+     "rcode": 0
+    },
+    {
+     "ms": 25.97,
+     "rcode": 0
+    },
+    {
+     "ms": 25.08,
+     "rcode": 0
+    },
+    {
+     "ms": 25.97,
+     "rcode": 0
+    },
+    {
+     "ms": 25.56,
+     "rcode": 0
+    },
+    {
+     "ms": 24.22,
+     "rcode": 0
+    },
+    {
+     "ms": 24.67,
+     "rcode": 0
+    },
+    {
+     "ms": 25.05,
+     "rcode": 0
+    },
+    {
+     "ms": 24.6,
+     "rcode": 0
+    },
+    {
+     "ms": 25.12,
+     "rcode": 0
+    },
+    {
+     "ms": 25.22,
+     "rcode": 0
+    },
+    {
+     "ms": 24.45,
+     "rcode": 0
+    },
+    {
+     "ms": 25.11,
+     "rcode": 0
+    },
+    {
+     "ms": 24.8,
+     "rcode": 0
+    },
+    {
+     "ms": 24.67,
+     "rcode": 0
+    },
+    {
+     "ms": 25.24,
+     "rcode": 0
+    },
+    {
+     "ms": 24.56,
+     "rcode": 0
+    },
+    {
+     "ms": 24.56,
+     "rcode": 0
+    },
+    {
+     "ms": 27.86,
+     "rcode": 0
+    },
+    {
+     "ms": 25.15,
+     "rcode": 0
+    },
+    {
+     "ms": 24.78,
+     "rcode": 0
+    },
+    {
+     "ms": 24.84,
+     "rcode": 0
+    },
+    {
+     "ms": 24.55,
+     "rcode": 0
+    },
+    {
+     "ms": 25.51,
+     "rcode": 0
+    },
+    {
+     "ms": 24.6,
+     "rcode": 0
+    },
+    {
+     "ms": 25.77,
+     "rcode": 0
+    },
+    {
+     "ms": 25.4,
+     "rcode": 0
+    },
+    {
+     "ms": 23.79,
+     "rcode": 0
+    },
+    {
+     "ms": 25.67,
+     "rcode": 0
+    },
+    {
+     "ms": 26.95,
+     "rcode": 0
+    },
+    {
+     "ms": 25.04,
+     "rcode": 0
+    },
+    {
+     "ms": 26.3,
+     "rcode": 0
+    },
+    {
+     "ms": 25.55,
+     "rcode": 0
+    },
+    {
+     "ms": 25.32,
+     "rcode": 0
+    },
+    {
+     "ms": 25.3,
+     "rcode": 0
+    },
+    {
+     "ms": 24.87,
+     "rcode": 0
+    },
+    {
+     "ms": 25.29,
+     "rcode": 0
+    },
+    {
+     "ms": 24.62,
+     "rcode": 0
+    }
+   ],
+   "uncached": [
+    {
+     "ms": 35.04,
+     "rcode": 3,
+     "name": "bttof7jyu5jsjc.google.com"
+    },
+    {
+     "ms": 30.71,
+     "rcode": 3,
+     "name": "659o2v21i9mpfl.amazon.com"
+    },
+    {
+     "ms": 33.06,
+     "rcode": 3,
+     "name": "1geqfng052loi0.microsoft.com"
+    },
+    {
+     "ms": 28.36,
+     "rcode": 0,
+     "name": "w1xf266ccifu6f.apple.com"
+    },
+    {
+     "ms": 35.74,
+     "rcode": 0,
+     "name": "otnzekjcbhgkwj.netflix.com"
+    },
+    {
+     "ms": 69.21,
+     "rcode": 3,
+     "name": "jtt1rmggrny3ca.yahoo.com"
+    },
+    {
+     "ms": 34.04,
+     "rcode": 3,
+     "name": "lc0gaxit9qtl0c.google.com"
+    },
+    {
+     "ms": 38.2,
+     "rcode": 3,
+     "name": "motdz3nqay38f8.amazon.com"
+    },
+    {
+     "ms": 32.72,
+     "rcode": 3,
+     "name": "pgys0kdsjb26v6.microsoft.com"
+    },
+    {
+     "ms": 26.18,
+     "rcode": 0,
+     "name": "dbk9ew2d7y2wg7.apple.com"
+    },
+    {
+     "ms": 36.43,
+     "rcode": 0,
+     "name": "ldgwc0aat9atzg.netflix.com"
+    },
+    {
+     "ms": 69.38,
+     "rcode": 3,
+     "name": "ax5ncdrtmht2hk.yahoo.com"
+    },
+    {
+     "ms": 34.32,
+     "rcode": 3,
+     "name": "wgw9uhcpqwm2b2.google.com"
+    },
+    {
+     "ms": 37.89,
+     "rcode": 3,
+     "name": "dz2ms6gmpdidfe.amazon.com"
+    },
+    {
+     "ms": 33.11,
+     "rcode": 3,
+     "name": "ue8oqq4w74oje7.microsoft.com"
+    },
+    {
+     "ms": 26.98,
+     "rcode": 0,
+     "name": "qpq2f75fmi1sxc.apple.com"
+    },
+    {
+     "ms": 26.08,
+     "rcode": 0,
+     "name": "o8fm3jl1vzhcwh.netflix.com"
+    },
+    {
+     "ms": 68.32,
+     "rcode": 3,
+     "name": "1y6t8heqopm39p.yahoo.com"
+    },
+    {
+     "ms": 32.45,
+     "rcode": 3,
+     "name": "x8vqe4i133mvmh.google.com"
+    },
+    {
+     "ms": 26.84,
+     "rcode": 3,
+     "name": "u4ig7q6ynwqbmr.amazon.com"
+    },
+    {
+     "ms": 34.2,
+     "rcode": 3,
+     "name": "lgqtz0l2g3vunb.microsoft.com"
+    },
+    {
+     "ms": 25.95,
+     "rcode": 0,
+     "name": "mtumezbkax4oe4.apple.com"
+    },
+    {
+     "ms": 37.88,
+     "rcode": 0,
+     "name": "fmj4ve7wus04qv.netflix.com"
+    },
+    {
+     "ms": 26.01,
+     "rcode": 3,
+     "name": "tip8vdwlui8d93.yahoo.com"
+    },
+    {
+     "ms": 31.86,
+     "rcode": 3,
+     "name": "47m46j6koewyez.google.com"
+    },
+    {
+     "ms": 36.88,
+     "rcode": 3,
+     "name": "yhi5svy9lubun3.amazon.com"
+    },
+    {
+     "ms": 33.19,
+     "rcode": 3,
+     "name": "0rk22laif81pjq.microsoft.com"
+    },
+    {
+     "ms": 27.05,
+     "rcode": 0,
+     "name": "s0jujlkwrdpvcl.apple.com"
+    },
+    {
+     "ms": 26.9,
+     "rcode": 0,
+     "name": "83y3morr6pitzc.netflix.com"
+    },
+    {
+     "ms": 26.84,
+     "rcode": 3,
+     "name": "xi4fbbj6off9m7.yahoo.com"
+    },
+    {
+     "ms": 33.91,
+     "rcode": 3,
+     "name": "v1msud6x6gcvqq.google.com"
+    },
+    {
+     "ms": 25.29,
+     "rcode": 3,
+     "name": "50zd6auc1movab.amazon.com"
+    },
+    {
+     "ms": 32.94,
+     "rcode": 3,
+     "name": "38xiyes0sshn1u.microsoft.com"
+    },
+    {
+     "ms": 27.49,
+     "rcode": 0,
+     "name": "i85w5xdmo174mc.apple.com"
+    },
+    {
+     "ms": 38.52,
+     "rcode": 0,
+     "name": "2jsq2nkm2invlz.netflix.com"
+    },
+    {
+     "ms": 28.01,
+     "rcode": 3,
+     "name": "cbkq7f1mp58v3c.yahoo.com"
+    },
+    {
+     "ms": 32.52,
+     "rcode": 3,
+     "name": "k433szcg3ul6b5.google.com"
+    },
+    {
+     "ms": 25.15,
+     "rcode": 3,
+     "name": "6dctagby702wb2.amazon.com"
+    },
+    {
+     "ms": 35.31,
+     "rcode": 3,
+     "name": "rjj7n58knpljze.microsoft.com"
+    },
+    {
+     "ms": 27.96,
+     "rcode": 0,
+     "name": "7oo5rl59hn4e06.apple.com"
+    }
+   ]
+  },
+  "Control D": {
+   "cached": [
+    {
+     "ms": 14.35,
+     "rcode": 0
+    },
+    {
+     "ms": 30.94,
+     "rcode": 0
+    },
+    {
+     "ms": 16.07,
+     "rcode": 0
+    },
+    {
+     "ms": 14.83,
+     "rcode": 0
+    },
+    {
+     "ms": 14.89,
+     "rcode": 0
+    },
+    {
+     "ms": 14.12,
+     "rcode": 0
+    },
+    {
+     "ms": 13.38,
+     "rcode": 0
+    },
+    {
+     "ms": 14.67,
+     "rcode": 0
+    },
+    {
+     "ms": 15.96,
+     "rcode": 0
+    },
+    {
+     "ms": 14.48,
+     "rcode": 0
+    },
+    {
+     "ms": 14.9,
+     "rcode": 0
+    },
+    {
+     "ms": 15.96,
+     "rcode": 0
+    },
+    {
+     "ms": 13.51,
+     "rcode": 0
+    },
+    {
+     "ms": 15.65,
+     "rcode": 0
+    },
+    {
+     "ms": 14.5,
+     "rcode": 0
+    },
+    {
+     "ms": 13.29,
+     "rcode": 0
+    },
+    {
+     "ms": 14.83,
+     "rcode": 0
+    },
+    {
+     "ms": 15.42,
+     "rcode": 0
+    },
+    {
+     "ms": 15.93,
+     "rcode": 0
+    },
+    {
+     "ms": 14.32,
+     "rcode": 0
+    },
+    {
+     "ms": 15.63,
+     "rcode": 0
+    },
+    {
+     "ms": 14.23,
+     "rcode": 0
+    },
+    {
+     "ms": 15.48,
+     "rcode": 0
+    },
+    {
+     "ms": 17.07,
+     "rcode": 0
+    },
+    {
+     "ms": 13.14,
+     "rcode": 0
+    },
+    {
+     "ms": 15.33,
+     "rcode": 0
+    },
+    {
+     "ms": 15.26,
+     "rcode": 0
+    },
+    {
+     "ms": 14.91,
+     "rcode": 0
+    },
+    {
+     "ms": 15.15,
+     "rcode": 0
+    },
+    {
+     "ms": 13.63,
+     "rcode": 0
+    },
+    {
+     "ms": 16.21,
+     "rcode": 0
+    },
+    {
+     "ms": 13.55,
+     "rcode": 0
+    },
+    {
+     "ms": 17.08,
+     "rcode": 0
+    },
+    {
+     "ms": 14.55,
+     "rcode": 0
+    },
+    {
+     "ms": 15.3,
+     "rcode": 0
+    },
+    {
+     "ms": 15.34,
+     "rcode": 0
+    },
+    {
+     "ms": 19.44,
+     "rcode": 0
+    },
+    {
+     "ms": 15.34,
+     "rcode": 0
+    },
+    {
+     "ms": 14.68,
+     "rcode": 0
+    },
+    {
+     "ms": 14.47,
+     "rcode": 0
+    }
+   ],
+   "uncached": [
+    {
+     "ms": 29.85,
+     "rcode": 3,
+     "name": "5qa3e68f7e4qeq.google.com"
+    },
+    {
+     "ms": 13.78,
+     "rcode": 3,
+     "name": "vstqqzpt49zhkk.amazon.com"
+    },
+    {
+     "ms": 16.15,
+     "rcode": 3,
+     "name": "fqo1xo5cv0xzma.microsoft.com"
+    },
+    {
+     "ms": 15.28,
+     "rcode": 0,
+     "name": "ozm4lncz7kywhj.apple.com"
+    },
+    {
+     "ms": 17.0,
+     "rcode": 0,
+     "name": "lds7qtuacojs10.netflix.com"
+    },
+    {
+     "ms": 15.68,
+     "rcode": 3,
+     "name": "khf59guwgzzf1b.yahoo.com"
+    },
+    {
+     "ms": 29.26,
+     "rcode": 3,
+     "name": "gotz7oz3nkiem4.google.com"
+    },
+    {
+     "ms": 15.05,
+     "rcode": 3,
+     "name": "ux24kjhxk04y2r.amazon.com"
+    },
+    {
+     "ms": 16.86,
+     "rcode": 3,
+     "name": "bgmqb37p2gwglc.microsoft.com"
+    },
+    {
+     "ms": 16.01,
+     "rcode": 0,
+     "name": "f38j2h6is0srpf.apple.com"
+    },
+    {
+     "ms": 15.99,
+     "rcode": 0,
+     "name": "p1crbvjpifmr8i.netflix.com"
+    },
+    {
+     "ms": 15.97,
+     "rcode": 3,
+     "name": "16i5mc9ql8kp8q.yahoo.com"
+    },
+    {
+     "ms": 30.85,
+     "rcode": 3,
+     "name": "5heqlj9syjq8r2.google.com"
+    },
+    {
+     "ms": 17.6,
+     "rcode": 3,
+     "name": "0cfv5zq3abuud0.amazon.com"
+    },
+    {
+     "ms": 16.22,
+     "rcode": 3,
+     "name": "0jap6qypmhfcdz.microsoft.com"
+    },
+    {
+     "ms": 16.44,
+     "rcode": 0,
+     "name": "hfoeag5fn3dmv4.apple.com"
+    },
+    {
+     "ms": 17.38,
+     "rcode": 0,
+     "name": "otcgawmjtdlvw2.netflix.com"
+    },
+    {
+     "ms": 15.79,
+     "rcode": 3,
+     "name": "8wim7dkt7ktdty.yahoo.com"
+    },
+    {
+     "ms": 29.71,
+     "rcode": 3,
+     "name": "xzuy4rhn260kuc.google.com"
+    },
+    {
+     "ms": 17.36,
+     "rcode": 3,
+     "name": "a9nbl63nhn1hf8.amazon.com"
+    },
+    {
+     "ms": 15.3,
+     "rcode": 3,
+     "name": "xp4qadgyxpsb42.microsoft.com"
+    },
+    {
+     "ms": 16.25,
+     "rcode": 0,
+     "name": "t6h2p57x79m1eq.apple.com"
+    },
+    {
+     "ms": 16.09,
+     "rcode": 0,
+     "name": "qkqfedqivv65jm.netflix.com"
+    },
+    {
+     "ms": 16.24,
+     "rcode": 3,
+     "name": "9hxddn6b6n63j9.yahoo.com"
+    },
+    {
+     "ms": 29.58,
+     "rcode": 3,
+     "name": "9ajxzuovk99zls.google.com"
+    },
+    {
+     "ms": 15.3,
+     "rcode": 3,
+     "name": "frua60w8lamlog.amazon.com"
+    },
+    {
+     "ms": 15.96,
+     "rcode": 3,
+     "name": "xvprvocz01ejfe.microsoft.com"
+    },
+    {
+     "ms": 18.32,
+     "rcode": 0,
+     "name": "xaohvzp1pvpyc7.apple.com"
+    },
+    {
+     "ms": 15.94,
+     "rcode": 0,
+     "name": "1311mgj0l6juo1.netflix.com"
+    },
+    {
+     "ms": 14.3,
+     "rcode": 3,
+     "name": "5lqat3oxp0hoah.yahoo.com"
+    },
+    {
+     "ms": 30.35,
+     "rcode": 3,
+     "name": "tdhg1enr5sl1bs.google.com"
+    },
+    {
+     "ms": 16.76,
+     "rcode": 3,
+     "name": "xjpbhmtatugs38.amazon.com"
+    },
+    {
+     "ms": 16.12,
+     "rcode": 3,
+     "name": "m4tyfh2e21q5qz.microsoft.com"
+    },
+    {
+     "ms": 16.1,
+     "rcode": 0,
+     "name": "9n5c4nu4aqsi2n.apple.com"
+    },
+    {
+     "ms": 16.14,
+     "rcode": 0,
+     "name": "i60rrfph3xg686.netflix.com"
+    },
+    {
+     "ms": 13.99,
+     "rcode": 3,
+     "name": "k2zlityi9u9pzx.yahoo.com"
+    },
+    {
+     "ms": 28.51,
+     "rcode": 3,
+     "name": "rxhvawwyhvvvtj.google.com"
+    },
+    {
+     "ms": 15.95,
+     "rcode": 3,
+     "name": "wveeth4l33azec.amazon.com"
+    },
+    {
+     "ms": 16.02,
+     "rcode": 3,
+     "name": "aof43n4ih639ha.microsoft.com"
+    },
+    {
+     "ms": 16.29,
+     "rcode": 0,
+     "name": "86g42ufufhzgvd.apple.com"
+    }
+   ]
+  },
+  "CleanBrowsing": {
+   "cached": [
+    {
+     "ms": 20.7,
+     "rcode": 0
+    },
+    {
+     "ms": 14.67,
+     "rcode": 0
+    },
+    {
+     "ms": 12.77,
+     "rcode": 0
+    },
+    {
+     "ms": 13.93,
+     "rcode": 0
+    },
+    {
+     "ms": 14.73,
+     "rcode": 0
+    },
+    {
+     "ms": 13.87,
+     "rcode": 0
+    },
+    {
+     "ms": 12.97,
+     "rcode": 0
+    },
+    {
+     "ms": 12.88,
+     "rcode": 0
+    },
+    {
+     "ms": 13.29,
+     "rcode": 0
+    },
+    {
+     "ms": 14.01,
+     "rcode": 0
+    },
+    {
+     "ms": 13.32,
+     "rcode": 0
+    },
+    {
+     "ms": 14.51,
+     "rcode": 0
+    },
+    {
+     "ms": 12.9,
+     "rcode": 0
+    },
+    {
+     "ms": 14.63,
+     "rcode": 0
+    },
+    {
+     "ms": 12.96,
+     "rcode": 0
+    },
+    {
+     "ms": 13.78,
+     "rcode": 0
+    },
+    {
+     "ms": 13.85,
+     "rcode": 0
+    },
+    {
+     "ms": 13.45,
+     "rcode": 0
+    },
+    {
+     "ms": 13.69,
+     "rcode": 0
+    },
+    {
+     "ms": 14.28,
+     "rcode": 0
+    },
+    {
+     "ms": 12.37,
+     "rcode": 0
+    },
+    {
+     "ms": 13.96,
+     "rcode": 0
+    },
+    {
+     "ms": 12.99,
+     "rcode": 0
+    },
+    {
+     "ms": 12.65,
+     "rcode": 0
+    },
+    {
+     "ms": 12.62,
+     "rcode": 0
+    },
+    {
+     "ms": 12.83,
+     "rcode": 0
+    },
+    {
+     "ms": 13.35,
+     "rcode": 0
+    },
+    {
+     "ms": 13.68,
+     "rcode": 0
+    },
+    {
+     "ms": 13.21,
+     "rcode": 0
+    },
+    {
+     "ms": 13.99,
+     "rcode": 0
+    },
+    {
+     "ms": 13.48,
+     "rcode": 0
+    },
+    {
+     "ms": 13.71,
+     "rcode": 0
+    },
+    {
+     "ms": 14.46,
+     "rcode": 0
+    },
+    {
+     "ms": 14.05,
+     "rcode": 0
+    },
+    {
+     "ms": 14.14,
+     "rcode": 0
+    },
+    {
+     "ms": 15.02,
+     "rcode": 0
+    },
+    {
+     "ms": 14.45,
+     "rcode": 0
+    },
+    {
+     "ms": 15.13,
+     "rcode": 0
+    },
+    {
+     "ms": 13.4,
+     "rcode": 0
+    },
+    {
+     "ms": 13.22,
+     "rcode": 0
+    }
+   ],
+   "uncached": [
+    {
+     "ms": 15.11,
+     "rcode": 3,
+     "name": "o35ye4scmejvqt.google.com"
+    },
+    {
+     "ms": 14.97,
+     "rcode": 3,
+     "name": "33h9mtf4bs3e62.amazon.com"
+    },
+    {
+     "ms": 15.34,
+     "rcode": 3,
+     "name": "qmevxrvcqurtae.microsoft.com"
+    },
+    {
+     "ms": 16.86,
+     "rcode": 0,
+     "name": "x6l2qagwncxvjc.apple.com"
+    },
+    {
+     "ms": 16.16,
+     "rcode": 0,
+     "name": "xcmlzkruykqh7d.netflix.com"
+    },
+    {
+     "ms": 25.4,
+     "rcode": 3,
+     "name": "b17gw4d8nfsk1a.yahoo.com"
+    },
+    {
+     "ms": 29.04,
+     "rcode": 3,
+     "name": "5hvmutifcz9z8d.google.com"
+    },
+    {
+     "ms": 24.01,
+     "rcode": 3,
+     "name": "vmlyfbdc9x35ez.amazon.com"
+    },
+    {
+     "ms": 15.21,
+     "rcode": 3,
+     "name": "pja3mckoexi2gy.microsoft.com"
+    },
+    {
+     "ms": 15.53,
+     "rcode": 0,
+     "name": "oym9x39t44tbpv.apple.com"
+    },
+    {
+     "ms": 16.73,
+     "rcode": 0,
+     "name": "2x8pz6nih6f8ry.netflix.com"
+    },
+    {
+     "ms": 23.74,
+     "rcode": 3,
+     "name": "z3irlbxw0b3pzw.yahoo.com"
+    },
+    {
+     "ms": 28.78,
+     "rcode": 3,
+     "name": "oqgm7q5o93o8h6.google.com"
+    },
+    {
+     "ms": 17.89,
+     "rcode": 3,
+     "name": "1gxspjetvx6pw9.amazon.com"
+    },
+    {
+     "ms": 47.35,
+     "rcode": 3,
+     "name": "lo8j86h7w5ewno.microsoft.com"
+    },
+    {
+     "ms": 15.84,
+     "rcode": 0,
+     "name": "xcs01qwpyimxen.apple.com"
+    },
+    {
+     "ms": 20.15,
+     "rcode": 0,
+     "name": "c6g0i0wexkxkfv.netflix.com"
+    },
+    {
+     "ms": 23.06,
+     "rcode": 3,
+     "name": "emdx0fwk55iqtd.yahoo.com"
+    },
+    {
+     "ms": 28.33,
+     "rcode": 3,
+     "name": "8twxqpe9g0htkl.google.com"
+    },
+    {
+     "ms": 17.53,
+     "rcode": 3,
+     "name": "rpa08bvo8wvapv.amazon.com"
+    },
+    {
+     "ms": 15.23,
+     "rcode": 3,
+     "name": "l2kszpvqbfnqje.microsoft.com"
+    },
+    {
+     "ms": 16.09,
+     "rcode": 0,
+     "name": "jr0gd1gbsesli0.apple.com"
+    },
+    {
+     "ms": 25.8,
+     "rcode": 0,
+     "name": "bobo6sn3mlntqi.netflix.com"
+    },
+    {
+     "ms": 22.43,
+     "rcode": 3,
+     "name": "3nvxpeghubboxe.yahoo.com"
+    },
+    {
+     "ms": 28.6,
+     "rcode": 3,
+     "name": "bemndijtood1qh.google.com"
+    },
+    {
+     "ms": 16.55,
+     "rcode": 3,
+     "name": "n9en66hphsgmar.amazon.com"
+    },
+    {
+     "ms": 15.05,
+     "rcode": 3,
+     "name": "vf1te62pjlt1ug.microsoft.com"
+    },
+    {
+     "ms": 18.13,
+     "rcode": 0,
+     "name": "1mjx6hhr26zqbz.apple.com"
+    },
+    {
+     "ms": 19.98,
+     "rcode": 0,
+     "name": "hirttm8o2uix52.netflix.com"
+    },
+    {
+     "ms": 22.93,
+     "rcode": 3,
+     "name": "25bonwcuy08zot.yahoo.com"
+    },
+    {
+     "ms": 28.63,
+     "rcode": 3,
+     "name": "chb59jzj83rwzk.google.com"
+    },
+    {
+     "ms": 22.83,
+     "rcode": 3,
+     "name": "155xgyuayq0e58.amazon.com"
+    },
+    {
+     "ms": 17.3,
+     "rcode": 3,
+     "name": "f5uczrx2orl3lk.microsoft.com"
+    },
+    {
+     "ms": 17.79,
+     "rcode": 0,
+     "name": "34rvt8bm5lfnw1.apple.com"
+    },
+    {
+     "ms": 18.49,
+     "rcode": 0,
+     "name": "0e1p97x7zj1qxt.netflix.com"
+    },
+    {
+     "ms": 22.21,
+     "rcode": 3,
+     "name": "tfm1cc7s98l098.yahoo.com"
+    },
+    {
+     "ms": 31.87,
+     "rcode": 3,
+     "name": "xb5ch4efzuoq2f.google.com"
+    },
+    {
+     "ms": 17.51,
+     "rcode": 3,
+     "name": "ppg2neogoog2hu.amazon.com"
+    },
+    {
+     "ms": 14.95,
+     "rcode": 3,
+     "name": "rmqzh0oqy0g17l.microsoft.com"
+    },
+    {
+     "ms": 16.07,
+     "rcode": 0,
+     "name": "qkpi63i4ajn8wt.apple.com"
+    }
+   ]
+  },
+  "NextDNS": {
+   "cached": [
+    {
+     "ms": 13.53,
+     "rcode": 0
+    },
+    {
+     "ms": 14.06,
+     "rcode": 0
+    },
+    {
+     "ms": 13.76,
+     "rcode": 0
+    },
+    {
+     "ms": 14.51,
+     "rcode": 0
+    },
+    {
+     "ms": 16.35,
+     "rcode": 0
+    },
+    {
+     "ms": 12.92,
+     "rcode": 0
+    },
+    {
+     "ms": 19.08,
+     "rcode": 0
+    },
+    {
+     "ms": 14.62,
+     "rcode": 0
+    },
+    {
+     "ms": 12.94,
+     "rcode": 0
+    },
+    {
+     "ms": 13.66,
+     "rcode": 0
+    },
+    {
+     "ms": 13.78,
+     "rcode": 0
+    },
+    {
+     "ms": 13.78,
+     "rcode": 0
+    },
+    {
+     "ms": 14.73,
+     "rcode": 0
+    },
+    {
+     "ms": 15.25,
+     "rcode": 0
+    },
+    {
+     "ms": 14.01,
+     "rcode": 0
+    },
+    {
+     "ms": 13.82,
+     "rcode": 0
+    },
+    {
+     "ms": 13.27,
+     "rcode": 0
+    },
+    {
+     "ms": 16.28,
+     "rcode": 0
+    },
+    {
+     "ms": 12.62,
+     "rcode": 0
+    },
+    {
+     "ms": 14.05,
+     "rcode": 0
+    },
+    {
+     "ms": 14.32,
+     "rcode": 0
+    },
+    {
+     "ms": 13.43,
+     "rcode": 0
+    },
+    {
+     "ms": 14.54,
+     "rcode": 0
+    },
+    {
+     "ms": 13.68,
+     "rcode": 0
+    },
+    {
+     "ms": 12.9,
+     "rcode": 0
+    },
+    {
+     "ms": 12.51,
+     "rcode": 0
+    },
+    {
+     "ms": 14.11,
+     "rcode": 0
+    },
+    {
+     "ms": 12.87,
+     "rcode": 0
+    },
+    {
+     "ms": 13.19,
+     "rcode": 0
+    },
+    {
+     "ms": 14.9,
+     "rcode": 0
+    },
+    {
+     "ms": 12.9,
+     "rcode": 0
+    },
+    {
+     "ms": 14.58,
+     "rcode": 0
+    },
+    {
+     "ms": 13.73,
+     "rcode": 0
+    },
+    {
+     "ms": 14.12,
+     "rcode": 0
+    },
+    {
+     "ms": 13.56,
+     "rcode": 0
+    },
+    {
+     "ms": 14.45,
+     "rcode": 0
+    },
+    {
+     "ms": 14.11,
+     "rcode": 0
+    },
+    {
+     "ms": 14.0,
+     "rcode": 0
+    },
+    {
+     "ms": 13.95,
+     "rcode": 0
+    },
+    {
+     "ms": 15.1,
+     "rcode": 0
+    }
+   ],
+   "uncached": [
+    {
+     "ms": 29.44,
+     "rcode": 3,
+     "name": "aeq1kdfy6spsc3.google.com"
+    },
+    {
+     "ms": 24.52,
+     "rcode": 3,
+     "name": "c145aez732pgoj.amazon.com"
+    },
+    {
+     "ms": 16.82,
+     "rcode": 3,
+     "name": "rup47p9pb0tdbm.microsoft.com"
+    },
+    {
+     "ms": 15.41,
+     "rcode": 0,
+     "name": "3cga4o2xcsohdm.apple.com"
+    },
+    {
+     "ms": 16.79,
+     "rcode": 0,
+     "name": "pmkumyvpy8447a.netflix.com"
+    },
+    {
+     "ms": 57.47,
+     "rcode": 3,
+     "name": "uv1qbwqsdxu64s.yahoo.com"
+    },
+    {
+     "ms": 32.11,
+     "rcode": 3,
+     "name": "u35s3x10elxbbc.google.com"
+    },
+    {
+     "ms": 14.53,
+     "rcode": 3,
+     "name": "oz7q7u46mmnmfl.amazon.com"
+    },
+    {
+     "ms": 14.83,
+     "rcode": 3,
+     "name": "jr00pjbrsvkq5g.microsoft.com"
+    },
+    {
+     "ms": 16.18,
+     "rcode": 0,
+     "name": "a5y2tl8tj1yofv.apple.com"
+    },
+    {
+     "ms": 23.45,
+     "rcode": 0,
+     "name": "pkxwnzynt46no2.netflix.com"
+    },
+    {
+     "ms": 56.37,
+     "rcode": 3,
+     "name": "wf0zor7fw12v62.yahoo.com"
+    },
+    {
+     "ms": 31.25,
+     "rcode": 3,
+     "name": "e2i696h6g3z8km.google.com"
+    },
+    {
+     "ms": 24.46,
+     "rcode": 3,
+     "name": "dvu46xppwjina3.amazon.com"
+    },
+    {
+     "ms": 14.41,
+     "rcode": 3,
+     "name": "5nwy3nubgaezwd.microsoft.com"
+    },
+    {
+     "ms": 16.37,
+     "rcode": 0,
+     "name": "f2yz705bg33104.apple.com"
+    },
+    {
+     "ms": 25.95,
+     "rcode": 0,
+     "name": "vxlhte93g9hkz3.netflix.com"
+    },
+    {
+     "ms": 21.66,
+     "rcode": 3,
+     "name": "6j3cu4iarjm6cz.yahoo.com"
+    },
+    {
+     "ms": 30.37,
+     "rcode": 3,
+     "name": "83h4osvv7on9ns.google.com"
+    },
+    {
+     "ms": 22.89,
+     "rcode": 3,
+     "name": "chn7y30nfbdbi1.amazon.com"
+    },
+    {
+     "ms": 16.56,
+     "rcode": 3,
+     "name": "gdyqfodesariwx.microsoft.com"
+    },
+    {
+     "ms": 14.8,
+     "rcode": 0,
+     "name": "qp0x7qed4nua24.apple.com"
+    },
+    {
+     "ms": 15.43,
+     "rcode": 0,
+     "name": "1ysbote4gejm23.netflix.com"
+    },
+    {
+     "ms": 59.56,
+     "rcode": 3,
+     "name": "20aonnx8xhc31b.yahoo.com"
+    },
+    {
+     "ms": 28.35,
+     "rcode": 3,
+     "name": "bu425rx7bw98u4.google.com"
+    },
+    {
+     "ms": 15.45,
+     "rcode": 3,
+     "name": "9qvk85rf5cj1f0.amazon.com"
+    },
+    {
+     "ms": 15.2,
+     "rcode": 3,
+     "name": "on1q3fp3aozgm0.microsoft.com"
+    },
+    {
+     "ms": 17.91,
+     "rcode": 0,
+     "name": "443ady3ol49ykg.apple.com"
+    },
+    {
+     "ms": 18.34,
+     "rcode": 0,
+     "name": "gfc6jrel7bbo2f.netflix.com"
+    },
+    {
+     "ms": 60.59,
+     "rcode": 3,
+     "name": "fx1aaq5km4it1n.yahoo.com"
+    },
+    {
+     "ms": 27.69,
+     "rcode": 3,
+     "name": "ozqpbg306fp2sn.google.com"
+    },
+    {
+     "ms": 23.39,
+     "rcode": 3,
+     "name": "7r5dhkaz9euvej.amazon.com"
+    },
+    {
+     "ms": 15.4,
+     "rcode": 3,
+     "name": "lnfyj7txej9u1o.microsoft.com"
+    },
+    {
+     "ms": 16.33,
+     "rcode": 0,
+     "name": "lmtzvbgswmjl0s.apple.com"
+    },
+    {
+     "ms": 18.08,
+     "rcode": 0,
+     "name": "2vnuf2l7veubhq.netflix.com"
+    },
+    {
+     "ms": 61.13,
+     "rcode": 3,
+     "name": "u6gudw7zw99x2r.yahoo.com"
+    },
+    {
+     "ms": 28.78,
+     "rcode": 3,
+     "name": "e38uo6gaxn08qv.google.com"
+    },
+    {
+     "ms": 22.72,
+     "rcode": 3,
+     "name": "yo0yefggt8h5df.amazon.com"
+    },
+    {
+     "ms": 15.74,
+     "rcode": 3,
+     "name": "8my7ebmtehk2wh.microsoft.com"
+    },
+    {
+     "ms": 14.97,
+     "rcode": 0,
+     "name": "gu3u7ylljrza4g.apple.com"
+    }
+   ]
+  },
+  "Comodo": {
+   "cached": [
+    {
+     "ms": 13.89,
+     "rcode": 0
+    },
+    {
+     "ms": 15.63,
+     "rcode": 0
+    },
+    {
+     "ms": 14.02,
+     "rcode": 0
+    },
+    {
+     "ms": 16.35,
+     "rcode": 0
+    },
+    {
+     "ms": 14.95,
+     "rcode": 0
+    },
+    {
+     "ms": 15.12,
+     "rcode": 0
+    },
+    {
+     "ms": 14.92,
+     "rcode": 0
+    },
+    {
+     "ms": 13.93,
+     "rcode": 0
+    },
+    {
+     "ms": 13.45,
+     "rcode": 0
+    },
+    {
+     "ms": 14.69,
+     "rcode": 0
+    },
+    {
+     "ms": 14.63,
+     "rcode": 0
+    },
+    {
+     "ms": 13.67,
+     "rcode": 0
+    },
+    {
+     "ms": 14.62,
+     "rcode": 0
+    },
+    {
+     "ms": 13.31,
+     "rcode": 0
+    },
+    {
+     "ms": 13.94,
+     "rcode": 0
+    },
+    {
+     "ms": 15.31,
+     "rcode": 0
+    },
+    {
+     "ms": 13.59,
+     "rcode": 0
+    },
+    {
+     "ms": 13.88,
+     "rcode": 0
+    },
+    {
+     "ms": 14.32,
+     "rcode": 0
+    },
+    {
+     "ms": 14.88,
+     "rcode": 0
+    },
+    {
+     "ms": 14.6,
+     "rcode": 0
+    },
+    {
+     "ms": 13.9,
+     "rcode": 0
+    },
+    {
+     "ms": 14.81,
+     "rcode": 0
+    },
+    {
+     "ms": 13.84,
+     "rcode": 0
+    },
+    {
+     "ms": 14.09,
+     "rcode": 0
+    },
+    {
+     "ms": 13.3,
+     "rcode": 0
+    },
+    {
+     "ms": 20.59,
+     "rcode": 0
+    },
+    {
+     "ms": 14.32,
+     "rcode": 0
+    },
+    {
+     "ms": 14.08,
+     "rcode": 0
+    },
+    {
+     "ms": 14.65,
+     "rcode": 0
+    },
+    {
+     "ms": 14.17,
+     "rcode": 0
+    },
+    {
+     "ms": 13.95,
+     "rcode": 0
+    },
+    {
+     "ms": 15.57,
+     "rcode": 0
+    },
+    {
+     "ms": 14.83,
+     "rcode": 0
+    },
+    {
+     "ms": 14.73,
+     "rcode": 0
+    },
+    {
+     "ms": 13.63,
+     "rcode": 0
+    },
+    {
+     "ms": 15.34,
+     "rcode": 0
+    },
+    {
+     "ms": 15.48,
+     "rcode": 0
+    },
+    {
+     "ms": 14.47,
+     "rcode": 0
+    },
+    {
+     "ms": 13.43,
+     "rcode": 0
+    }
+   ],
+   "uncached": [
+    {
+     "ms": 29.29,
+     "rcode": 3,
+     "name": "76bofbcixgy29d.google.com"
+    },
+    {
+     "ms": 24.82,
+     "rcode": 3,
+     "name": "zbka52ztj0wyuh.amazon.com"
+    },
+    {
+     "ms": 14.86,
+     "rcode": 3,
+     "name": "3xf6mzkp0ec498.microsoft.com"
+    },
+    {
+     "ms": 16.84,
+     "rcode": 0,
+     "name": "3kiad9jzfx6kjw.apple.com"
+    },
+    {
+     "ms": 24.64,
+     "rcode": 0,
+     "name": "i5ocbdawtg7w8o.netflix.com"
+    },
+    {
+     "ms": 22.71,
+     "rcode": 3,
+     "name": "tq186kyo3i8cwu.yahoo.com"
+    },
+    {
+     "ms": 28.78,
+     "rcode": 3,
+     "name": "0oi459d43j5p5k.google.com"
+    },
+    {
+     "ms": 18.03,
+     "rcode": 3,
+     "name": "rdvajt1pyyyo2s.amazon.com"
+    },
+    {
+     "ms": 15.45,
+     "rcode": 3,
+     "name": "xaw727ehwpuyds.microsoft.com"
+    },
+    {
+     "ms": 15.74,
+     "rcode": 0,
+     "name": "0vwimr7g4ri0ga.apple.com"
+    },
+    {
+     "ms": 24.73,
+     "rcode": 0,
+     "name": "rgewm2ybdozc2d.netflix.com"
+    },
+    {
+     "ms": 58.78,
+     "rcode": 3,
+     "name": "shroczck1mtjyc.yahoo.com"
+    },
+    {
+     "ms": 36.22,
+     "rcode": 3,
+     "name": "vj564ccelz4k2z.google.com"
+    },
+    {
+     "ms": 23.13,
+     "rcode": 3,
+     "name": "q4ct939rx77riq.amazon.com"
+    },
+    {
+     "ms": 15.0,
+     "rcode": 3,
+     "name": "laqrecm6d09xra.microsoft.com"
+    },
+    {
+     "ms": 17.27,
+     "rcode": 0,
+     "name": "a8e0ucro2smn3z.apple.com"
+    },
+    {
+     "ms": 22.39,
+     "rcode": 0,
+     "name": "mfd0oq21jdick2.netflix.com"
+    },
+    {
+     "ms": 23.41,
+     "rcode": 3,
+     "name": "kowzt5u6mkz7aa.yahoo.com"
+    },
+    {
+     "ms": 29.15,
+     "rcode": 3,
+     "name": "cysiyre6rnotgx.google.com"
+    },
+    {
+     "ms": 25.44,
+     "rcode": 3,
+     "name": "90qcj3b4gglj7k.amazon.com"
+    },
+    {
+     "ms": 16.72,
+     "rcode": 3,
+     "name": "ie2ugnrxeh44ql.microsoft.com"
+    },
+    {
+     "ms": 16.18,
+     "rcode": 0,
+     "name": "ionrhc6iz0e43v.apple.com"
+    },
+    {
+     "ms": 23.96,
+     "rcode": 0,
+     "name": "o3vtzu7tdufsdu.netflix.com"
+    },
+    {
+     "ms": 26.12,
+     "rcode": 3,
+     "name": "mutv6l586ajy9k.yahoo.com"
+    },
+    {
+     "ms": 28.52,
+     "rcode": 3,
+     "name": "qyqbxyex8arvs5.google.com"
+    },
+    {
+     "ms": 15.37,
+     "rcode": 3,
+     "name": "ffcn34fsvlihl6.amazon.com"
+    },
+    {
+     "ms": 15.23,
+     "rcode": 3,
+     "name": "qgy65qmg52se4i.microsoft.com"
+    },
+    {
+     "ms": 15.82,
+     "rcode": 0,
+     "name": "w7xkg675hxs8no.apple.com"
+    },
+    {
+     "ms": 23.87,
+     "rcode": 0,
+     "name": "n2x36w65bwznkw.netflix.com"
+    },
+    {
+     "ms": 23.4,
+     "rcode": 3,
+     "name": "ktjq9gddmpnfqq.yahoo.com"
+    },
+    {
+     "ms": 28.54,
+     "rcode": 3,
+     "name": "8lkfj7n4vg7jj9.google.com"
+    },
+    {
+     "ms": 26.49,
+     "rcode": 3,
+     "name": "5gzg516bh4tc0r.amazon.com"
+    },
+    {
+     "ms": 15.21,
+     "rcode": 3,
+     "name": "06isu23s4ilq6b.microsoft.com"
+    },
+    {
+     "ms": 15.82,
+     "rcode": 0,
+     "name": "frwh5j67lg7jyi.apple.com"
+    },
+    {
+     "ms": 24.06,
+     "rcode": 0,
+     "name": "udpp2q42yholxh.netflix.com"
+    },
+    {
+     "ms": 59.47,
+     "rcode": 3,
+     "name": "wl1vrpk76slh9l.yahoo.com"
+    },
+    {
+     "ms": 29.0,
+     "rcode": 3,
+     "name": "x1i2i7va599jav.google.com"
+    },
+    {
+     "ms": 19.09,
+     "rcode": 3,
+     "name": "k3ur83bsvwbee2.amazon.com"
+    },
+    {
+     "ms": 30.33,
+     "rcode": 3,
+     "name": "z198k8ctnnkz2o.microsoft.com"
+    },
+    {
+     "ms": 15.22,
+     "rcode": 0,
+     "name": "hgw5o4f4xqj5id.apple.com"
+    }
+   ]
+  },
+  "Level3": {
+   "cached": [
+    {
+     "ms": 12.65,
+     "rcode": 0
+    },
+    {
+     "ms": 12.67,
+     "rcode": 0
+    },
+    {
+     "ms": 12.94,
+     "rcode": 0
+    },
+    {
+     "ms": 13.19,
+     "rcode": 0
+    },
+    {
+     "ms": 13.47,
+     "rcode": 0
+    },
+    {
+     "ms": 12.51,
+     "rcode": 0
+    },
+    {
+     "ms": 24.5,
+     "rcode": 0
+    },
+    {
+     "ms": 14.86,
+     "rcode": 0
+    },
+    {
+     "ms": 13.74,
+     "rcode": 0
+    },
+    {
+     "ms": 13.03,
+     "rcode": 0
+    },
+    {
+     "ms": 12.49,
+     "rcode": 0
+    },
+    {
+     "ms": 11.4,
+     "rcode": 0
+    },
+    {
+     "ms": 13.51,
+     "rcode": 0
+    },
+    {
+     "ms": 11.77,
+     "rcode": 0
+    },
+    {
+     "ms": 12.87,
+     "rcode": 0
+    },
+    {
+     "ms": 12.85,
+     "rcode": 0
+    },
+    {
+     "ms": 13.14,
+     "rcode": 0
+    },
+    {
+     "ms": 12.13,
+     "rcode": 0
+    },
+    {
+     "ms": 13.39,
+     "rcode": 0
+    },
+    {
+     "ms": 12.28,
+     "rcode": 0
+    },
+    {
+     "ms": 13.11,
+     "rcode": 0
+    },
+    {
+     "ms": 15.28,
+     "rcode": 0
+    },
+    {
+     "ms": 12.92,
+     "rcode": 0
+    },
+    {
+     "ms": 13.23,
+     "rcode": 0
+    },
+    {
+     "ms": 12.48,
+     "rcode": 0
+    },
+    {
+     "ms": 12.37,
+     "rcode": 0
+    },
+    {
+     "ms": 12.3,
+     "rcode": 0
+    },
+    {
+     "ms": 13.42,
+     "rcode": 0
+    },
+    {
+     "ms": 12.02,
+     "rcode": 0
+    },
+    {
+     "ms": 17.39,
+     "rcode": 0
+    },
+    {
+     "ms": 12.19,
+     "rcode": 0
+    },
+    {
+     "ms": 13.09,
+     "rcode": 0
+    },
+    {
+     "ms": 12.11,
+     "rcode": 0
+    },
+    {
+     "ms": 12.85,
+     "rcode": 0
+    },
+    {
+     "ms": 15.36,
+     "rcode": 0
+    },
+    {
+     "ms": 11.87,
+     "rcode": 0
+    },
+    {
+     "ms": 13.79,
+     "rcode": 0
+    },
+    {
+     "ms": 12.73,
+     "rcode": 0
+    },
+    {
+     "ms": 12.65,
+     "rcode": 0
+    },
+    {
+     "ms": 12.09,
+     "rcode": 0
+    }
+   ],
+   "uncached": [
+    {
+     "ms": 28.07,
+     "rcode": 3,
+     "name": "6lrwbqcab69m64.google.com"
+    },
+    {
+     "ms": 14.18,
+     "rcode": 3,
+     "name": "99nfd02is5d9ik.amazon.com"
+    },
+    {
+     "ms": 13.27,
+     "rcode": 3,
+     "name": "n5mtmo3oqsg5lo.microsoft.com"
+    },
+    {
+     "ms": 13.57,
+     "rcode": 0,
+     "name": "62lba53p23l4zg.apple.com"
+    },
+    {
+     "ms": 13.86,
+     "rcode": 0,
+     "name": "cicecexm8eygpn.netflix.com"
+    },
+    {
+     "ms": 13.68,
+     "rcode": 3,
+     "name": "9uk32qoiv3p6mr.yahoo.com"
+    },
+    {
+     "ms": 34.29,
+     "rcode": 3,
+     "name": "1v1q9dssw5zv6r.google.com"
+    },
+    {
+     "ms": 25.48,
+     "rcode": 3,
+     "name": "r7bgcn5nqr1g2i.amazon.com"
+    },
+    {
+     "ms": 14.92,
+     "rcode": 3,
+     "name": "mff5rlnimtmae7.microsoft.com"
+    },
+    {
+     "ms": 12.55,
+     "rcode": 0,
+     "name": "u1m6boi0z3cccr.apple.com"
+    },
+    {
+     "ms": 21.91,
+     "rcode": 0,
+     "name": "tz5bpflkwylasz.netflix.com"
+    },
+    {
+     "ms": 49.77,
+     "rcode": 3,
+     "name": "5m8uawfsqpfibb.yahoo.com"
+    },
+    {
+     "ms": 28.56,
+     "rcode": 3,
+     "name": "fjx90x7p2zqhol.google.com"
+    },
+    {
+     "ms": 20.47,
+     "rcode": 3,
+     "name": "gxjozfbihd86n9.amazon.com"
+    },
+    {
+     "ms": 14.16,
+     "rcode": 3,
+     "name": "9u3a446v8ypywe.microsoft.com"
+    },
+    {
+     "ms": 14.22,
+     "rcode": 0,
+     "name": "x7vyqb9maqdlt8.apple.com"
+    },
+    {
+     "ms": 14.9,
+     "rcode": 0,
+     "name": "s5wb5fm5rt8fmi.netflix.com"
+    },
+    {
+     "ms": 13.59,
+     "rcode": 3,
+     "name": "zzvyzfov1tat5b.yahoo.com"
+    },
+    {
+     "ms": 35.61,
+     "rcode": 3,
+     "name": "lb6r1xerfhzy60.google.com"
+    },
+    {
+     "ms": 20.75,
+     "rcode": 3,
+     "name": "uv935napnwyggi.amazon.com"
+    },
+    {
+     "ms": 13.69,
+     "rcode": 3,
+     "name": "kn7d8p07fnnsaq.microsoft.com"
+    },
+    {
+     "ms": 14.97,
+     "rcode": 0,
+     "name": "0ji7iudko1kf20.apple.com"
+    },
+    {
+     "ms": 14.49,
+     "rcode": 0,
+     "name": "41iamng3pq6178.netflix.com"
+    },
+    {
+     "ms": 59.74,
+     "rcode": 3,
+     "name": "j2b1iqro0n63df.yahoo.com"
+    },
+    {
+     "ms": 27.43,
+     "rcode": 3,
+     "name": "dkhcbukh3kglmw.google.com"
+    },
+    {
+     "ms": 21.07,
+     "rcode": 3,
+     "name": "zki445rxg95vkv.amazon.com"
+    },
+    {
+     "ms": 14.73,
+     "rcode": 3,
+     "name": "41iblcehupdorw.microsoft.com"
+    },
+    {
+     "ms": 13.72,
+     "rcode": 0,
+     "name": "yaxhuvicmnbosg.apple.com"
+    },
+    {
+     "ms": 21.27,
+     "rcode": 0,
+     "name": "k7j1l46nmpwgqr.netflix.com"
+    },
+    {
+     "ms": 13.27,
+     "rcode": 3,
+     "name": "asby2u7oveidfs.yahoo.com"
+    },
+    {
+     "ms": 34.94,
+     "rcode": 3,
+     "name": "xp06rp13qni9i9.google.com"
+    },
+    {
+     "ms": 14.26,
+     "rcode": 3,
+     "name": "7ujgp27ywj2l9s.amazon.com"
+    },
+    {
+     "ms": 13.02,
+     "rcode": 3,
+     "name": "6k61ma4yvyh9fz.microsoft.com"
+    },
+    {
+     "ms": 13.83,
+     "rcode": 0,
+     "name": "jgtq60r3s9vqao.apple.com"
+    },
+    {
+     "ms": 16.72,
+     "rcode": 0,
+     "name": "xa10d6g5czi55l.netflix.com"
+    },
+    {
+     "ms": 14.78,
+     "rcode": 3,
+     "name": "yriix367nilv8q.yahoo.com"
+    },
+    {
+     "ms": 34.61,
+     "rcode": 3,
+     "name": "t78w5n1e0h6wi8.google.com"
+    },
+    {
+     "ms": 15.18,
+     "rcode": 3,
+     "name": "i65mt7amv0n2ot.amazon.com"
+    },
+    {
+     "ms": 13.92,
+     "rcode": 3,
+     "name": "jv3l2q63dtn8o4.microsoft.com"
+    },
+    {
+     "ms": 12.5,
+     "rcode": 0,
+     "name": "1kogopdufey7wg.apple.com"
+    }
+   ]
+  },
+  "Yandex": {
+   "cached": [
+    {
+     "ms": 231.9,
+     "rcode": 0
+    },
+    {
+     "ms": 226.73,
+     "rcode": 0
+    },
+    {
+     "ms": 237.71,
+     "rcode": 0
+    },
+    {
+     "ms": 220.19,
+     "rcode": 0
+    },
+    {
+     "ms": 220.28,
+     "rcode": 0
+    },
+    {
+     "ms": 222.24,
+     "rcode": 0
+    },
+    {
+     "ms": 237.81,
+     "rcode": 0
+    },
+    {
+     "ms": 263.15,
+     "rcode": 0
+    },
+    {
+     "ms": 240.2,
+     "rcode": 0
+    },
+    {
+     "ms": 217.52,
+     "rcode": 0
+    },
+    {
+     "ms": 230.13,
+     "rcode": 0
+    },
+    {
+     "ms": 230.84,
+     "rcode": 0
+    },
+    {
+     "ms": 236.9,
+     "rcode": 0
+    },
+    {
+     "ms": 238.37,
+     "rcode": 0
+    },
+    {
+     "ms": 224.9,
+     "rcode": 0
+    },
+    {
+     "ms": 238.3,
+     "rcode": 0
+    },
+    {
+     "ms": 236.18,
+     "rcode": 0
+    },
+    {
+     "ms": 219.69,
+     "rcode": 0
+    },
+    {
+     "ms": 222.45,
+     "rcode": 0
+    },
+    {
+     "ms": 226.21,
+     "rcode": 0
+    },
+    {
+     "ms": 222.99,
+     "rcode": 0
+    },
+    {
+     "ms": 217.1,
+     "rcode": 0
+    },
+    {
+     "ms": 233.77,
+     "rcode": 0
+    },
+    {
+     "ms": 218.09,
+     "rcode": 0
+    },
+    {
+     "ms": 234.54,
+     "rcode": 0
+    },
+    {
+     "ms": 227.91,
+     "rcode": 0
+    },
+    {
+     "ms": 232.28,
+     "rcode": 0
+    },
+    {
+     "ms": 214.26,
+     "rcode": 0
+    },
+    {
+     "ms": 230.99,
+     "rcode": 0
+    },
+    {
+     "ms": 219.0,
+     "rcode": 0
+    },
+    {
+     "ms": 205.29,
+     "rcode": 0
+    },
+    {
+     "ms": 227.48,
+     "rcode": 0
+    },
+    {
+     "ms": 227.79,
+     "rcode": 0
+    },
+    {
+     "ms": 236.92,
+     "rcode": 0
+    },
+    {
+     "ms": 225.17,
+     "rcode": 0
+    },
+    {
+     "ms": 207.61,
+     "rcode": 0
+    },
+    {
+     "ms": 215.59,
+     "rcode": 0
+    },
+    {
+     "ms": 214.55,
+     "rcode": 0
+    },
+    {
+     "ms": 221.99,
+     "rcode": 0
+    },
+    {
+     "ms": 220.38,
+     "rcode": 0
+    }
+   ],
+   "uncached": [
+    {
+     "ms": 240.8,
+     "rcode": 3,
+     "name": "ic7phkqdlmtt7n.google.com"
+    },
+    {
+     "ms": 253.16,
+     "rcode": 3,
+     "name": "upxqmb0y07nyrv.amazon.com"
+    },
+    {
+     "ms": 269.46,
+     "rcode": 3,
+     "name": "kvml73ctyxv2kg.microsoft.com"
+    },
+    {
+     "ms": 264.54,
+     "rcode": 0,
+     "name": "cnau0xltenc594.apple.com"
+    },
+    {
+     "ms": 248.74,
+     "rcode": 0,
+     "name": "td48ay13f2logq.netflix.com"
+    },
+    {
+     "ms": 252.33,
+     "rcode": 3,
+     "name": "31uqg0pzkq143b.yahoo.com"
+    },
+    {
+     "ms": 249.62,
+     "rcode": 3,
+     "name": "i7waanesqgjol2.google.com"
+    },
+    {
+     "ms": 246.08,
+     "rcode": 3,
+     "name": "qr1kcsjjr95w8f.amazon.com"
+    },
+    {
+     "ms": 262.9,
+     "rcode": 3,
+     "name": "7wvs5fa04irplx.microsoft.com"
+    },
+    {
+     "ms": 256.28,
+     "rcode": 0,
+     "name": "5zj0rhy23swswz.apple.com"
+    },
+    {
+     "ms": 252.25,
+     "rcode": 0,
+     "name": "gek7531daujpwr.netflix.com"
+    },
+    {
+     "ms": 244.53,
+     "rcode": 3,
+     "name": "sxl7kgtuylwuox.yahoo.com"
+    },
+    {
+     "ms": 255.04,
+     "rcode": 3,
+     "name": "lkysa2wm4f8u73.google.com"
+    },
+    {
+     "ms": 264.53,
+     "rcode": 3,
+     "name": "amr8aubnuub5zv.amazon.com"
+    },
+    {
+     "ms": 238.82,
+     "rcode": 3,
+     "name": "ci6o1gbduehh5i.microsoft.com"
+    },
+    {
+     "ms": 246.3,
+     "rcode": 0,
+     "name": "frzs2h24l7jaix.apple.com"
+    },
+    {
+     "ms": 249.48,
+     "rcode": 0,
+     "name": "u9jtqu9njozcuy.netflix.com"
+    },
+    {
+     "ms": 394.13,
+     "rcode": 3,
+     "name": "6kjwinmovea4c5.yahoo.com"
+    },
+    {
+     "ms": 243.31,
+     "rcode": 3,
+     "name": "e0e6ap1znrijop.google.com"
+    },
+    {
+     "ms": 260.36,
+     "rcode": 3,
+     "name": "6yaeb9f698ed8s.amazon.com"
+    },
+    {
+     "ms": 264.61,
+     "rcode": 3,
+     "name": "gnwvramefktqlc.microsoft.com"
+    },
+    {
+     "ms": 250.37,
+     "rcode": 0,
+     "name": "qke3cma809rbea.apple.com"
+    },
+    {
+     "ms": 244.66,
+     "rcode": 0,
+     "name": "y14eq6o2u40x82.netflix.com"
+    },
+    {
+     "ms": 250.92,
+     "rcode": 3,
+     "name": "dm3zt4yt4uwtwg.yahoo.com"
+    },
+    {
+     "ms": 275.31,
+     "rcode": 3,
+     "name": "h1uz0q2o4blklj.google.com"
+    },
+    {
+     "ms": 261.74,
+     "rcode": 3,
+     "name": "g04udyo347mqk7.amazon.com"
+    },
+    {
+     "ms": 251.15,
+     "rcode": 3,
+     "name": "38adp1ipapwpf4.microsoft.com"
+    },
+    {
+     "ms": 254.46,
+     "rcode": 0,
+     "name": "8sszcq4un2wt3x.apple.com"
+    },
+    {
+     "ms": 273.33,
+     "rcode": 0,
+     "name": "m8lellq6ik6us9.netflix.com"
+    },
+    {
+     "ms": 248.5,
+     "rcode": 3,
+     "name": "t52yg1oymu4yz7.yahoo.com"
+    },
+    {
+     "ms": 233.77,
+     "rcode": 3,
+     "name": "stfrnza1oy3a2y.google.com"
+    },
+    {
+     "ms": 264.39,
+     "rcode": 3,
+     "name": "gfwzlkneafzfip.amazon.com"
+    },
+    {
+     "ms": 269.61,
+     "rcode": 3,
+     "name": "aa21xt5ootnw94.microsoft.com"
+    },
+    {
+     "ms": 243.48,
+     "rcode": 0,
+     "name": "q9l45vipqgpppc.apple.com"
+    },
+    {
+     "ms": 264.12,
+     "rcode": 0,
+     "name": "0tnj934kcw9nvh.netflix.com"
+    },
+    {
+     "ms": 254.41,
+     "rcode": 3,
+     "name": "leqfngs95upsrw.yahoo.com"
+    },
+    {
+     "ms": 255.18,
+     "rcode": 3,
+     "name": "pjy8jk7z4raout.google.com"
+    },
+    {
+     "ms": 234.15,
+     "rcode": 3,
+     "name": "b7imw0unwm8qma.amazon.com"
+    },
+    {
+     "ms": 272.83,
+     "rcode": 3,
+     "name": "n4aqpui0qxuujb.microsoft.com"
+    },
+    {
+     "ms": 247.43,
+     "rcode": 0,
+     "name": "u3eoyq2jqhip6n.apple.com"
+    }
+   ]
+  },
+  "Network default": {
+   "cached": [
+    {
+     "ms": 5.09,
+     "rcode": 0
+    },
+    {
+     "ms": 4.28,
+     "rcode": 0
+    },
+    {
+     "ms": 4.68,
+     "rcode": 0
+    },
+    {
+     "ms": 6.71,
+     "rcode": 0
+    },
+    {
+     "ms": 4.81,
+     "rcode": 0
+    },
+    {
+     "ms": 4.54,
+     "rcode": 0
+    },
+    {
+     "ms": 4.85,
+     "rcode": 0
+    },
+    {
+     "ms": 4.58,
+     "rcode": 0
+    },
+    {
+     "ms": 23.07,
+     "rcode": 0
+    },
+    {
+     "ms": 4.41,
+     "rcode": 0
+    },
+    {
+     "ms": 4.65,
+     "rcode": 0
+    },
+    {
+     "ms": 5.59,
+     "rcode": 0
+    },
+    {
+     "ms": 6.04,
+     "rcode": 0
+    },
+    {
+     "ms": 4.27,
+     "rcode": 0
+    },
+    {
+     "ms": 4.38,
+     "rcode": 0
+    },
+    {
+     "ms": 4.42,
+     "rcode": 0
+    },
+    {
+     "ms": 4.08,
+     "rcode": 0
+    },
+    {
+     "ms": 9.89,
+     "rcode": 0
+    },
+    {
+     "ms": 4.49,
+     "rcode": 0
+    },
+    {
+     "ms": 4.29,
+     "rcode": 0
+    },
+    {
+     "ms": 7.56,
+     "rcode": 0
+    },
+    {
+     "ms": 4.57,
+     "rcode": 0
+    },
+    {
+     "ms": 4.05,
+     "rcode": 0
+    },
+    {
+     "ms": 22.46,
+     "rcode": 0
+    },
+    {
+     "ms": 7.73,
+     "rcode": 0
+    },
+    {
+     "ms": 4.19,
+     "rcode": 0
+    },
+    {
+     "ms": 4.66,
+     "rcode": 0
+    },
+    {
+     "ms": 4.87,
+     "rcode": 0
+    },
+    {
+     "ms": 4.75,
+     "rcode": 0
+    },
+    {
+     "ms": 4.82,
+     "rcode": 0
+    },
+    {
+     "ms": 4.01,
+     "rcode": 0
+    },
+    {
+     "ms": 5.0,
+     "rcode": 0
+    },
+    {
+     "ms": 4.16,
+     "rcode": 0
+    },
+    {
+     "ms": 7.66,
+     "rcode": 0
+    },
+    {
+     "ms": 5.56,
+     "rcode": 0
+    },
+    {
+     "ms": 4.57,
+     "rcode": 0
+    },
+    {
+     "ms": 4.78,
+     "rcode": 0
+    },
+    {
+     "ms": 4.45,
+     "rcode": 0
+    },
+    {
+     "ms": 4.14,
+     "rcode": 0
+    },
+    {
+     "ms": 33.24,
+     "rcode": 0
+    }
+   ],
+   "uncached": [
+    {
+     "ms": 38.47,
+     "rcode": 3,
+     "name": "g158z6tnovmizw.google.com"
+    },
+    {
+     "ms": 30.61,
+     "rcode": 3,
+     "name": "rxi67nfrpyz21t.amazon.com"
+    },
+    {
+     "ms": 37.93,
+     "rcode": 3,
+     "name": "rfw0h9nywt1fd4.microsoft.com"
+    },
+    {
+     "ms": 31.3,
+     "rcode": 0,
+     "name": "00bxmzzna1k1hf.apple.com"
+    },
+    {
+     "ms": 33.13,
+     "rcode": 0,
+     "name": "pkdga9mj0m760l.netflix.com"
+    },
+    {
+     "ms": 43.15,
+     "rcode": 3,
+     "name": "o6s3bjqzap10oo.yahoo.com"
+    },
+    {
+     "ms": 64.95,
+     "rcode": 3,
+     "name": "gacm4d68yjfnc3.google.com"
+    },
+    {
+     "ms": 32.59,
+     "rcode": 3,
+     "name": "wz7jpc5xgx3fju.amazon.com"
+    },
+    {
+     "ms": 38.78,
+     "rcode": 3,
+     "name": "2vuo4hxjvodl29.microsoft.com"
+    },
+    {
+     "ms": 120.5,
+     "rcode": 0,
+     "name": "j3zkby07czdxvz.apple.com"
+    },
+    {
+     "ms": 38.05,
+     "rcode": 0,
+     "name": "et6lhsv60k7s6n.netflix.com"
+    },
+    {
+     "ms": 40.69,
+     "rcode": 3,
+     "name": "ge9x6tmetfosiz.yahoo.com"
+    },
+    {
+     "ms": 38.44,
+     "rcode": 3,
+     "name": "zfdvt0x4itv7bm.google.com"
+    },
+    {
+     "ms": 32.97,
+     "rcode": 3,
+     "name": "3w1e5ulrq8bkrp.amazon.com"
+    },
+    {
+     "ms": 69.23,
+     "rcode": 3,
+     "name": "5nk4ritsfva5pk.microsoft.com"
+    },
+    {
+     "ms": 29.97,
+     "rcode": 0,
+     "name": "yqt9z60dttpy18.apple.com"
+    },
+    {
+     "ms": 40.38,
+     "rcode": 0,
+     "name": "agd5nofkjqb1z7.netflix.com"
+    },
+    {
+     "ms": 37.72,
+     "rcode": 3,
+     "name": "00t3jv8nfwz3cs.yahoo.com"
+    },
+    {
+     "ms": 38.92,
+     "rcode": 3,
+     "name": "n0a8q9wkuwtgcl.google.com"
+    },
+    {
+     "ms": 32.87,
+     "rcode": 3,
+     "name": "k1iiahn8ybaf3c.amazon.com"
+    },
+    {
+     "ms": 39.9,
+     "rcode": 3,
+     "name": "teee8aexej9h56.microsoft.com"
+    },
+    {
+     "ms": 30.34,
+     "rcode": 0,
+     "name": "1ul4bkzxhs9npm.apple.com"
+    },
+    {
+     "ms": 29.76,
+     "rcode": 0,
+     "name": "lp3bmuh67x47te.netflix.com"
+    },
+    {
+     "ms": 40.1,
+     "rcode": 3,
+     "name": "5a2fe90ju3kn8v.yahoo.com"
+    },
+    {
+     "ms": 39.21,
+     "rcode": 3,
+     "name": "lyka66ax0my0v4.google.com"
+    },
+    {
+     "ms": 31.09,
+     "rcode": 3,
+     "name": "kko4oqqdoktey8.amazon.com"
+    },
+    {
+     "ms": 38.59,
+     "rcode": 3,
+     "name": "xq8jkkjjhhkt6g.microsoft.com"
+    },
+    {
+     "ms": 30.0,
+     "rcode": 0,
+     "name": "no1qxbr9dvx0c1.apple.com"
+    },
+    {
+     "ms": 34.59,
+     "rcode": 0,
+     "name": "4synu1atqi99ik.netflix.com"
+    },
+    {
+     "ms": 36.81,
+     "rcode": 3,
+     "name": "62174rl00nd9n3.yahoo.com"
+    },
+    {
+     "ms": 36.55,
+     "rcode": 3,
+     "name": "mzz1mx9szz6zmy.google.com"
+    },
+    {
+     "ms": 30.64,
+     "rcode": 3,
+     "name": "t8ch36j5hnjtoa.amazon.com"
+    },
+    {
+     "ms": 39.73,
+     "rcode": 3,
+     "name": "kp681vqyu52c56.microsoft.com"
+    },
+    {
+     "ms": 35.53,
+     "rcode": 0,
+     "name": "f7cib752qrb0r7.apple.com"
+    },
+    {
+     "ms": 33.49,
+     "rcode": 0,
+     "name": "ibfvouohd0lcf4.netflix.com"
+    },
+    {
+     "ms": 44.82,
+     "rcode": 3,
+     "name": "0qudjrhxwvj33c.yahoo.com"
+    },
+    {
+     "ms": 36.05,
+     "rcode": 3,
+     "name": "e8q9xe9yqbw0bs.google.com"
+    },
+    {
+     "ms": 31.59,
+     "rcode": 3,
+     "name": "9kvxopp2z6518j.amazon.com"
+    },
+    {
+     "ms": 39.67,
+     "rcode": 3,
+     "name": "ufoe7bbgfgxp07.microsoft.com"
+    },
+    {
+     "ms": 34.64,
+     "rcode": 0,
+     "name": "elqqnhgvp9alm0.apple.com"
+    }
+   ]
+  }
+ },
+ "doh": {
+  "Cloudflare": [
+   [
+    {
+     "http": 200,
+     "tls_s": 0.068061,
+     "total_s": 0.106315,
+     "new_conn": 1
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.082261,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.026332,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.015877,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.02547,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.029153,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.026371,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.021748,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.023906,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.016425,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.022733,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.018104,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.024992,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.024576,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.020745,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.02066,
+     "new_conn": 0
+    }
+   ],
+   [
+    {
+     "http": 200,
+     "tls_s": 0.078621,
+     "total_s": 0.117446,
+     "new_conn": 1
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.074345,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.024665,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.022496,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.02481,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.023163,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.021069,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.025665,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.019607,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.026812,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.01673,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.019844,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.028812,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.020169,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.026139,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.017234,
+     "new_conn": 0
+    }
+   ],
+   [
+    {
+     "http": 200,
+     "tls_s": 0.076073,
+     "total_s": 0.125647,
+     "new_conn": 1
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.082833,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.024505,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.023151,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.036029,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.025725,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.017164,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.028381,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.024529,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.023652,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.029868,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.020852,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.031217,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.024073,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.020452,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.027376,
+     "new_conn": 0
+    }
+   ]
+  ],
+  "Google": [
+   [
+    {
+     "http": 200,
+     "tls_s": 0.07403,
+     "total_s": 0.113543,
+     "new_conn": 1
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.06808,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.063833,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.039965,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.066368,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.03358,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.020182,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.019293,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.02516,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.019501,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.02634,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.03528,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.038841,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.042137,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.019451,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.024801,
+     "new_conn": 0
+    }
+   ],
+   [
+    {
+     "http": 200,
+     "tls_s": 0.095646,
+     "total_s": 0.134691,
+     "new_conn": 1
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.049644,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.041645,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.027251,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.039978,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.036409,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.032914,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.01561,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.024264,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.018629,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.021828,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.037349,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.182627,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.03114,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.02835,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.009565,
+     "new_conn": 0
+    }
+   ],
+   [
+    {
+     "http": 200,
+     "tls_s": 0.078604,
+     "total_s": 0.121985,
+     "new_conn": 1
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.035229,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.025888,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.016335,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.039595,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.032087,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.025648,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.013712,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.027198,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.022647,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.017061,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.029905,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.030973,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.040285,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.018715,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.019291,
+     "new_conn": 0
+    }
+   ]
+  ],
+  "Quad9": [
+   [
+    {
+     "http": 200,
+     "tls_s": 0.073272,
+     "total_s": 0.109522,
+     "new_conn": 1
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.072247,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.017949,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.013899,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.016133,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.020164,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.011478,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.020064,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.015595,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.019867,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.015372,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.018076,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.012995,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.008064,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.017879,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.014109,
+     "new_conn": 0
+    }
+   ],
+   [
+    {
+     "http": 200,
+     "tls_s": 0.053634,
+     "total_s": 0.081588,
+     "new_conn": 1
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.0385,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.136845,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.156296,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.018505,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.018655,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.012202,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.020492,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.029275,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.016025,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.021837,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.007547,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.007449,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.014705,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.015241,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.013383,
+     "new_conn": 0
+    }
+   ],
+   [
+    {
+     "http": 200,
+     "tls_s": 0.061341,
+     "total_s": 0.090893,
+     "new_conn": 1
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.07997,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.017004,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.021673,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.01761,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.022127,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.014589,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.022079,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.012433,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.024067,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.015362,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.021587,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.022071,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.015952,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.021257,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.019368,
+     "new_conn": 0
+    }
+   ]
+  ],
+  "OpenDNS": [
+   [
+    {
+     "http": 200,
+     "tls_s": 0.091724,
+     "total_s": 0.121256,
+     "new_conn": 1
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.096392,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.066987,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.013458,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.027758,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.084193,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.022422,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.01281,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.023742,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.017526,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.021581,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.03191,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.014757,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.021178,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.012675,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.018651,
+     "new_conn": 0
+    }
+   ],
+   [
+    {
+     "http": 200,
+     "tls_s": 0.058315,
+     "total_s": 0.1044,
+     "new_conn": 1
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.09876,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.05974,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.018288,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.023598,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.019827,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.02157,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.097816,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.680599,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.017732,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.040254,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.025291,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.017999,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.017217,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.010369,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.01916,
+     "new_conn": 0
+    }
+   ],
+   [
+    {
+     "http": 200,
+     "tls_s": 0.076463,
+     "total_s": 0.102282,
+     "new_conn": 1
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.089175,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.05139,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.023,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.020439,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.059594,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.026335,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.02137,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.029997,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.012729,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.026453,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.022438,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.024861,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.02034,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.03166,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.028191,
+     "new_conn": 0
+    }
+   ]
+  ],
+  "AdGuard": [
+   [
+    {
+     "http": 200,
+     "tls_s": 0.077052,
+     "total_s": 0.138142,
+     "new_conn": 1
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.086712,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.062302,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.050402,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.075909,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.176537,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.075585,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.028371,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.029802,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.023461,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.027631,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.028867,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.031753,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.024729,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.017624,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.030607,
+     "new_conn": 0
+    }
+   ],
+   [
+    {
+     "http": 200,
+     "tls_s": 0.105408,
+     "total_s": 0.143331,
+     "new_conn": 1
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.078104,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.024624,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.019953,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.027377,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.029161,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.025536,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.023105,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.018348,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.02162,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.022412,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.039409,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.036555,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.036461,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.035419,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.02217,
+     "new_conn": 0
+    }
+   ],
+   [
+    {
+     "http": 200,
+     "tls_s": 0.077008,
+     "total_s": 0.13341,
+     "new_conn": 1
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.092781,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.031696,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.022236,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.028473,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.021141,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.027977,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.050251,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.024101,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.027135,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.032026,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.021608,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.031593,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.032951,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.029861,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.022209,
+     "new_conn": 0
+    }
+   ]
+  ],
+  "Control D": [
+   [
+    {
+     "http": 200,
+     "tls_s": 0.08651,
+     "total_s": 0.117678,
+     "new_conn": 1
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.074679,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.022241,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.01858,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.012648,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.017911,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.01746,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.019314,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.02223,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.018068,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.013085,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.020119,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.02554,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.020873,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.018479,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.017603,
+     "new_conn": 0
+    }
+   ],
+   [
+    {
+     "http": 200,
+     "tls_s": 0.085629,
+     "total_s": 0.117886,
+     "new_conn": 1
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.088318,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.018939,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.017862,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.016652,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.02319,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.017872,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.031615,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.030126,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.016955,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.018717,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.017445,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.019424,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.011369,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.0264,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.014268,
+     "new_conn": 0
+    }
+   ],
+   [
+    {
+     "http": 200,
+     "tls_s": 0.091804,
+     "total_s": 0.142608,
+     "new_conn": 1
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.078681,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.023131,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.016045,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.020526,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.023397,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.018757,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.012223,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.017859,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.021953,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.01834,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.027095,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.012969,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.018059,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.017208,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.018426,
+     "new_conn": 0
+    }
+   ]
+  ],
+  "CleanBrowsing": [
+   [
+    {
+     "http": 200,
+     "tls_s": 0.116473,
+     "total_s": 0.142634,
+     "new_conn": 1
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.09004,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.026503,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.029147,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.022168,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.022923,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.021961,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.019761,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.022295,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.018561,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.02104,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.021458,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.022498,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.02261,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.026454,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.026949,
+     "new_conn": 0
+    }
+   ],
+   [
+    {
+     "http": 200,
+     "tls_s": 0.105702,
+     "total_s": 0.155625,
+     "new_conn": 1
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.025972,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.02284,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.03076,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.023913,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.025533,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.017795,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.0218,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.022431,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.022489,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.017702,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.022423,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.056461,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.028703,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.025566,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.018943,
+     "new_conn": 0
+    }
+   ],
+   [
+    {
+     "http": 200,
+     "tls_s": 0.095102,
+     "total_s": 0.116522,
+     "new_conn": 1
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.022178,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.025253,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.019062,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.021786,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.022405,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.022206,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.022729,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.02204,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.023074,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.021064,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.017291,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.021957,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.02332,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.021537,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.022765,
+     "new_conn": 0
+    }
+   ]
+  ],
+  "NextDNS": [
+   [
+    {
+     "http": 200,
+     "tls_s": 0.068793,
+     "total_s": 0.094345,
+     "new_conn": 1
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.075248,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.025677,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.01403,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.013568,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.017722,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.013315,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.022471,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.01397,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.01198,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.018566,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.012897,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.013575,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.013457,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.013885,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.012752,
+     "new_conn": 0
+    }
+   ],
+   [
+    {
+     "http": 200,
+     "tls_s": 0.060458,
+     "total_s": 0.091787,
+     "new_conn": 1
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.062775,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.013205,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.017353,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.017822,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.013435,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.012946,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.018765,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.017439,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.018026,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.012687,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.025782,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.017008,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.018345,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.012719,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.026061,
+     "new_conn": 0
+    }
+   ],
+   [
+    {
+     "http": 200,
+     "tls_s": 0.07481,
+     "total_s": 0.120916,
+     "new_conn": 1
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.076295,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.016762,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.018009,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.022297,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.013528,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.018141,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.018031,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.012618,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.013886,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.017868,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.013189,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.022167,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.013248,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.013574,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.020595,
+     "new_conn": 0
+    }
+   ]
+  ],
+  "Yandex": [
+   [
+    {
+     "http": 200,
+     "tls_s": 0.939458,
+     "total_s": 1.378564,
+     "new_conn": 1
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.456296,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.220928,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.229001,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.227615,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.254724,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.231171,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.220077,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.230295,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.231371,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.252328,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.216402,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.243397,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.230847,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.229041,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.225793,
+     "new_conn": 0
+    }
+   ],
+   [
+    {
+     "http": 0,
+     "tls_s": 0.0,
+     "total_s": 10.0069,
+     "new_conn": 1
+    },
+    {
+     "http": 200,
+     "tls_s": 0.594626,
+     "total_s": 1.221022,
+     "new_conn": 1
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.714564,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.357837,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.359048,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.357134,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.358289,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.264681,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.272966,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.26865,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.299864,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.245839,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.245588,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.251417,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.239098,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.24643,
+     "new_conn": 0
+    }
+   ],
+   [
+    {
+     "http": 200,
+     "tls_s": 0.485301,
+     "total_s": 1.019658,
+     "new_conn": 1
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.474505,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.239553,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.229032,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.234211,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.227491,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.221913,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.223864,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.348628,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.221161,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.239998,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.230315,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.220901,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.240907,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.303713,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.244555,
+     "new_conn": 0
+    }
+   ]
+  ],
+  "Mullvad": [
+   [
+    {
+     "http": 200,
+     "tls_s": 0.237242,
+     "total_s": 0.40304,
+     "new_conn": 1
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.204997,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.081119,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.079448,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.077172,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.082782,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.078116,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.082174,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.079347,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.076605,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.080807,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.080796,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.079198,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.076751,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.079221,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.079677,
+     "new_conn": 0
+    }
+   ],
+   [
+    {
+     "http": 200,
+     "tls_s": 0.207813,
+     "total_s": 0.363543,
+     "new_conn": 1
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.199933,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.080365,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.08994,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.079494,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.079475,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.082107,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.079993,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.080715,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.084589,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.084443,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.087264,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.089561,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.076178,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.08088,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.077903,
+     "new_conn": 0
+    }
+   ],
+   [
+    {
+     "http": 200,
+     "tls_s": 0.216884,
+     "total_s": 0.380769,
+     "new_conn": 1
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.22056,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.092563,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.092908,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.105421,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.082691,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.085781,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.086644,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.085849,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.083602,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.087289,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.081253,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.084003,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.091627,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.083939,
+     "new_conn": 0
+    },
+    {
+     "http": 200,
+     "tls_s": 0.0,
+     "total_s": 0.085391,
+     "new_conn": 0
+    }
+   ]
+  ]
+ }
+}

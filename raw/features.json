@@ -1,0 +1,184 @@
+{
+ "Cloudflare": {
+  "dnssec_bad_sig": "SERVFAIL",
+  "dnssec_ad_flag": true,
+  "nxdomain": "NXDOMAIN",
+  "nxdomain_answer": [],
+  "google_whoami": [
+   "\"172.71.157.120\""
+  ],
+  "akamai_whoami": [
+   "\"ip\" \"x.x.x.x\"",
+   "\"ns\" \"172.69.21.220\"",
+   "\"ecs\" \"x.x.x.x/25/24\""
+  ],
+  "tcp": "NOERROR",
+  "dot": "TLSv1.3"
+ },
+ "Google": {
+  "dnssec_bad_sig": "SERVFAIL",
+  "dnssec_ad_flag": true,
+  "nxdomain": "NXDOMAIN",
+  "nxdomain_answer": [],
+  "google_whoami": [
+   "\"172.253.9.212\"",
+   "\"edns0-client-subnet x.x.x.x/24\""
+  ],
+  "akamai_whoami": [
+   "\"ecs\" \"x.x.x.x/24/24\"",
+   "\"ip\" \"x.x.x.x\"",
+   "\"ns\" \"2607:f8b0:4004:1002::124\""
+  ],
+  "tcp": "NOERROR",
+  "dot": "TLSv1.3"
+ },
+ "Quad9": {
+  "dnssec_bad_sig": "SERVFAIL",
+  "dnssec_ad_flag": true,
+  "nxdomain": "NXDOMAIN",
+  "nxdomain_answer": [],
+  "google_whoami": [
+   "\"74.63.16.250\""
+  ],
+  "akamai_whoami": [
+   "\"ns\" \"2620:171:f0:f0:9999::250\""
+  ],
+  "tcp": "NOERROR",
+  "dot": "TLSv1.3"
+ },
+ "OpenDNS": {
+  "dnssec_bad_sig": "SERVFAIL",
+  "dnssec_ad_flag": true,
+  "nxdomain": "NXDOMAIN",
+  "nxdomain_answer": [],
+  "google_whoami": [
+   "\"208.67.219.140\"",
+   "\"edns0-client-subnet x.x.x.x/24\""
+  ],
+  "akamai_whoami": [
+   "\"ip\" \"x.x.x.x\"",
+   "\"ns\" \"2620:0:cc3::131\"",
+   "\"ecs\" \"x.x.x.x/24/24\""
+  ],
+  "tcp": "NOERROR",
+  "dot": "TLSv1.3"
+ },
+ "AdGuard": {
+  "dnssec_bad_sig": "SERVFAIL",
+  "dnssec_ad_flag": true,
+  "nxdomain": "NXDOMAIN",
+  "nxdomain_answer": [],
+  "google_whoami": [
+   "\"84.17.44.209\"",
+   "\"edns0-client-subnet x.x.x.x/24\""
+  ],
+  "akamai_whoami": [
+   "\"ip\" \"x.x.x.x\"",
+   "\"ns\" \"84.17.44.209\"",
+   "\"ecs\" \"x.x.x.x/24/24\""
+  ],
+  "tcp": "NOERROR",
+  "dot": "TLSv1.3"
+ },
+ "Control D": {
+  "dnssec_bad_sig": "SERVFAIL",
+  "dnssec_ad_flag": true,
+  "nxdomain": "NXDOMAIN",
+  "nxdomain_answer": [],
+  "google_whoami": [
+   "\"2a02:6ea0:3607::1\""
+  ],
+  "akamai_whoami": [
+   "\"ns\" \"149.50.212.65\""
+  ],
+  "tcp": "NOERROR",
+  "dot": null
+ },
+ "CleanBrowsing": {
+  "dnssec_bad_sig": "SERVFAIL",
+  "dnssec_ad_flag": true,
+  "nxdomain": "NXDOMAIN",
+  "nxdomain_answer": [],
+  "google_whoami": [
+   "\"45.32.138.180\""
+  ],
+  "akamai_whoami": [
+   "\"ns\" \"45.32.138.180\""
+  ],
+  "tcp": "NOERROR",
+  "dot": "TLSv1.3"
+ },
+ "NextDNS": {
+  "dnssec_bad_sig": "SERVFAIL",
+  "dnssec_ad_flag": true,
+  "nxdomain": "NXDOMAIN",
+  "nxdomain_answer": [],
+  "google_whoami": [
+   "\"104.238.181.28\""
+  ],
+  "akamai_whoami": [
+   "\"ns\" \"104.238.181.28\""
+  ],
+  "tcp": "NOERROR",
+  "dot": "TLSv1.3"
+ },
+ "Comodo": {
+  "dnssec_bad_sig": "NOERROR",
+  "dnssec_ad_flag": false,
+  "nxdomain": "NXDOMAIN",
+  "nxdomain_answer": [],
+  "google_whoami": [
+   "\"2001:19f0:ac01:1a8f:ec4:7aff:fe8f:6758\""
+  ],
+  "akamai_whoami": [
+   "\"ns\" \"2001:19f0:ac01:1a8f:ec4:7aff:fe8f:6758\""
+  ],
+  "tcp": "NOERROR",
+  "dot": null
+ },
+ "Level3": {
+  "dnssec_bad_sig": "NOERROR",
+  "dnssec_ad_flag": false,
+  "nxdomain": "NXDOMAIN",
+  "nxdomain_answer": [],
+  "google_whoami": [
+   "\"8.0.34.9\""
+  ],
+  "akamai_whoami": [
+   "\"ns\" \"8.0.34.7\""
+  ],
+  "tcp": "NOERROR",
+  "dot": null
+ },
+ "Yandex": {
+  "dnssec_bad_sig": "NOERROR",
+  "dnssec_ad_flag": true,
+  "nxdomain": "NXDOMAIN",
+  "nxdomain_answer": [],
+  "google_whoami": [
+   "\"2a02:6b8:c6a:3aa6:0:51f2:c18:0\""
+  ],
+  "akamai_whoami": [
+   "\"ns\" \"37.140.169.70\""
+  ],
+  "tcp": "NOERROR",
+  "dot": "TLSv1.3"
+ },
+ "Network default": {
+  "dnssec_bad_sig": "NOERROR",
+  "dnssec_ad_flag": false,
+  "nxdomain": "NXDOMAIN",
+  "nxdomain_answer": [],
+  "google_whoami": [
+   "\"172.253.1.24\"",
+   "\"edns0-client-subnet x.x.x.x/24\""
+  ],
+  "akamai_whoami": [
+   "\"ns\" \"2607:f8b0:4004:1002::124\"",
+   "\"ip\" \"x.x.x.x\"",
+   "\"ecs\" \"x.x.x.x/24/24\""
+  ],
+  "tcp": "NOERROR",
+  "dot": null
+ }
+}
