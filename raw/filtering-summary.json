@@ -1,0 +1,400 @@
+{
+ "date": "2026-10-29T16:07:32-0700",
+ "variants": {
+  "Cloudflare Security": "1.1.1.2",
+  "Control D Malware": "76.76.2.1",
+  "Control D Ads": "76.76.2.2"
+ },
+ "resolvers": {
+  "Cloudflare": {
+   "malware": {
+    "blocked": 0,
+    "resolved": 150,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 150
+   },
+   "phishing": {
+    "blocked": 0,
+    "resolved": 94,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 94
+   },
+   "ads": {
+    "blocked": 0,
+    "resolved": 149,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 149
+   }
+  },
+  "Google": {
+   "malware": {
+    "blocked": 0,
+    "resolved": 150,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 150
+   },
+   "phishing": {
+    "blocked": 0,
+    "resolved": 94,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 94
+   },
+   "ads": {
+    "blocked": 0,
+    "resolved": 149,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 149
+   }
+  },
+  "Quad9": {
+   "malware": {
+    "blocked": 92,
+    "resolved": 58,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 150
+   },
+   "phishing": {
+    "blocked": 55,
+    "resolved": 39,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 94
+   },
+   "ads": {
+    "blocked": 1,
+    "resolved": 148,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 149
+   }
+  },
+  "OpenDNS": {
+   "malware": {
+    "blocked": 8,
+    "resolved": 141,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 1,
+    "n": 150
+   },
+   "phishing": {
+    "blocked": 83,
+    "resolved": 11,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 94
+   },
+   "ads": {
+    "blocked": 1,
+    "resolved": 147,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 1,
+    "n": 149
+   }
+  },
+  "AdGuard": {
+   "malware": {
+    "blocked": 80,
+    "resolved": 68,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 2,
+    "n": 150
+   },
+   "phishing": {
+    "blocked": 86,
+    "resolved": 8,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 94
+   },
+   "ads": {
+    "blocked": 79,
+    "resolved": 70,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 149
+   }
+  },
+  "Control D": {
+   "malware": {
+    "blocked": 0,
+    "resolved": 150,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 150
+   },
+   "phishing": {
+    "blocked": 0,
+    "resolved": 94,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 94
+   },
+   "ads": {
+    "blocked": 0,
+    "resolved": 148,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 1,
+    "n": 149
+   }
+  },
+  "CleanBrowsing": {
+   "malware": {
+    "blocked": 118,
+    "resolved": 32,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 150
+   },
+   "phishing": {
+    "blocked": 8,
+    "resolved": 86,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 94
+   },
+   "ads": {
+    "blocked": 0,
+    "resolved": 148,
+    "servfail": 1,
+    "refused": 0,
+    "timeout": 0,
+    "n": 149
+   }
+  },
+  "NextDNS": {
+   "malware": {
+    "blocked": 0,
+    "resolved": 150,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 150
+   },
+   "phishing": {
+    "blocked": 0,
+    "resolved": 94,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 94
+   },
+   "ads": {
+    "blocked": 0,
+    "resolved": 149,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 149
+   }
+  },
+  "Comodo": {
+   "malware": {
+    "blocked": 0,
+    "resolved": 150,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 150
+   },
+   "phishing": {
+    "blocked": 0,
+    "resolved": 94,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 94
+   },
+   "ads": {
+    "blocked": 0,
+    "resolved": 149,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 149
+   }
+  },
+  "Level3": {
+   "malware": {
+    "blocked": 0,
+    "resolved": 150,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 150
+   },
+   "phishing": {
+    "blocked": 0,
+    "resolved": 94,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 94
+   },
+   "ads": {
+    "blocked": 0,
+    "resolved": 148,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 1,
+    "n": 149
+   }
+  },
+  "Yandex": {
+   "malware": {
+    "blocked": 0,
+    "resolved": 150,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 150
+   },
+   "phishing": {
+    "blocked": 0,
+    "resolved": 94,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 94
+   },
+   "ads": {
+    "blocked": 0,
+    "resolved": 147,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 2,
+    "n": 149
+   }
+  },
+  "Network default": {
+   "malware": {
+    "blocked": 0,
+    "resolved": 150,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 150
+   },
+   "phishing": {
+    "blocked": 0,
+    "resolved": 94,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 94
+   },
+   "ads": {
+    "blocked": 0,
+    "resolved": 149,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 149
+   }
+  },
+  "Cloudflare Security": {
+   "malware": {
+    "blocked": 77,
+    "resolved": 73,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 150
+   },
+   "phishing": {
+    "blocked": 67,
+    "resolved": 27,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 94
+   },
+   "ads": {
+    "blocked": 0,
+    "resolved": 149,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 149
+   }
+  },
+  "Control D Malware": {
+   "malware": {
+    "blocked": 125,
+    "resolved": 25,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 150
+   },
+   "phishing": {
+    "blocked": 92,
+    "resolved": 2,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 94
+   },
+   "ads": {
+    "blocked": 5,
+    "resolved": 144,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 149
+   }
+  },
+  "Control D Ads": {
+   "malware": {
+    "blocked": 145,
+    "resolved": 5,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 150
+   },
+   "phishing": {
+    "blocked": 93,
+    "resolved": 1,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 94
+   },
+   "ads": {
+    "blocked": 146,
+    "resolved": 3,
+    "servfail": 0,
+    "refused": 0,
+    "timeout": 0,
+    "n": 149
+   }
+  }
+ }
+}

@@ -318,6 +318,66 @@
         flex-wrap: wrap;
         gap: 8px 24px;
       }
+      /* blocking */
+      .blk {
+        display: grid;
+        grid-template-columns: minmax(150px, 220px) repeat(3, 1fr);
+        gap: 12px 20px;
+        align-items: center;
+      }
+      .blk .hd {
+        color: var(--muted);
+        font-size: 13px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+      .blk .n {
+        font-weight: 500;
+        white-space: nowrap;
+      }
+      .blk .n .ip {
+        display: block;
+        color: var(--faint);
+        font-family: var(--mono);
+        font-size: 12px;
+        font-weight: 400;
+      }
+      .blk .cell {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 15px;
+        color: var(--muted);
+      }
+      .blk .cell i {
+        display: block;
+        height: 14px;
+        border-radius: 2px;
+        background: var(--accent);
+        min-width: 2px;
+      }
+      .blk .cell.ads i {
+        background: var(--bar);
+      }
+      .blk .cell.zero {
+        color: var(--faint);
+      }
+      @media (max-width: 640px) {
+        .blk {
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 6px 12px;
+        }
+        .blk .n {
+          grid-column: 1 / -1;
+          margin-top: 10px;
+        }
+        .blk .hd.first {
+          display: none;
+        }
+        .blk .cell {
+          font-size: 14px;
+        }
+      }
       @media (max-width: 640px) {
         .bar-row {
           grid-template-columns: 104px 1fr;
@@ -345,7 +405,7 @@
       <h1>13 DNS resolvers, measured. <em>Quad9</em> wins from here.</h1>
       <p class="lede">
         Every web request starts with a DNS lookup. I timed <b>960 plain lookups</b> and <b>576 encrypted ones</b> against Cloudflare, Google, Quad9 and ten others, then checked which ones
-        validate DNSSEC and which ones leak your location. <b>Quad9 was fastest and passed every check.</b>
+        validate DNSSEC, which ones leak your location, and what each one blocks. <b>Quad9 was fastest, passed every check, and blocked 61% of live malware hosts on its default address.</b>
       </p>
 
       <video src="assets/dns-resolver-benchmark-15s.mp4" poster="assets/poster.jpg" controls playsinline muted preload="metadata"></video>
@@ -371,8 +431,18 @@
           <div><b>46 ms</b><p>is OpenDNS's 90th percentile, against a 14.7 ms median. It has the slowest outliers of the fast group.</p></div>
           <div><b>90–140 ms</b><p>to open a new encrypted connection, versus 17–29 ms on one that's already open. Browsers keep it open, so the warm number is what you'll usually feel.</p></div>
           <div><b>4.7 ms</b><p>for this network's own resolver on cache hits. It's on the local network, but it's slow on misses (37 ms), skips DNSSEC and forwards to Google with your subnet attached.</p></div>
-          <div><b>0</b><p>timeouts across all 960 timed plain lookups, and no resolver redirected a made-up name to an ad page.</p></div>
+          <div><b>0 of 393</b><p>bad domains blocked by Comodo, whose resolver is sold as Secure DNS. Level3, Yandex, NextDNS without an account, and Control D's default address blocked none either.</p></div>
         </div>
+      </section>
+
+      <section id="blocking">
+        <h2>What they block</h2>
+        <p class="sub">
+          393 live domains pulled on 29 Oct from lists no resolver vendor runs: URLhaus malware hosts, the OpenPhish feed, and Peter Lowe's ad and tracker list. Share of each
+          that the resolver refused to resolve.
+        </p>
+        <div class="blk" id="blk"></div>
+        <p class="legend" id="blk-none"></p>
       </section>
 
       <section id="table">
@@ -389,17 +459,19 @@
           <li><b>Cached.</b> One of 15 popular domains, warmed into every resolver's cache first.</li>
           <li><b>Cache miss.</b> A fresh random 14-character name under one of 6 unsigned zones, unique per resolver per round. No resolver can reuse another's cache or synthesize the answer from DNSSEC records.</li>
           <li><b>Encrypted (DoH).</b> RFC 8484 GETs with curl, 16 on one connection, 3 times per endpoint. The first request includes TCP and TLS setup; "warm" is the median of the other 45.</li>
-          <li><b>Checks.</b> <code>dig</code> against <code>dnssec-failed.org</code> (DNSSEC), a random <code>.com</code> name (NXDOMAIN), Google's and Akamai's whoami records (subnet leak), and a TLS connection on port 853 (DNS over TLS).</li>
+          <li><b>Checks.</b> <code>dig</code> against <code>dnssec-failed.org</code> (DNSSEC), a random <code>.com</code> name (NXDOMAIN), Google's and Akamai's whoami records (subnet leak), and a TLS connection on port 853 (DNS over TLS). No plain lookup timed out, and no resolver redirected a made-up name to an ad page.</li>
+          <li><b>Blocking.</b> <a href="https://github.com/arjunkshah12345-hash/dns-resolver-benchmark/blob/main/scripts/filtering.py"><code>scripts/filtering.py</code></a> samples up to 150 hosts per list, at most 10 per parent domain, keeping only ones Google or Cloudflare still resolve. Every resolver gets the same names at the same time; errors are re-asked once slowly, since Control D answers REFUSED when one client hits several of its addresses at once. A domain either reference lost during the run counts as taken down and is dropped (1 was). A block-page address must cover 3+ unrelated domains and sit on a different network than the real answers, so a resolver abroad that sees a different CDN edge doesn't count as blocking. Only hostnames were resolved; nothing was visited.</li>
           <li><b>Re-run.</b> The first encrypted pass was lost to a network drop partway through, so DoH was re-run on its own. The plain-DNS rounds were unaffected.</li>
-          <li><b>Limits.</b> One machine, one network, one evening. Anycast routing means the order will differ from other places, so treat gaps under about 3 ms as noise. Ad and malware filtering weren't tested.</li>
+          <li><b>Limits.</b> One machine, one network, one evening. Anycast routing means the order will differ from other places, so treat gaps under about 3 ms as noise. Blocking is one pass on one day's lists, and threat lists go stale within hours.</li>
         </ul>
         <pre>ROUNDS=40 python3 -I scripts/bench.py &lt;your-default-resolver-ip&gt;
-python3 -I scripts/analyze.py</pre>
+python3 -I scripts/analyze.py
+python3 -I scripts/filtering.py &lt;your-default-resolver-ip&gt;</pre>
         <p class="sub" style="margin-top: 18px">Run it on your own network. Your ranking may differ, and that's the point.</p>
       </section>
 
       <footer>
-        <span>Measured 28 Oct 2026 from one network.</span>
+        <span>Speed measured 28 Oct 2026, blocking 29 Oct, from one network.</span>
         <a href="https://github.com/arjunkshah12345-hash/dns-resolver-benchmark">Code and raw data</a>
         <a href="https://github.com/arjunkshah12345-hash/dns-resolver-benchmark/issues">Found a mistake? Open an issue</a>
       </footer>
@@ -482,6 +554,30 @@ python3 -I scripts/analyze.py</pre>
               <td>${f ? (f.dot ? '<span class="ok">yes</span>' : '<span class="na">no</span>') : yes(null)}</td></tr>`;
           });
           document.getElementById("tbl").innerHTML = h + "</tbody>";
+        });
+
+      fetch("raw/filtering-summary.json")
+        .then((r) => r.json())
+        .then((F) => {
+          const R = F.resolvers, cats = ["malware", "phishing", "ads"];
+          const ip = (n) => F.variants[n] || IPS[n] || "";
+          const label = (n) => (n === "Network default" ? "This network" : n);
+          const share = (n, c) => R[n][c].blocked / R[n][c].n;
+          const total = (n) => cats.reduce((t, c) => t + R[n][c].blocked, 0);
+          const blocks = Object.keys(R).filter(total).sort((a, b) => share(b, "malware") + share(b, "phishing") - share(a, "malware") - share(a, "phishing"));
+          const none = Object.keys(R).filter((n) => !total(n));
+          let h = `<span class="hd first"></span>` + cats.map((c) => `<span class="hd">${c === "ads" ? "Ads &amp; trackers" : c}</span>`).join("");
+          blocks.forEach((n) => {
+            h += `<span class="n">${label(n)}<span class="ip">${ip(n)}</span></span>`;
+            cats.forEach((c) => {
+              const p = Math.round(share(n, c) * 100);
+              h += `<span class="cell ${c}${p ? "" : " zero"}"><i style="width:${p * 0.7}%"></i>${p}%</span>`;
+            });
+          });
+          document.getElementById("blk").innerHTML = h;
+          document.getElementById("blk-none").textContent =
+            `Blocked nothing: ${none.map((n) => `${label(n)} (${ip(n)})`).join(", ")}. Google and Cloudflare 1.1.1.1 are the reference, so they score zero by design. ` +
+            `A domain counts as blocked on NXDOMAIN, an empty answer, 0.0.0.0, or a block-page address on another network.`;
         });
     </script>
   </body>
