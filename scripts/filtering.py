@@ -15,7 +15,9 @@ gets other Cloudflare and Adobe addresses) from counting as blocking.
 Usage: python3 scripts/filtering.py [network-default-ip]
        python3 scripts/filtering.py --reclassify   (re-score saved answers)
        python3 scripts/filtering.py --retry        (re-ask saved errors, then re-score)
-Writes raw/filtering.json (every answer) and raw/filtering-summary.json (counts).
+       TAG=2 SEED=8 python3 scripts/filtering.py   (another run, kept as filtering-2.json)
+Writes raw/filtering[-TAG].json (every answer) and raw/filtering-summary.json
+(counts pooled over every saved run, plus each run on its own).
 The lists are cached in raw/feeds/, which is gitignored: phishing URLs can carry
 victims' email addresses.
 """
@@ -44,10 +46,13 @@ VARIANTS = [
     ("Control D Ads", "76.76.2.2"),
 ]
 SINKHOLE_MIN = 3
+# TAG=2 keeps a repeat run (fresh lists, own feed cache) apart from the main one.
+TAG = os.environ.get("TAG", "")
+SUFFIX = "-" + TAG if TAG else ""
 
 
 def fetch(cat):
-    path = os.path.join(ROOT, "raw", "feeds", cat + ".txt")
+    path = os.path.join(ROOT, "raw", "feeds", TAG, cat + ".txt")
     if not os.path.exists(path):
         os.makedirs(os.path.dirname(path), exist_ok=True)
         req = urllib.request.Request(FEEDS[cat], headers={"User-Agent": "dns-resolver-benchmark"})
@@ -194,8 +199,10 @@ def classify(data):
     ref_any = {a for v in refs.values() for a in v}
     # Google and Cloudflare filter nothing here, so if either lost the domain during
     # the run it was taken down, not blocked. Drop it for every resolver.
+    # A domain whose own nameserver answers 0.0.0.0 or 127.x is parked, not live.
     gone = {h for _, h in domains for n in ("Google", "Cloudflare")
-            if not answers[n][h]["a"] or answers[n][h]["rcode"] != 0}
+            if not answers[n][h]["a"] or answers[n][h]["rcode"] != 0
+            or any(a == "0.0.0.0" or a.startswith("127.") for a in answers[n][h]["a"])}
     results = {}
     for name, ans in answers.items():
         seen = collections.defaultdict(set)
@@ -243,24 +250,48 @@ def classify(data):
 
 def write(data):
     data = classify(data)
-    with open(os.path.join(ROOT, "raw", "filtering.json"), "w") as f:
+    with open(os.path.join(ROOT, "raw", "filtering" + SUFFIX + ".json"), "w") as f:
         json.dump(data, f, indent=1)
-    results = data["resolvers"]
-    summary = {"date": data["meta"]["date"], "variants": data["meta"].get("variants", {}),
-               "resolvers": {n: r["categories"] for n, r in results.items()}}
+    combine()
+
+
+def combine():
+    """Pool every saved run into raw/filtering-summary.json, which the site reads.
+    One run's phishing sample swings a lot with which sites are in the feed that
+    hour, so counts are summed across runs and each run is kept for the range."""
+    runs = []
+    for fn in sorted(os.listdir(os.path.join(ROOT, "raw"))):
+        if fn.startswith("filtering") and fn.endswith(".json") and "summary" not in fn:
+            d = json.load(open(os.path.join(ROOT, "raw", fn)))
+            runs.append({"file": fn, "date": d["meta"]["date"],
+                         "resolvers": {n: r["categories"] for n, r in d["resolvers"].items()}})
+    runs.sort(key=lambda r: r["date"])
+    pooled = {}
+    for r in runs:
+        for n, cats in r["resolvers"].items():
+            for c, counts in cats.items():
+                acc = pooled.setdefault(n, {}).setdefault(c, collections.Counter())
+                acc.update(counts)
+    summary = {"date": runs[-1]["date"], "variants": dict(VARIANTS),
+               "runs": [{"date": r["date"], "resolvers": r["resolvers"]} for r in runs],
+               "resolvers": {n: {c: dict(v) for c, v in cats.items()} for n, cats in pooled.items()}}
     with open(os.path.join(ROOT, "raw", "filtering-summary.json"), "w") as f:
         json.dump(summary, f, indent=1)
-    print(f"dropped {len(data['dropped_taken_down'])} taken down mid-run")
-    print(f"{'resolver':<16}" + "".join(f"{c:>12}" for c in FEEDS))
-    for name, r in sorted(results.items(), key=lambda kv: -sum(c["blocked"] for c in kv[1]["categories"].values())):
-        print(f"{name:<16}" + "".join(f"{r['categories'][c]['blocked']:>8}/{r['categories'][c]['n']:<3}" for c in FEEDS))
+    pct = lambda c: f"{100 * c['blocked'] / c['n']:.0f}%" if c["n"] else "-"
+    print(f"{len(runs)} runs: " + ", ".join(r["date"] for r in runs))
+    print(f"{'resolver':<20}" + "".join(f"{c:>22}" for c in FEEDS))
+    for n, cats in sorted(pooled.items(), key=lambda kv: -sum(c["blocked"] for c in kv[1].values())):
+        cells = [pct(cats[c]) + " (" + "/".join(pct(r["resolvers"][n][c]) for r in runs) + ")" for c in FEEDS]
+        print(f"{n:<20}" + "".join(f"{x:>22}" for x in cells))
 
 
 if __name__ == "__main__":
-    if "--reclassify" in sys.argv:
-        write(json.load(open(os.path.join(ROOT, "raw", "filtering.json"))))
+    if "--combine" in sys.argv:
+        combine()
+    elif "--reclassify" in sys.argv:
+        write(json.load(open(os.path.join(ROOT, "raw", "filtering" + SUFFIX + ".json"))))
     elif "--retry" in sys.argv:
-        data = json.load(open(os.path.join(ROOT, "raw", "filtering.json")))
+        data = json.load(open(os.path.join(ROOT, "raw", "filtering" + SUFFIX + ".json")))
         ips = {n: ip for n, ip in [(n, ip) for n, ip, _ in bench.RESOLVERS if ip] + VARIANTS}
         ips["Network default"] = sys.argv[2] if len(sys.argv) > 2 else "10.10.10.15"
         retry(data["answers"], ips)

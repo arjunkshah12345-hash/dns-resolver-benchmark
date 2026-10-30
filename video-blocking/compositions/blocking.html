@@ -1,0 +1,300 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: var(--ground);
+    }
+    #cam {
+      position: absolute;
+      inset: 0;
+      transform-origin: 900px 520px;
+    }
+    #cam > * {
+      position: absolute;
+    }
+    .w {
+      display: inline-block;
+    }
+    .a {
+      color: var(--accent);
+    }
+    .b {
+      color: var(--bad);
+    }
+    .m {
+      color: var(--muted);
+    }
+    .mono {
+      font-family: "JetBrains Mono", monospace;
+    }
+
+    /* 1. The question */
+    #q {
+      left: 0;
+      top: 500px;
+      width: 1920px;
+      text-align: center;
+      font-size: 64px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+
+    /* 2. Comodo's zero */
+    #numt {
+      left: 0;
+      top: 230px;
+      width: 1920px;
+      text-align: center;
+      font-size: 46px;
+      font-weight: 500;
+      letter-spacing: -0.015em;
+    }
+    #num {
+      left: 0;
+      top: 330px;
+      width: 1920px;
+      text-align: center;
+      font-size: 340px;
+      font-weight: 600;
+      letter-spacing: -0.05em;
+      line-height: 1;
+      white-space: nowrap;
+      color: var(--bad);
+      transform-origin: 960px 170px;
+    }
+    #num small {
+      font-size: 120px;
+      letter-spacing: -0.02em;
+      color: var(--muted);
+      margin-left: 24px;
+    }
+    #numl {
+      left: 0;
+      top: 720px;
+      width: 1920px;
+      text-align: center;
+      font-size: 46px;
+      font-weight: 500;
+      letter-spacing: -0.015em;
+    }
+
+    /* 3. The board */
+    .ttl {
+      left: 220px;
+      top: 104px;
+      font-size: 64px;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      white-space: nowrap;
+    }
+    .row {
+      left: 220px;
+      width: 1500px;
+      height: 62px;
+    }
+    .nm {
+      position: absolute;
+      left: 0;
+      top: 12px;
+      font-size: 34px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+    }
+    .bar {
+      position: absolute;
+      left: 340px;
+      top: 16px;
+      height: 30px;
+      border-radius: 3px;
+      background: #3a3a3a;
+      transform-origin: 0 50%;
+    }
+    .row.win .bar {
+      background: var(--accent);
+    }
+    .val {
+      position: absolute;
+      top: 14px;
+      font-size: 30px;
+      font-weight: 500;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .row.win .val {
+      color: var(--ink);
+    }
+    .row.bad .val {
+      color: var(--bad);
+    }
+    .why {
+      position: absolute;
+      left: 460px;
+      top: 14px;
+      font-size: 28px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .row.bad .why {
+      color: var(--bad);
+    }
+
+    /* 4. The pick */
+    #hero {
+      left: 0;
+      top: 300px;
+      width: 1920px;
+      text-align: center;
+      font-size: 250px;
+      font-weight: 600;
+      letter-spacing: -0.05em;
+      line-height: 1;
+      color: var(--accent);
+    }
+    #heroip {
+      left: 0;
+      top: 250px;
+      width: 1920px;
+      text-align: center;
+      font-size: 40px;
+      color: var(--muted);
+    }
+    #sub {
+      left: 0;
+      top: 600px;
+      width: 1920px;
+      text-align: center;
+      font-size: 46px;
+      font-weight: 500;
+      letter-spacing: -0.015em;
+    }
+    #url {
+      left: 0;
+      top: 860px;
+      width: 1920px;
+      text-align: center;
+      font-size: 34px;
+      color: var(--ink);
+    }
+    #src {
+      left: 0;
+      top: 916px;
+      width: 1920px;
+      text-align: center;
+      font-size: 28px;
+      color: var(--muted);
+    }
+  </style>
+
+  <div id="root" data-composition-id="blocking" data-width="1920" data-height="1080">
+  <div id="cam" data-layout-allow-overflow data-layout-allow-overlap>
+    <div id="q"><span class="w">What</span> <span class="w">does</span> <span class="w">your</span> <span class="w a">DNS</span> <span class="w">block?</span></div>
+
+    <div id="numt"><span class="w">Comodo</span> <span class="w m">“Secure</span> <span class="w m">DNS”</span></div>
+    <div id="num"><span id="numv">0</span><small>of 833</small></div>
+    <div id="numl"><span class="w m">known-bad</span> <span class="w m">domains</span> <span class="w b">blocked.</span></div>
+
+    <div id="t1" class="ttl"><span class="w">Malware</span> <span class="w">hosts</span> <span class="w">blocked</span></div>
+
+    <!-- Share of 299 live malware hosts over two runs, default addresses, raw/filtering-summary.json.
+         Malware only: it held within 4 points between runs; phishing swung by up to 72. -->
+    <div class="row" data-name="CleanBrowsing" data-v="77"></div>
+    <div class="row win" data-name="Quad9" data-v="63"></div>
+    <div class="row" data-name="AdGuard" data-v="54"></div>
+    <div class="row" data-name="OpenDNS" data-v="4"></div>
+    <div class="row bad" data-name="Comodo" data-v="0" data-why="sold as “Secure DNS”"></div>
+    <div class="row" data-name="Cloudflare" data-v="0" data-why="doesn’t filter"></div>
+    <div class="row" data-name="Google" data-v="0" data-why="doesn’t filter"></div>
+    <div class="row" data-name="Control D" data-v="0" data-why="doesn’t filter"></div>
+    <div class="row" data-name="NextDNS" data-v="0" data-why="not without an account"></div>
+    <div class="row" data-name="Level3" data-v="0" data-why="doesn’t filter"></div>
+    <div class="row" data-name="Yandex" data-v="0" data-why="doesn’t filter"></div>
+
+    <div id="heroip" class="mono">9.9.9.9</div>
+    <div id="hero">Quad9</div>
+    <div id="sub"><span class="w">Fastest.</span> <span class="w">Blocks</span> <span class="w a">63%</span> <span class="w">of</span> <span class="w">malware</span> <span class="w">hosts.</span></div>
+    <div id="url" class="mono">arjunkshah12345-hash.github.io/dns-resolver-benchmark</div>
+    <div id="src">833 live domains, two runs · URLhaus, OpenPhish, Peter Lowe · 29 Oct 2026</div>
+  </div>
+  </div>
+
+  <script>
+    (() => {
+      const TOP = 250, RH = 62, PX = 10, BAR0 = 340;
+
+      // Build rows from their data attributes: name, bar, value, and a note on the zeros.
+      const rows = Array.from(document.querySelectorAll(".row"));
+      rows.forEach((r, i) => {
+        const v = +r.dataset.v, w = v * PX;
+        r.style.top = TOP + i * RH + "px";
+        r.innerHTML =
+          `<div class="nm">${r.dataset.name}</div>` +
+          `<div class="bar" style="width:${w}px"></div>` +
+          `<div class="val" style="left:${BAR0 + w + (v ? 22 : 0)}px">${v}%</div>` +
+          (r.dataset.why ? `<div class="why">${r.dataset.why}</div>` : "");
+      });
+      const comodo = rows.find((r) => r.dataset.name === "Comodo");
+      const ci = rows.indexOf(comodo);
+
+      const build = () => {
+        const tl = gsap.timeline({ paused: true });
+        const wordsIn = (sel, at, gap = 0.07) =>
+          tl.fromTo(sel, { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.16, ease: "power2.out", stagger: gap }, at);
+        const out = (sel, at, gap = 0.02) =>
+          tl.to(sel, { opacity: 0, filter: "blur(8px)", duration: 0.18, ease: "power3.in", stagger: gap }, at);
+
+        gsap.set("#numt .w, #numl .w, .ttl .w, #heroip, #hero, #sub .w, #url, #src, .row .nm, .row .val, .row .why", { opacity: 0 });
+        gsap.set("#num", { opacity: 0 });
+        gsap.set(".row .bar", { scaleX: 0 });
+
+        // ---- 1. The question (it is also the first frame)
+        out("#q .w", 1.5, 0.03);
+
+        // ---- 2. The one sold as secure blocks nothing
+        wordsIn("#numt .w", 1.8, 0.08);
+        tl.fromTo("#num", { opacity: 0, scale: 1.08, filter: "blur(12px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.9, ease: "expo.out" }, 2.0);
+        wordsIn("#numl .w", 2.35, 0.08);
+        out("#numt .w, #numl .w", 4.0, 0.02);
+
+        // the zero flies into Comodo's slot on the board
+        tl.to("#num", { x: 220 + BAR0 + 30 - 960, y: TOP + ci * RH + 31 - 500, scale: 0.09, filter: "blur(8px)", duration: 0.5, ease: "power3.inOut" }, 4.1);
+        tl.to("#num", { opacity: 0, duration: 0.1 }, 4.5);
+
+        // ---- 3. The board
+        rows.forEach((r, i) => {
+          const at = 4.3 + i * 0.05, v = +r.dataset.v, val = r.querySelector(".val");
+          tl.fromTo(r.querySelector(".nm"), { opacity: 0, x: -20, filter: "blur(6px)" }, { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.4, ease: "expo.out" }, at);
+          if (v) {
+            tl.fromTo(r.querySelector(".bar"), { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "expo.out" }, at + 0.06);
+            const o = { v: 0 };
+            tl.fromTo(o, { v: 0 }, { v, duration: 0.8, ease: "expo.out", onUpdate: () => (val.textContent = Math.round(o.v) + "%") }, at + 0.06);
+          }
+          tl.fromTo(val, { opacity: 0 }, { opacity: 1, duration: 0.15 }, r === comodo ? 4.5 : at + 0.12);
+        });
+        wordsIn("#t1 .w", 4.55, 0.08);
+        tl.fromTo(".row .why", { opacity: 0, x: -10 }, { opacity: 1, x: 0, duration: 0.35, ease: "expo.out", stagger: 0.04 }, 5.4);
+        // punch in on Quad9
+        tl.to("#cam", { scale: 1.1, x: 40, y: 60, duration: 0.55, ease: "power2.inOut" }, 6.9);
+
+        // ---- 4. Quad9's name grows into the title
+        out("#t1 .w", 8.0);
+        rows.forEach((r) => { if (!r.classList.contains("win")) out(r, 8.0, 0); });
+        const win = rows.find((r) => r.classList.contains("win"));
+        out(win.querySelectorAll(".bar, .val"), 8.05, 0);
+        tl.to("#cam", { scale: 1, x: 0, y: 0, duration: 0.4, ease: "power2.inOut" }, 8.05);
+        const qn = win.querySelector(".nm");
+        tl.to(qn, { x: 960 - 220 - 50, y: 425 - parseFloat(win.style.top) - 30, scale: 5.5, filter: "blur(10px)", color: "#7cf29a", duration: 0.35, ease: "power3.in" }, 8.3);
+        tl.to(qn, { opacity: 0, duration: 0.08 }, 8.58);
+        tl.fromTo("#hero", { opacity: 0, scale: 1.12, filter: "blur(14px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.7, ease: "expo.out" }, 8.56);
+        tl.fromTo("#heroip", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 8.7);
+        wordsIn("#sub .w", 8.7, 0.05);
+        tl.fromTo("#url", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.22, ease: "power2.out" }, 8.85);
+        tl.fromTo("#src", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 8.9);
+        window.__timelines["blocking"] = tl;
+      };
+      Promise.all([document.fonts.load("600 340px Geist"), document.fonts.load("400 40px 'JetBrains Mono'"), document.fonts.ready]).then(build);
+    })();
+  </script>
+</template>
