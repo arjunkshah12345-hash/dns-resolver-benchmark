@@ -5,3 +5,8 @@ video/.hyperframes/
 video/.thumbnails/
 video/.waveform-cache/
 node_modules/
+raw/feeds/
+video-blocking/renders/
+video-blocking/.hyperframes/
+video-blocking/.thumbnails/
+video-blocking/.waveform-cache/

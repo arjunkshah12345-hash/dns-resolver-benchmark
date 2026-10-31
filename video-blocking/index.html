@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Geist";
+        src: url("assets/fonts/Geist-Variable.woff2") format("woff2");
+        font-weight: 100 900;
+      }
+      :root {
+        --ground: #0a0b0c;
+        --ink: #f2f2f2;
+        --muted: #9a9a9a;
+        --accent: #7cf29a;
+        --bad: #ff6b6b;
+        --font-display: "Geist", sans-serif;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: var(--ground);
+        color: var(--ink);
+        font-family: var(--font-display);
+        font-feature-settings: "tnum" 1;
+        -webkit-font-smoothing: antialiased;
+      }
+      #ground {
+        position: absolute;
+        inset: 0;
+        background: var(--ground);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="13" data-width="1920" data-height="1080">
+      <div id="ground"></div>
+      <div id="blocking" data-composition-id="blocking" data-composition-src="compositions/blocking.html" data-start="0" data-duration="13" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080"></div>
+      <audio id="sfx-q" class="clip" src="assets/sfx/key-press.mp3" data-start="0.05" data-duration="0.4" data-volume="0.42" data-track-index="5"></audio>
+      <audio id="sfx-zero" class="clip" src="assets/sfx/impact-bass-1.mp3" data-start="2.0" data-duration="1.6" data-volume="0.5" data-track-index="6"></audio>
+      <audio id="sfx-carry" class="clip" src="assets/sfx/whoosh.mp3" data-start="4.1" data-duration="0.6" data-volume="0.56" data-track-index="7"></audio>
+      <audio id="sfx-land" class="clip" src="assets/sfx/pop.mp3" data-start="4.5" data-duration="0.72" data-volume="0.56" data-playback-rate="0.75" data-track-index="8"></audio>
+      <audio id="sfx-why" class="clip" src="assets/sfx/click-soft.mp3" data-start="5.4" data-duration="0.4" data-volume="0.5" data-track-index="5"></audio>
+      <audio id="sfx-punch" class="clip" src="assets/sfx/whoosh-short.mp3" data-start="6.9" data-duration="0.5" data-volume="0.45" data-track-index="6"></audio>
+      <audio id="sfx-rise" class="clip" src="assets/sfx/whoosh.mp3" data-start="8.25" data-duration="0.6" data-volume="0.56" data-track-index="7"></audio>
+      <audio id="sfx-hit" class="clip" src="assets/sfx/impact-bass-1.mp3" data-start="8.56" data-duration="2.1" data-volume="0.59" data-track-index="8"></audio>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+    </script>
+  </body>
+</html>
