@@ -1,6 +1,6 @@
 # Public DNS resolver benchmark
 
-**Live:** https://arjunkshah12345-hash.github.io/dns-resolver-benchmark/ · **Video:** [`assets/dns-resolver-benchmark-15s.mp4`](assets/dns-resolver-benchmark-15s.mp4) (15 s, source in [`video/`](video))
+**Live:** https://arjunkshah12345-hash.github.io/dns-resolver-benchmark/ · **Video:** [`assets/dns-resolver-benchmark-15s.mp4`](assets/dns-resolver-benchmark-15s.mp4) (15 s, source in [`video/`](video)) · **Blocking video:** [`assets/dns-blocking-13s.mp4`](assets/dns-blocking-13s.mp4) (13 s, source in [`video-blocking/`](video-blocking))
 
 ![Quad9: fastest, validates DNSSEC, keeps your IP private](assets/card.jpg)
 
@@ -80,7 +80,7 @@ Blocked nothing: Cloudflare `1.1.1.1`, Google, Control D `76.76.2.0`, NextDNS wi
 - `scripts/analyze.py` writes `raw/summary.json`, which the site reads.
 - `scripts/filtering.py` runs the blocking test and writes `raw/filtering.json` (every answer, plus cached ASN lookups) and `raw/filtering-summary.json` (counts pooled over every saved run plus each run on its own, read by the site). `TAG=2 SEED=8` keeps another run as `raw/filtering-2.json`; `--combine` re-pools. The downloaded lists go in `raw/feeds/`, which is gitignored because phishing URLs can carry victims' email addresses. `--reclassify` re-scores saved answers without querying again.
 - `index.html` is the whole site, with no build step.
-- `video/` is the HyperFrames source for the video: `npx hyperframes render` inside it.
+- `video/` and `video-blocking/` are the HyperFrames sources for the two videos: `npx hyperframes render` inside either.
 
 Found something wrong? Open an issue with a link and it will be corrected.
 
