@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono Variable", ui-monospace, monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-faint: var(--faint);
+  --color-card: var(--card);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+}
+
+@theme inline {
+    --color-dither-ink: var(--dither-ink);
+    --color-dither-paper: var(--dither-paper);
+    --color-dither-blue: var(--dither-color-blue);
+    --color-dither-purple: var(--dither-color-purple);
+    --color-dither-green: var(--dither-color-green);
+    --color-dither-pink: var(--dither-color-pink);
+    --color-dither-orange: var(--dither-color-orange);
+    --color-dither-red: var(--dither-color-red);
+    --color-dither-grey: var(--dither-color-grey);
+}
+
+@layer base {
+  :root {
+    --dither-ink: var(--primary);
+    --dither-paper: var(--background);
+    --dither-cell: 3px;
+    --dither-color-blue: oklch(0.56 0.18 248);
+    --dither-color-purple: oklch(0.53 0.22 302);
+    --dither-color-green: oklch(0.58 0.15 152);
+    --dither-color-pink: oklch(0.58 0.21 355);
+    --dither-color-orange: oklch(0.64 0.17 52);
+    --dither-color-red: oklch(0.55 0.21 27);
+    --dither-color-grey: oklch(0.55 0 0);
+    --dither-bloom: 0.6;
+    }
+  .dark {
+    --dither-ink: var(--primary);
+    --dither-paper: var(--background);
+    --dither-cell: 3px;
+    --dither-color-blue: oklch(0.72 0.14 240);
+    --dither-color-purple: oklch(0.7 0.18 304);
+    --dither-color-green: oklch(0.78 0.17 152);
+    --dither-color-pink: oklch(0.74 0.17 354);
+    --dither-color-orange: oklch(0.79 0.15 62);
+    --dither-color-red: oklch(0.68 0.2 25);
+    --dither-color-grey: oklch(0.66 0 0);
+    --dither-bloom: 1;
+    }
+}
+/* The site is always dark: html carries .dark, and these are its only values. */
+:root {
+  --background: #0a0b0c;
+  --foreground: #ededed;
+  --muted: #141618;
+  --muted-foreground: #9b9ea2;
+  --faint: #5f6266;
+  --card: #111315;
+  --popover: #16181b;
+  --popover-foreground: #ededed;
+  --border: rgb(255 255 255 / 0.09);
+  /* dither ink: a soft grey, so the one accent (Quad9 green) stands out */
+  --primary: oklch(0.8 0 0);
+  --accent: oklch(0.86 0.16 152);
+}
+
+@layer base {
+  html {
+    background: var(--background);
+    color: var(--foreground);
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+  body {
+    font-family: var(--font-sans);
+    font-feature-settings: "tnum" 1;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: color-mix(in oklch, var(--accent) 35%, transparent);
+  }
+}

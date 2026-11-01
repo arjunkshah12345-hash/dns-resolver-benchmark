@@ -10,3 +10,6 @@ video-blocking/renders/
 video-blocking/.hyperframes/
 video-blocking/.thumbnails/
 video-blocking/.waveform-cache/
+
+site/node_modules/
+site/dist/

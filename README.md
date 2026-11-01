@@ -79,7 +79,7 @@ Blocked nothing: Cloudflare `1.1.1.1`, Google, Control D `76.76.2.0`, NextDNS wi
 - `scripts/bench.py` runs the measurements and writes `raw/samples.json` and `raw/features.json`.
 - `scripts/analyze.py` writes `raw/summary.json`, which the site reads.
 - `scripts/filtering.py` runs the blocking test and writes `raw/filtering.json` (every answer, plus cached ASN lookups) and `raw/filtering-summary.json` (counts pooled over every saved run plus each run on its own, read by the site). `TAG=2 SEED=8` keeps another run as `raw/filtering-2.json`; `--combine` re-pools. The downloaded lists go in `raw/feeds/`, which is gitignored because phishing URLs can carry victims' email addresses. `--reclassify` re-scores saved answers without querying again.
-- `index.html` is the whole site, with no build step.
+- `site/` is the website: Vite, React and Tailwind, with the dithered visuals from [dithercn](https://github.com/opencoredev/dithercn) (the hero and the speed bars) and [Dither Kit](https://github.com/Boring-Software-Inc/dither-kit) (the blocking chart, the button and the footer). It reads `raw/summary.json` and `raw/filtering-summary.json` at build time. `cd site && npm ci && npm run dev` runs it locally; `.github/workflows/pages.yml` builds it and deploys it to GitHub Pages on every push to main.
 - `video/` and `video-blocking/` are the HyperFrames sources for the two videos: `npx hyperframes render` inside either.
 
 Found something wrong? Open an issue with a link and it will be corrected.
